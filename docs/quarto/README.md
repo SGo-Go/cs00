@@ -26,3 +26,9 @@ Render to `docs/quarto/_site`:
 ```sh
 quarto render docs/quarto
 ```
+
+## Publishing
+
+The site is published at <https://sgo-go.github.io/cs00/>.
+The [publish-site workflow](../../.github/workflows/publish-site.yml) deploys it to GitHub Pages.
+One-time setup: open the [Pages settings](https://github.com/SGo-Go/cs00/settings/pages) and set **Source** to **GitHub Actions**.

@@ -1,0 +1,42 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/quarto/**
+      - .github/workflows/publish-site.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Render site
+        run: quarto render docs/quarto
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/quarto/_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
