@@ -1,0 +1,51 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+
+project:
+  type: website
+  output-dir: _site
+
+lang: uk
+
+website:
+  title: "CS00"
+  description: "Підготовчий курс інформатики для повних початківців"
+  site-url: https://sgo-go.github.io/cs00/
+  repo-url: https://github.com/SGo-Go/cs00
+  repo-actions: [edit, issue]
+  page-navigation: true
+  back-to-top-navigation: true
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Головна"
+        href: index.qmd
+      - text: "Розклад"
+        href: schedule.qmd
+      - text: "Програма"
+        href: syllabus.qmd
+      - text: "Завдання"
+        href: assignments.qmd
+      - text: "Ресурси"
+        href: resources.qmd
+      - text: "Команда"
+        href: staff.qmd
+    tools:
+      - icon: github
+        href: https://github.com/SGo-Go/cs00
+        text: "GitHub"
+  page-footer:
+    left: "© 2026 SGo-Go. Усі права захищено."
+    right: "Зроблено за допомогою [Quarto](https://quarto.org/)."
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+    toc: true
+    toc-title: "На цій сторінці"
+    smooth-scroll: true
+    code-copy: true
+
+execute:
+  freeze: auto
