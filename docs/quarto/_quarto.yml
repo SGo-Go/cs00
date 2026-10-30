@@ -5,6 +5,7 @@ project:
   output-dir: _site
 
 lang: uk
+bibliography: references.yml
 
 website:
   title: "CS00"
@@ -28,6 +29,8 @@ website:
         href: assignments.qmd
       - text: "Ресурси"
         href: resources.qmd
+      - text: "API"
+        href: api/index.html
       - text: "Команда"
         href: staff.qmd
     tools:
@@ -40,6 +43,7 @@ website:
 
 format:
   html:
+    language: _language-uk.yml
     theme:
       light: [cosmo, styles.scss]
     toc: true

@@ -7,6 +7,10 @@ on:
     branches: [main]
     paths:
       - docs/quarto/**
+      - docs/sphinx/**
+      - libs/**
+      - assignments/**
+      - pyproject.toml
       - .github/workflows/publish-site.yml
   workflow_dispatch:
 
@@ -27,6 +31,11 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
       - name: Render site
         run: quarto render docs/quarto
+      - uses: astral-sh/setup-uv@v6
+      - name: Install documentation dependencies
+        run: uv sync --group docs
+      - name: Build API reference
+        run: uv run --no-sync sphinx-build -W -b html docs/sphinx docs/quarto/_site/api
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/quarto/_site

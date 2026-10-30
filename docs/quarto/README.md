@@ -9,6 +9,7 @@ Pages:
 - `syllabus.qmd`: policies and workload
 - `assignments.qmd`: homework and final project
 - `resources.qmd`: setup and learning materials
+- `glossary.qmd`: course terms, linked from the other pages
 - `staff.qmd`: teaching staff and office hours
 
 Run the commands from the repository root.
@@ -31,4 +32,6 @@ quarto render docs/quarto
 
 The site is published at <https://sgo-go.github.io/cs00/>.
 The [publish-site workflow](../../.github/workflows/publish-site.yml) deploys it to GitHub Pages.
+It also builds the Sphinx API reference from `docs/sphinx` and publishes it at <https://sgo-go.github.io/cs00/api/>.
+GitHub Pages serves one site per repository, so both are deployed together in a single artifact.
 One-time setup: open the [Pages settings](https://github.com/SGo-Go/cs00/settings/pages) and set **Source** to **GitHub Actions**.
