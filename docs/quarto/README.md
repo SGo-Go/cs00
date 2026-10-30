@@ -9,6 +9,7 @@ Pages:
 - `syllabus.qmd`: policies and workload
 - `assignments.qmd`: homework and final project
 - `resources.qmd`: setup and learning materials
+- `glossary.qmd`: course terms, linked from the other pages
 - `staff.qmd`: teaching staff and office hours
 
 Run the commands from the repository root.

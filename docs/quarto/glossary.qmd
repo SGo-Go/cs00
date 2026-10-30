@@ -1,0 +1,47 @@
+---
+title: "Глосарій"
+---
+
+## CS50 {#cs50}
+
+CS50 — вступний курс з інформатики Гарвардського університету.
+Курс розрахований на тих, хто починає вивчати програмування.
+Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/CS50) та на [сайті курсу](https://cs50.harvard.edu/x/).
+[CS00] готує до проходження CS50.
+
+Продовження та споріднені курси:
+
+| Курс                              | Оригінал                  | Українською                         |
+| --------------------------------- | ------------------------- | ----------------------------------- |
+| CS50x (основний)                  | [CS50x][x]                | [CS50x (2019)][base]                |
+| Розробка 2D-ігор                  | [CS50 2D][2d]             | —                                   |
+| Штучний інтелект                  | [CS50 AI][ai]             | [CS50 AI (2023)][ai-ua]             |
+| Вебпрограмування                  | [CS50 Web][web]           | [CS50 Web (2020)][web-ua]           |
+| Python                            | [CS50 Python][python]     | —                                   |
+| R                                 | [CS50 R][r]               | —                                   |
+| SQL                               | [CS50 SQL][sql]           | —                                   |
+| Бізнес                            | [CS50 Business][business] | [CS50 Business (2024)][business-ua] |
+| Кібербезпека                      | [CS50 Cyber][cyber]       | [CS50 Cyber (2023)][cyber-ua]       |
+| Для юристів                       | [CS50 Law][law]           | —                                   |
+| Scratch (візуальне програмування) | [CS50 Scratch][scratch]   | —                                   |
+
+Каталог українських курсів: [Prometheus](https://prometheus.org.ua/courses-catalog?q=cs50).
+
+[x]: https://cs50.harvard.edu/x/
+[base]: https://prometheus.org.ua/prometheus-free/osnovy-programuvannya-cs50-2019/
+[2d]: https://cs50.harvard.edu/games
+[ai]: https://cs50.harvard.edu/ai
+[ai-ua]: https://prometheus.org.ua/prometheus-free/cs50-introduction-to-ai-with-python/
+[web]: https://cs50.harvard.edu/web/
+[web-ua]: https://prometheus.org.ua/prometheus-free/webprogramuvannya-python-javascript-cs50/
+[python]: https://cs50.harvard.edu/python
+[r]: https://cs50.harvard.edu/r
+[sql]: https://cs50.harvard.edu/sql
+[business]: https://cs50.harvard.edu/business
+[business-ua]: https://prometheus.org.ua/prometheus-free/cs50-programming-for-business/
+[cyber]: https://cs50.harvard.edu/cybersecurity
+[cyber-ua]: https://prometheus.org.ua/prometheus-free/cs50-cybersecurity/
+[law]: https://cs50.harvard.edu/law
+[scratch]: https://cs50.harvard.edu/scratch
+
+[CS00]: https://sgo-go.github.io/cs00/
