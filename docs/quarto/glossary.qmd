@@ -27,6 +27,18 @@ CS50 — вступний курс з інформатики Гарвардсь�
 
 Каталог українських курсів: [Prometheus](https://prometheus.org.ua/courses-catalog?q=cs50).
 
+## Git {#git}
+
+Git — система контролю версій.
+Вона зберігає історію змін у файлах і дає змогу повернутися до будь-якого попереднього стану.
+Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/Git) та в [офіційному посібнику Pro Git українською](https://git-scm.com/book/uk/v2).
+
+## GitHub {#github}
+
+GitHub — вебсервіс для зберігання репозиторіїв Git і спільної роботи над кодом.
+У курсі через GitHub подаються домашні завдання.
+Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/GitHub) та на [сайті GitHub](https://github.com/).
+
 [x]: https://cs50.harvard.edu/x/
 [base]: https://prometheus.org.ua/prometheus-free/osnovy-programuvannya-cs50-2019/
 [2d]: https://cs50.harvard.edu/games

@@ -1,0 +1,15 @@
+[project]
+dependencies = [ "cs00", "cs00-assignment-00", "marimo>=0.25.2" ]
+name = "workspace"
+requires-python = ">=3.12"
+version = "0.0.0"
+
+[dependency-groups]
+docs = [ "sphinx>=8.0" ]
+
+[tool.uv.sources]
+cs00 = {workspace = true}
+cs00-assignment-00 = {workspace = true}
+
+[tool.uv.workspace]
+members = [ "assignments/*", "libs/*" ]

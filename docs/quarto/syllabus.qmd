@@ -21,7 +21,7 @@ CS00 знайомить повних початківців з основами 
 4. Основи Python.
 5. Структури даних.
 6. Налагодження коду.
-7. Git і GitHub.
+7. [Git](glossary.qmd#git) і [GitHub](glossary.qmd#github).
 8. Підготовка до [CS50](glossary.qmd#cs50).
 
 ## Очікуване навантаження

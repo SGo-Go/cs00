@@ -1,0 +1,20 @@
+[project]
+dependencies = [ "cs00" ]
+description = "CS00 assignment 0"
+name = "cs00-assignment-00"
+requires-python = ">=3.12"
+version = "0.0.1"
+
+[dependency-groups]
+dev = [ "pytest>=7.4.0" ]
+
+[build-system]
+build-backend = "uv_build"
+requires = [ "uv_build<0.12" ]
+
+[tool.uv.build-backend]
+module-name = "cs00_assignment_00"
+module-root = "python"
+
+[tool.uv.sources]
+cs00 = {workspace = true}
