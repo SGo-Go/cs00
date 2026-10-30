@@ -1,0 +1,20 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+
+references:
+  - id: courant-robbins-1996
+    type: book
+    title: "What Is Mathematics? An Elementary Approach to Ideas and Methods"
+    edition: "2"
+    author:
+      - family: Courant
+        given: Richard
+      - family: Robbins
+        given: Herbert
+    editor:
+      - family: Stewart
+        given: Ian
+    publisher: Oxford University Press
+    publisher-place: New York
+    issued: 1996
+    ISBN: "978-0-19-510519-3"
+    note: "Chapter I, The Natural Numbers: integer representation and other number systems."

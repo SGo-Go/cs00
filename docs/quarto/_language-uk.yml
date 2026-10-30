@@ -1,0 +1,65 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Ukrainian UI strings: Quarto does not ship a `uk` translation, so unlisted keys fall back to English.
+
+toc-title-document: "Зміст"
+toc-title-website: "На цій сторінці"
+
+section-title-footnotes: "Примітки"
+section-title-references: "Література"
+section-title-abstract: "Анотація"
+section-title-appendices: "Додатки"
+section-title-citation: "Цитування"
+section-title-copyright: "Авторські права"
+section-title-reuse: "Повторне використання"
+
+title-block-author-single: "Автор"
+title-block-author-plural: "Автори"
+title-block-affiliation-single: "Установа"
+title-block-affiliation-plural: "Установи"
+title-block-published: "Опубліковано"
+title-block-modified: "Змінено"
+title-block-keywords: "Ключові слова"
+
+callout-tip-title: "Порада"
+callout-note-title: "Примітка"
+callout-warning-title: "Попередження"
+callout-important-title: "Важливо"
+callout-caution-title: "Обережно"
+
+code-summary: "Код"
+code-tools-menu-caption: "Код"
+code-tools-show-all-code: "Показати весь код"
+code-tools-hide-all-code: "Сховати весь код"
+code-tools-view-source: "Переглянути джерело"
+code-tools-source-code: "Вихідний код"
+copy-button-tooltip: "Копіювати"
+copy-button-tooltip-success: "Скопійовано!"
+
+repo-action-links-edit: "Редагувати сторінку"
+repo-action-links-source: "Переглянути джерело"
+repo-action-links-issue: "Повідомити про проблему"
+
+back-to-top: "Нагору"
+
+search-no-results-text: "Нічого не знайдено"
+search-matching-documents-text: "знайдених документів"
+search-copy-link-title: "Скопіювати посилання на пошук"
+search-hide-matches-text: "Сховати додаткові збіги"
+search-more-match-text: "збіг у цьому документі"
+search-more-matches-text: "збігів у цьому документі"
+search-clear-button-title: "Очистити"
+search-detached-cancel-button-title: "Скасувати"
+search-submit-button-title: "Шукати"
+search-label: "Пошук"
+
+toggle-section: "Згорнути або розгорнути розділ"
+toggle-sidebar: "Показати або сховати бічну панель"
+toggle-dark-mode: "Перемкнути темний режим"
+toggle-reader-mode: "Перемкнути режим читання"
+toggle-navigation: "Перемкнути навігацію"
+
+crossref-fig-title: "Рисунок"
+crossref-tbl-title: "Таблиця"
+crossref-lst-title: "Листинг"
+crossref-ch-prefix: "Розділ"
+crossref-sec-prefix: "Розділ"
