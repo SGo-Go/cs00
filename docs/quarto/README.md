@@ -28,6 +28,11 @@ Render to `docs/quarto/_site`:
 quarto render docs/quarto
 ```
 
+Each lecture in `lectures/` is also rendered to a separate PDF with [Typst](https://typst.app/), which is bundled with Quarto.
+Formats are set in `lectures/_metadata.yml`, and the PDFs are written next to the HTML pages, for example `_site/lectures/01-data-encoding.pdf`.
+`quarto preview` shows only the HTML, so run `quarto render` to build the PDFs.
+Each lecture page links to its PDF in the sidebar, and the schedule links to it too.
+
 ## Publishing
 
 The site is published at <https://sgo-go.github.io/cs00/>.

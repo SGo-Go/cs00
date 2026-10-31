@@ -1,0 +1,13 @@
+format:
+  html:
+    format-links:
+      - html
+      - format: typst
+        text: PDF
+  typst:
+    papersize: a4
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+    toc: false
+    citeproc: true
