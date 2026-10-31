@@ -1,24 +1,7 @@
 # Copyright (C) 2026 SGo-Go. All rights reserved.
+# Books on algorithms and data structures.
 
 references:
-  - id: courant-robbins-1996
-    type: book
-    title: "What Is Mathematics? An Elementary Approach to Ideas and Methods"
-    edition: "2"
-    author:
-      - family: Courant
-        given: Richard
-      - family: Robbins
-        given: Herbert
-    editor:
-      - family: Stewart
-        given: Ian
-    publisher: Oxford University Press
-    publisher-place: New York
-    issued: 1996
-    ISBN: "978-0-19-510519-3"
-    note: "Chapter I, The Natural Numbers: integer representation and other number systems."
-
   - id: wirth-1976
     type: book
     title: "Algorithms + Data Structures = Programs"
@@ -29,6 +12,8 @@ references:
     publisher-place: Englewood Cliffs, NJ
     issued: 1976
     ISBN: "978-0-13-022418-7"
+    # ETH-hosted PDF is Wirth's revised (Oberon) edition, not the 1976 original.
+    URL: "https://people.inf.ethz.ch/wirth/AD.pdf"
 
   - id: aho-hopcroft-ullman-1974
     type: book
@@ -44,6 +29,7 @@ references:
     publisher-place: Reading, MA
     issued: 1974
     ISBN: "978-0-201-00029-0"
+    URL: "https://openlibrary.org/isbn/9780201000290"
 
   - id: aho-hopcroft-ullman-1983
     type: book
@@ -59,6 +45,7 @@ references:
     publisher-place: Reading, MA
     issued: 1983
     ISBN: "978-0-201-00023-8"
+    URL: "https://openlibrary.org/isbn/9780201000238"
 
   - id: knuth-taocp-1
     type: book
@@ -71,6 +58,7 @@ references:
     publisher-place: Reading, MA
     issued: 1997
     ISBN: "978-0-201-89683-1"
+    URL: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
 
   - id: knuth-taocp-3
     type: book
@@ -83,6 +71,39 @@ references:
     publisher-place: Reading, MA
     issued: 1998
     ISBN: "978-0-201-89685-5"
+    URL: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
+
+  - id: graham-knuth-patashnik-1994
+    type: book
+    title: "Concrete Mathematics: A Foundation for Computer Science"
+    edition: "2"
+    author:
+      - family: Graham
+        given: Ronald L.
+      - family: Knuth
+        given: Donald E.
+      - family: Patashnik
+        given: Oren
+    publisher: Addison-Wesley
+    publisher-place: Reading, MA
+    issued: 1994
+    ISBN: "978-0-201-55802-9"
+    URL: "https://www-cs-faculty.stanford.edu/~knuth/gkp.html"
+
+  - id: savchenko-1996
+    type: book
+    # Details come from the user, not from the book itself; the ISBN is unknown.
+    title: "Разработка алгоритмов: от простого к сложному"
+    language: ru
+    author:
+      - family: Савченко
+        given: В. С.
+    publisher: Донецкий национальный университет
+    publisher-place: Донецк
+    issued: 1996
+    number-of-pages: "370"
+    # Hosted on the DonNU Moodle; opening it requires a DonNU login.
+    URL: "https://moodle.donnu.edu.ua/mod/resource/view.php?id=2947"
 
   - id: dasgupta-papadimitriou-vazirani-2008
     type: book
@@ -98,6 +119,7 @@ references:
     publisher-place: New York
     issued: 2008
     ISBN: "978-0-07-352340-8"
+    URL: "https://people.eecs.berkeley.edu/~vazirani/algorithms.html"
 
   - id: cormen-et-al-2022
     type: book
@@ -116,3 +138,4 @@ references:
     publisher-place: Cambridge, MA
     issued: 2022
     ISBN: "978-0-262-04630-5"
+    URL: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/"

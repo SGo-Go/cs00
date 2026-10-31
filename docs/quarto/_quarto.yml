@@ -5,7 +5,10 @@ project:
   output-dir: _site
 
 lang: uk
-bibliography: references.yml
+bibliography:
+  - references/algorithms.yml
+  - references/number-systems.yml
+  - references/problem-solving.yml
 
 website:
   title: "CS00"
