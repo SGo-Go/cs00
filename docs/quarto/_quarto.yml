@@ -3,15 +3,22 @@
 project:
   type: website
   output-dir: _site
+  pre-render: scripts/visuals_placeholders.py
+  resources:
+    - media/visuals/
 
 lang: uk
-bibliography: references.yml
+bibliography:
+  - references/algorithms.yml
+  - references/number-systems.yml
+  - references/problem-solving.yml
 
 website:
   title: "CS00"
   description: "Підготовчий курс інформатики для повних початківців"
   site-url: https://sgo-go.github.io/cs00/
   repo-url: https://github.com/SGo-Go/cs00
+  repo-subdir: docs/quarto
   repo-actions: [edit, issue]
   page-navigation: true
   back-to-top-navigation: true

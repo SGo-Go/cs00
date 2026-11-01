@@ -29,11 +29,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
+      - uses: astral-sh/setup-uv@v6
+      # pycairo and manimpango have no Linux wheels, so they build against these libraries.
+      - name: Install system libraries for Manim
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libcairo2-dev libpango1.0-dev pkg-config
+      - name: Install Python dependencies
+        run: uv sync --group docs --group visuals
+      - name: Render visualizations
+        run: uv run --no-sync python -m cs00_visuals.render --quality web
       - name: Render site
         run: quarto render docs/quarto
-      - uses: astral-sh/setup-uv@v6
-      - name: Install documentation dependencies
-        run: uv sync --group docs
       - name: Build API reference
         run: uv run --no-sync sphinx-build -W -b html docs/sphinx docs/quarto/_site/api
       - uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,17 @@
+[project]
+dependencies = [ "manim>=0.19" ]
+description = "Manim visualizations for CS00 lectures"
+name = "cs00-visuals"
+requires-python = ">=3.12"
+version = "0.0.1"
+
+[dependency-groups]
+dev = [ "pytest>=7.4.0" ]
+
+[build-system]
+build-backend = "uv_build"
+requires = [ "uv_build<0.12" ]
+
+[tool.uv.build-backend]
+module-name = "cs00_visuals"
+module-root = "python"

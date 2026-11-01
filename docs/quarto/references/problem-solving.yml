@@ -1,0 +1,98 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Books by George Pólya on problem solving and mathematical thinking.
+
+references:
+  - id: polya-2014
+    type: book
+    title: "How to Solve It: A New Aspect of Mathematical Method"
+    language: en
+    author:
+      - family: Pólya
+        given: George
+    publisher: Princeton University Press
+    publisher-place: Princeton, NJ
+    issued: 2014
+    ISBN: "978-0-691-16407-6"
+    URL: "https://press.princeton.edu/books/paperback/9780691164076/how-to-solve-it"
+    note: "Princeton Science Library edition of the 1945 original."
+
+  - id: polya-1990-1
+    type: book
+    title: "Mathematics and Plausible Reasoning, Volume 1: Induction and Analogy in Mathematics"
+    language: en
+    author:
+      - family: Pólya
+        given: George
+    publisher: Princeton University Press
+    publisher-place: Princeton, NJ
+    issued: 1990
+    ISBN: "978-0-691-02509-4"
+    URL: "https://press.princeton.edu/our-authors/polya-george"
+    note: "Reprint of the 1954 original."
+
+  - id: polya-1990-2
+    type: book
+    title: "Mathematics and Plausible Reasoning, Volume 2: Patterns of Plausible Inference"
+    language: en
+    author:
+      - family: Pólya
+        given: George
+    publisher: Princeton University Press
+    publisher-place: Princeton, NJ
+    issued: 1990
+    ISBN: "978-0-691-02510-0"
+    URL: "https://press.princeton.edu/our-authors/polya-george"
+    note: "Reprint of the 1954 original."
+
+  - id: polya-1981
+    type: book
+    title: "Mathematical Discovery: On Understanding, Learning, and Teaching Problem Solving"
+    language: en
+    author:
+      - family: Pólya
+        given: George
+    publisher: John Wiley & Sons
+    publisher-place: New York
+    issued: 1981
+    ISBN: "978-0-471-08975-9"
+    URL: "https://www.wiley.com/en-us/Mathematical+Discovery%3A+On+Understanding%2C+Learning%2C+and+Teaching+Problem+Solving%2C+Combined+Edition-p-9780471089759"
+    note: "Combined edition of the two volumes of 1962 and 1965."
+
+  - id: polya-1959-ru
+    type: book
+    title: "Как решать задачу"
+    language: ru
+    author:
+      - family: Пойа
+        given: Джордж
+    publisher: Учпедгиз
+    publisher-place: Москва
+    issued: 1959
+    note: "Russian translation of How to Solve It."
+
+  - id: polya-1975-ru
+    type: book
+    title: "Математика и правдоподобные рассуждения"
+    language: ru
+    edition: "2"
+    author:
+      - family: Пойа
+        given: Джордж
+    publisher: Наука
+    publisher-place: Москва
+    issued: 1975
+    note: "Том 1: Индукция и аналогия в математике. Том 2: Схемы правдоподобных умозаключений."
+
+  - id: polya-1976-ru
+    type: book
+    title: "Математическое открытие: Решение задач: основные понятия, изучение и преподавание"
+    language: ru
+    edition: "2"
+    author:
+      - family: Пойа
+        given: Джордж
+    publisher: Наука
+    publisher-place: Москва
+    issued: 1976
+    # math.ru returned 502 during checking, so this link was not opened.
+    URL: "https://math.ru/lib/book/djvu/000040"

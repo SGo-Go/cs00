@@ -1,0 +1,211 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Books on numbers, numeral systems and binary code, including books for children and teenagers.
+
+references:
+  - id: courant-robbins-1996
+    type: book
+    title: "What Is Mathematics? An Elementary Approach to Ideas and Methods"
+    edition: "2"
+    author:
+      - family: Courant
+        given: Richard
+      - family: Robbins
+        given: Herbert
+    editor:
+      - family: Stewart
+        given: Ian
+    publisher: Oxford University Press
+    publisher-place: New York
+    issued: 1996
+    ISBN: "978-0-19-510519-3"
+    URL: "https://www.cimat.mx/~gil/docencia/2017/mate_elem/%5BCourant,Robbins%5DWhat_Is_Mathematics%282nd_edition_1996%29v2.pdf"
+    note: "Chapter I, The Natural Numbers: integer representation and other number systems."
+
+  - id: courant-robbins-2001-ru
+    type: book
+    title: "Что такое математика? Элементарный очерк идей и методов"
+    language: ru
+    edition: "3"
+    author:
+      - family: Курант
+        given: Рихард
+      - family: Роббинс
+        given: Герберт
+    editor:
+      - family: Колмогоров
+        given: А. Н.
+    publisher: МЦНМО
+    publisher-place: Москва
+    issued: 2001
+    ISBN: "978-5-900916-45-3"
+    URL: "https://old.mccme.ru//free-books//pdf/kurant.pdf"
+    note: "Глава I, Натуральные числа."
+
+  - id: schmandt-besserat-1999
+    type: book
+    title: The History of Counting
+    language: en
+    author:
+      - family: Schmandt-Besserat
+        given: Denise
+    illustrator:
+      - family: Hays
+        given: Michael
+    publisher: Morrow Junior Books
+    publisher-place: New York
+    issued: 1999
+    ISBN: "978-0-688-14119-6"
+
+  - id: anno-1977
+    type: book
+    title: "Anno's Counting Book"
+    language: en
+    author:
+      - family: Anno
+        given: Mitsumasa
+    publisher: Crowell
+    publisher-place: New York
+    issued: 1977
+
+  - id: enzensberger-1998-en
+    type: book
+    title: "The Number Devil: A Mathematical Adventure"
+    language: en
+    author:
+      - family: Enzensberger
+        given: Hans Magnus
+    translator:
+      - family: Heim
+        given: Michael Henry
+    illustrator:
+      - family: Berner
+        given: Rotraut Susanne
+    publisher: Metropolitan Books
+    publisher-place: New York
+    issued: 1998
+    ISBN: "978-0-8050-5770-6"
+    original-title: Der Zahlenteufel
+
+  - id: enzensberger-2013-ru
+    type: book
+    title: "Дух Числа. Книга под подушку для всех, кто боится математики"
+    language: ru
+    author:
+      - family: Энценсбергер
+        given: Ханс Магнус
+    translator:
+      - family: Калинин
+        given: Иван Сергеевич
+    illustrator:
+      - family: Бернер
+        given: Ротраут Сюзанна
+    publisher: Страта
+    issued: 2013
+    ISBN: "978-5-906150-07-3"
+    original-title: Der Zahlenteufel
+
+  - id: enzensberger-2024-uk
+    type: book
+    title: "Пан Числовий чорт"
+    language: uk
+    author:
+      - family: Енценсберґер
+        given: Ганс Маґнус
+    translator:
+      - family: Сняданко
+        given: Наталка
+    illustrator:
+      - family: Бернер
+        given: Ротраут Сюзанна
+    publisher: Nebo BookLab Publishing
+    issued: 2024
+    ISBN: "978-617-7914-74-6"
+    original-title: Der Zahlenteufel
+
+  - id: demi-1997
+    type: book
+    title: "One Grain of Rice: A Mathematical Folktale"
+    language: en
+    author:
+      - family: Demi
+    publisher: Scholastic Press
+    publisher-place: New York
+    issued: 1997
+    ISBN: "978-0-590-93998-0"
+
+  - id: schwartz-1985
+    type: book
+    title: How Much Is a Million?
+    language: en
+    author:
+      - family: Schwartz
+        given: David M.
+    illustrator:
+      - family: Kellogg
+        given: Steven
+    publisher: Lothrop, Lee & Shepard
+    publisher-place: New York
+    issued: 1985
+    ISBN: "978-0-688-04050-5"
+
+  - id: liso-2019
+    type: book
+    title: How Do Computers Follow Instructions?
+    language: en
+    author:
+      - family: Liso
+        given: J. T.
+    illustrator:
+      - family: Bassani
+        given: Srimalie
+    publisher: Flowerpot Press
+    issued: 2019
+
+  - id: blum-1997
+    type: book
+    title: Mathamusements
+    language: en
+    author:
+      - family: Blum
+        given: Raymond
+    publisher: Sterling
+    publisher-place: New York
+    issued: 1997
+
+  - id: world-book-numbers
+    type: book
+    title: "Numbers"
+    collection-title: Building Blocks of Mathematics
+    language: en
+    author:
+      - literal: World Book
+    publisher: World Book
+    ISBN: "978-0-7166-1436-4"
+    URL: "https://www.worldbook.com/Numbers"
+
+  - id: prilutskaya-2021-ru
+    type: book
+    title: "История чисел"
+    collection-title: Сто тысяч почему
+    language: ru
+    author:
+      - family: Прилуцкая
+        given: Мария Олеговна
+    illustrator:
+      - family: Ефимова
+        given: Ксения
+    publisher: Качели
+    issued: 2021
+    ISBN: "978-5-907302-68-6"
+    URL: "https://www.labirint.ru/books/796306/"
+
+  - id: perelman-1926-ru
+    type: book
+    title: "Занимательная арифметика. Загадки и диковинки в мире чисел"
+    language: ru
+    author:
+      - family: Перельман
+        given: Яков Исидорович
+    publisher: Время
+    publisher-place: Ленинград
+    issued: 1926

@@ -57,6 +57,16 @@ print(format(5, "b"))   # 101
 print(int("101", 2))    # 5
 ```
 
+Так виглядає лічба від 0 до 15 чотирма бітами:
+
+::: {.content-visible when-format="html"}
+{{< video ../media/visuals/binary-counting.mp4 >}}
+:::
+
+::: {.content-visible unless-format="html"}
+![Чотирибітний лічильник на числі 15](../media/visuals/binary-counting.png)
+:::
+
 ## Текст — це числа
 
 Комп'ютер не знає літер.
@@ -108,6 +118,19 @@ print(0.1 + 0.2)   # 0.30000000000000004
 Це не помилка Python.
 Так працює запис дробових чисел у двійковій системі.
 
+Число float32 складається з 32 бітів: знака, порядку й мантиси.
+Ось як у них записуються 6,25, −0,75 і 0,1:
+
+::: {.content-visible when-format="html"}
+{{< video ../media/visuals/floating-point.mp4 >}}
+:::
+
+::: {.content-visible unless-format="html"}
+![Розкладання числа 0,1 у форматі float32 на знак, порядок і мантису](../media/visuals/floating-point.png)
+:::
+
+Спробуйте інші числа й формати в зошиті `notebooks/floating_point.py`.
+
 ## Практика
 
 1. Запишіть у двійковому вигляді числа 3, 10 і 255.
@@ -125,7 +148,7 @@ print(0.1 + 0.2)   # 0.30000000000000004
 
 ## Додаткові матеріали
 
-- Системи числення: розділ I книги [@courant-robbins-1996].
+- Системи числення: розділ I книги [@courant-robbins-1996]. Російською: [@courant-robbins-2001-ru].
 - [Unicode у Вікіпедії](https://uk.wikipedia.org/wiki/Unicode)
 - [UTF-8 у Вікіпедії](https://uk.wikipedia.org/wiki/UTF-8)
 - [Unicode HOWTO у документації Python](https://docs.python.org/3/howto/unicode.html)

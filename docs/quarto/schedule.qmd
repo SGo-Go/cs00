@@ -16,11 +16,11 @@ title: "Розклад"
 | Тиждень | Дата | Тема | Матеріали | Завдання |
 | --------- | ------ | ------ | ----------- | ---------- |
 | 0 | TBD | Налаштування середовища | [Інструкція](resources.qmd#налаштування-середовища) | — |
-| 1 | TBD | «Так» і «Ні»: як комп'ютери розуміють дані | [Конспект](lectures/01-data-encoding.qmd) | — |
-| 2 | TBD | Від операцій до інструкцій: як працює комп'ютер | [Конспект](lectures/02-instructions.qmd) | — |
-| 3 | TBD | Від ідеї до пакунка: пакування та дизайн | [Конспект](lectures/03-packaging-design.qmd) | — |
-| 4 | TBD | Від Software 1.0 до 2.0: програмування в епоху ШІ | [Конспект](lectures/04-software-ai.qmd) | — |
-| 5 | TBD | [Git](glossary.qmd#git) і [GitHub](glossary.qmd#github) | Слайди, нотатки | Завдання 4 видано |
+| 1 | TBD | «Так» і «Ні»: як комп'ютери розуміють дані | [Конспект](lectures/01-data-encoding.qmd), [PDF](lectures/01-data-encoding.pdf) | — |
+| 2 | TBD | Від операцій до інструкцій: як працює комп'ютер | [Конспект](lectures/02-instructions.qmd), [PDF](lectures/02-instructions.pdf) | — |
+| 3 | TBD | Програми = алгоритми + структури даних | [Конспект](lectures/03-algorithms-data-structures.qmd), [PDF](lectures/03-algorithms-data-structures.pdf) | — |
+| 4 | TBD | Від ідеї до пакунка: пакування та дизайн | [Конспект](lectures/04-packaging-design.qmd), [PDF](lectures/04-packaging-design.pdf) | — |
+| 5 | TBD | Від Software 1.0 до 2.0: програмування в епоху ШІ | [Конспект](lectures/05-software-ai.qmd), [PDF](lectures/05-software-ai.pdf) | — |
 | 6 | TBD | Що далі: огляд [CS50](glossary.qmd#cs50) | Слайди, нотатки | Завдання 4 здано |
 | 7 | TBD | Презентація фінальних проєктів | — | Проєкт здано |
 
