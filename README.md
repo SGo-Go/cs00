@@ -17,6 +17,8 @@
 | Path | Description |
 | --- | --- |
 | `libs/cs00/` | Core Python library shared by all assignments |
+| `libs/visuals/` | [Manim](https://www.manim.community/) animations for lectures (`cs00-visuals`) |
+| `notebooks/` | Interactive [marimo](https://marimo.io/) notebooks, e.g. `marimo edit notebooks/binary_counter.py` |
 | `assignments/assignment-00/` | Library for assignment 0 (depends on `cs00`) |
 | `docs/quarto/` | Course website |
 | `docs/sphinx/` | API reference of the Python libraries |
@@ -36,3 +38,38 @@ sphinx-build -W -b html docs/sphinx docs/sphinx/_build/html
 ```
 
 New packages are added to `docs/sphinx/api.rst`.
+
+## Lecture visualizations
+
+Animations are written with [Manim Community](https://docs.manim.community/), the maintained fork of the 3Blue1Brown library.
+Each scene is a class in `libs/visuals/python/cs00_visuals/scenes/` and is registered in `SCENES` in that package's `__init__.py`.
+
+Manim builds `pycairo` and `manimpango` from source on Linux, so install the system libraries first:
+
+```sh
+sudo apt-get install libcairo2-dev libpango1.0-dev pkg-config
+uv sync --inexact --group visuals
+```
+
+Render every scene to an MP4 video and a PNG still in `docs/quarto/media/visuals/`:
+
+```sh
+uv run --no-sync python -m cs00_visuals.render
+```
+
+Use `--still-only` for a quick check, `--only BinaryCounting` for one scene, and `--quality youtube` (1080p60) or `--quality 4k` for upload-ready videos.
+Rendered files are gitignored, and the publish workflow renders them before building the site.
+
+Lectures show the video on the web and the still in the PDF:
+
+```markdown
+::: {.content-visible when-format="html"}
+{{< video ../media/visuals/binary-counting.mp4 >}}
+:::
+
+::: {.content-visible unless-format="html"}
+![Description](../media/visuals/binary-counting.png)
+:::
+```
+
+Without Manim, `quarto render` writes grey placeholder stills so the PDFs still build.

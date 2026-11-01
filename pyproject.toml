@@ -6,10 +6,12 @@ version = "0.0.0"
 
 [dependency-groups]
 docs = [ "sphinx>=8.0" ]
+visuals = [ "cs00-visuals" ]
 
 [tool.uv.sources]
 cs00 = {workspace = true}
 cs00-assignment-00 = {workspace = true}
+cs00-visuals = {workspace = true}
 
 [tool.uv.workspace]
 members = [ "assignments/*", "libs/*" ]
