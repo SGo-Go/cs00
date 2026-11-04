@@ -6,17 +6,12 @@ import marimo
 __generated_with = "0.25.2"
 app = marimo.App(width="medium")
 
+with app.setup:
+    import marimo as mo
+
 
 @app.cell
 def _():
-    import marimo as mo
-    from cs00_assignment_00.binary import to_binary
-
-    return mo, to_binary
-
-
-@app.cell
-def _(mo):
     mo.md("""
     # Двійковий лічильник
 
@@ -27,21 +22,21 @@ def _(mo):
 
 
 @app.cell
-def _(mo):
+def _():
     width = mo.ui.dropdown(options={"4 біти": 4, "8 бітів": 8}, value="8 бітів", label="Кількість бітів")
     width
     return (width,)
 
 
 @app.cell
-def _(mo, width):
+def _(width):
     number = mo.ui.slider(0, 2**width.value - 1, value=min(42, 2**width.value - 1), label="Число", show_value=True)
     number
     return (number,)
 
 
 @app.cell
-def _(mo, number, to_binary, width):
+def _(number, width):
     ON, OFF, HEX = "#2e7d32", "#cfd8dc", "#1565c0"
 
     def bit_box(bit: str, weight: int) -> str:
@@ -55,7 +50,7 @@ def _(mo, number, to_binary, width):
             "</div>"
         )
 
-    bits = to_binary(number.value).zfill(width.value)
+    bits = format(number.value, f"0{width.value}b")
     nibbles = [bits[start : start + 4] for start in range(0, len(bits), 4)]
     groups = []
     for index, nibble in enumerate(nibbles):
@@ -73,14 +68,14 @@ def _(mo, number, to_binary, width):
 
 
 @app.cell
-def _(mo, number, to_binary, width):
+def _(number, width):
     value = number.value
     mo.md(
         f"""
         | Основа | Запис |
         | ------ | ----- |
         | 10 | `{value}` |
-        | 2 | `{to_binary(value).zfill(width.value)}` |
+        | 2 | `{format(value, f"0{width.value}b")}` |
         | 16 | `{format(value, "X")}` |
         | 8 | `{format(value, "o")}` |
         """
@@ -89,15 +84,12 @@ def _(mo, number, to_binary, width):
 
 
 @app.cell
-def _(mo, to_binary):
+def _():
     mo.vstack(
         [
             mo.md("## Таблиця для чисел від 0 до 15"),
             mo.ui.table(
-                [
-                    {"10": value, "2": to_binary(value).zfill(4), "16": format(value, "X")}
-                    for value in range(16)
-                ],
+                [{"10": value, "2": format(value, "04b"), "16": format(value, "X")} for value in range(16)],
                 selection=None,
                 pagination=False,
             ),

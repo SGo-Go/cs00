@@ -6,18 +6,14 @@ import marimo
 __generated_with = "0.25.2"
 app = marimo.App(width="medium")
 
-
-@app.cell
-def _():
+with app.setup:
     import math
 
     import marimo as mo
 
-    return math, mo
-
 
 @app.cell
-def _(mo):
+def _():
     mo.md("""
     # Шифр Цезаря
 
@@ -52,7 +48,7 @@ def _():
 
 
 @app.cell
-def _(ALPHABETS, mo):
+def _(ALPHABETS):
     language = mo.ui.dropdown(options=ALPHABETS, value="Українська", label="Алфавіт")
     mode = mo.ui.radio(options={"Зашифрувати": 1, "Розшифрувати": -1}, value="Зашифрувати", label="Дія")
     mo.hstack([language, mode], justify="start", gap=2)
@@ -60,7 +56,7 @@ def _(ALPHABETS, mo):
 
 
 @app.cell
-def _(language, mo):
+def _(language):
     default_text = "Привіт, світе!" if language.selected_key == "Українська" else "Hello, world!"
     shift = mo.ui.slider(0, len(language.value) - 1, value=3, label="Зсув", show_value=True)
     message = mo.ui.text_area(value=default_text, label="Текст", full_width=True)
@@ -69,7 +65,7 @@ def _(language, mo):
 
 
 @app.cell
-def _(caesar, language, message, mo, mode, shift):
+def _(caesar, language, message, mode, shift):
     result = caesar(message.value, mode.value * shift.value, language.value)
     mo.md(f"""
     **Результат:**
@@ -82,7 +78,7 @@ def _(caesar, language, message, mo, mode, shift):
 
 
 @app.cell
-def _(language, math, message, mo, shift):
+def _(language, message, shift):
     def wheel(alphabet: str, offset: int, used: set[str]) -> str:
         """Draw two letter rings: the outer one plain, the inner one shifted by `offset`."""
         size, center = len(alphabet), 210
@@ -102,7 +98,9 @@ def _(language, math, message, mo, shift):
             ):
                 x, y = center + radius * math.cos(angle), center + radius * math.sin(angle)
                 weight = "bold" if highlight else "normal"
-                parts.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="17" font-weight="{weight}" fill="{color}">{char}</text>')
+                parts.append(
+                    f'<text x="{x:.1f}" y="{y:.1f}" font-size="17" font-weight="{weight}" fill="{color}">{char}</text>'
+                )
         parts.append(f'<text x="{center}" y="{center}" font-size="34" fill="#37474f">+{offset}</text>')
         parts.append("</svg>")
         return "".join(parts)
@@ -112,19 +110,23 @@ def _(language, math, message, mo, shift):
         [
             mo.md("## Шифрувальний круг"),
             mo.md("Зовнішнє кільце — звичайні літери, внутрішнє — їхні заміни. Літери з тексту виділено."),
-            mo.Html(f'<div style="display:flex;justify-content:center">{wheel(language.value, shift.value, used_letters)}</div>'),
+            mo.Html(
+                f'<div style="display:flex;justify-content:center">{wheel(language.value, shift.value, used_letters)}</div>'
+            ),
         ]
     )
     return
 
 
 @app.cell
-def _(language, mo, shift):
+def _(language, shift):
     alphabet = language.value
     shifted = alphabet[shift.value :] + alphabet[: shift.value]
     cell = "padding:2px 5px;text-align:center;font-family:monospace;border:1px solid #cfd8dc"
     rows = "".join(
-        f"<tr><th style='{cell}'>{label}</th>" + "".join(f"<td style='{cell}'>{char}</td>" for char in letters) + "</tr>"
+        f"<tr><th style='{cell}'>{label}</th>"
+        + "".join(f"<td style='{cell}'>{char}</td>" for char in letters)
+        + "</tr>"
         for label, letters in (("Відкритий", alphabet), ("Шифр", shifted))
     )
     mo.vstack(
@@ -137,7 +139,7 @@ def _(language, mo, shift):
 
 
 @app.cell
-def _(caesar, language, mo, result):
+def _(caesar, language, result):
     mo.vstack(
         [
             mo.md("""
@@ -147,7 +149,10 @@ def _(caesar, language, mo, result):
     Серед варіантів легко помітити осмислений текст.
     """),
             mo.ui.table(
-                [{"Зсув": key, "Розшифровка": caesar(result, -key, language.value)} for key in range(len(language.value))],
+                [
+                    {"Зсув": key, "Розшифровка": caesar(result, -key, language.value)}
+                    for key in range(len(language.value))
+                ],
                 selection=None,
                 pagination=False,
             ),
