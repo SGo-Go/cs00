@@ -41,6 +41,30 @@ references:
     URL: "https://old.mccme.ru//free-books//pdf/kurant.pdf"
     note: "Глава I, Натуральные числа."
 
+  - id: singh-1997
+    type: book
+    title: "Fermat's Last Theorem"
+    language: en
+    author:
+      - family: Singh
+        given: Simon
+    publisher: Fourth Estate
+    publisher-place: London
+    issued: 1997
+    URL: "https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem_(book)"
+
+  - id: singh-2000-ru
+    type: book
+    title: "Великая теорема Ферма"
+    language: ru
+    author:
+      - family: Сингх
+        given: С.
+    publisher: МЦНМО
+    publisher-place: Москва
+    issued: 2000
+    URL: "https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem_(book)"
+
   - id: schmandt-besserat-1999
     type: book
     title: The History of Counting
@@ -84,24 +108,6 @@ references:
     publisher-place: New York
     issued: 1998
     ISBN: "978-0-8050-5770-6"
-    original-title: Der Zahlenteufel
-
-  - id: enzensberger-2013-ru
-    type: book
-    title: "Дух Числа. Книга под подушку для всех, кто боится математики"
-    language: ru
-    author:
-      - family: Энценсбергер
-        given: Ханс Магнус
-    translator:
-      - family: Калинин
-        given: Иван Сергеевич
-    illustrator:
-      - family: Бернер
-        given: Ротраут Сюзанна
-    publisher: Страта
-    issued: 2013
-    ISBN: "978-5-906150-07-3"
     original-title: Der Zahlenteufel
 
   - id: enzensberger-2024-uk

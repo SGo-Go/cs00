@@ -5,7 +5,13 @@ requires-python = ">=3.12"
 version = "0.0.0"
 
 [dependency-groups]
-docs = [ "sphinx>=8.0" ]
+docs = [
+  "ipykernel>=6.29",
+  "matplotlib>=3.10",
+  "nbclient>=0.10",
+  "nbformat>=5.10",
+  "sphinx>=8.0",
+]
 visuals = [ "cs00-visuals" ]
 
 [tool.uv.sources]

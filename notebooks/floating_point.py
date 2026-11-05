@@ -6,7 +6,7 @@ import marimo
 __generated_with = "0.25.2"
 app = marimo.App(width="medium")
 
-with app.setup:
+with app.setup(hide_code=True):
     import struct
     from decimal import Decimal, InvalidOperation
 

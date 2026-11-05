@@ -13,17 +13,17 @@ CS50 — вступний курс з інформатики Гарвардсь�
 
 | Курс                              | Оригінал                  | Українською                         |
 | --------------------------------- | ------------------------- | ----------------------------------- |
-| CS50x (основний)                  | [CS50x][x]                | [CS50x (2019)][base]                |
-| Розробка 2D-ігор                  | [CS50 2D][2d]             | —                                   |
-| Штучний інтелект                  | [CS50 AI][ai]             | [CS50 AI (2023)][ai-ua]             |
-| Вебпрограмування                  | [CS50 Web][web]           | [CS50 Web (2020)][web-ua]           |
-| Python                            | [CS50 Python][python]     | —                                   |
-| R                                 | [CS50 R][r]               | —                                   |
-| SQL                               | [CS50 SQL][sql]           | —                                   |
-| Бізнес                            | [CS50 Business][business] | [CS50 Business (2024)][business-ua] |
-| Кібербезпека                      | [CS50 Cyber][cyber]       | [CS50 Cyber (2023)][cyber-ua]       |
-| Для юристів                       | [CS50 Law][law]           | —                                   |
-| Scratch (візуальне програмування) | [CS50 Scratch][scratch]   | —                                   |
+| CS50x (основний)                  | [CS50x]                   | [CS50x (2019, ua)]                  |
+| Розробка 2D-ігор                  | [CS50 2D]                 | —                                   |
+| Штучний інтелект                  | [CS50 AI]                 | [CS50 AI (2023, ua)]                |
+| Вебпрограмування                  | [CS50 Web]                | [CS50 Web (2020, ua)]               |
+| Python                            | [CS50 Python]             | —                                   |
+| R                                 | [CS50 R]                  | —                                   |
+| SQL                               | [CS50 SQL]                | —                                   |
+| Бізнес                            | [CS50 Business]           | [CS50 Business (2024, ua)]          |
+| Кібербезпека                      | [CS50 Cyber]              | [CS50 Cyber (2023, ua)]             |
+| Для юристів                       | [CS50 Law]                | —                                   |
+| Scratch (візуальне програмування) | [CS50 Scratch]            | —                                   |
 
 Каталог українських курсів: [Prometheus](https://prometheus.org.ua/courses-catalog?q=cs50).
 
@@ -39,21 +39,44 @@ GitHub — вебсервіс для зберігання репозиторії
 У курсі через GitHub подаються домашні завдання.
 Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/GitHub) та на [сайті GitHub](https://github.com/).
 
-[x]: https://cs50.harvard.edu/x/
-[base]: https://prometheus.org.ua/prometheus-free/osnovy-programuvannya-cs50-2019/
-[2d]: https://cs50.harvard.edu/games
-[ai]: https://cs50.harvard.edu/ai
-[ai-ua]: https://prometheus.org.ua/prometheus-free/cs50-introduction-to-ai-with-python/
-[web]: https://cs50.harvard.edu/web/
-[web-ua]: https://prometheus.org.ua/prometheus-free/webprogramuvannya-python-javascript-cs50/
-[python]: https://cs50.harvard.edu/python
-[r]: https://cs50.harvard.edu/r
-[sql]: https://cs50.harvard.edu/sql
-[business]: https://cs50.harvard.edu/business
-[business-ua]: https://prometheus.org.ua/prometheus-free/cs50-programming-for-business/
-[cyber]: https://cs50.harvard.edu/cybersecurity
-[cyber-ua]: https://prometheus.org.ua/prometheus-free/cs50-cybersecurity/
-[law]: https://cs50.harvard.edu/law
-[scratch]: https://cs50.harvard.edu/scratch
+## Кодування Гаффмана {#huffman-coding}
+
+Кодування Гаффмана (Huffman encoding) — спосіб стискання даних без втрат, що призначає символам двійкові коди змінної довжини.
+Частіші символи отримують коротші коди, а рідкісніші — довші.
+Жоден код не є початком іншого, тому послідовність бітів можна однозначно розкодувати.
+Це стискання, а не шифрування: для відновлення даних не потрібен секретний ключ.
+Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/Код_Гаффмана).
+
+## Підстановочний шифр {#substitution-cipher}
+
+Підстановочний шифр — спосіб шифрування, у якому символи або групи символів відкритого тексту замінюють іншими за певним правилом.
+У шифрі простої заміни однакові символи завжди мають однакові заміни, тому закономірності мови, зокрема частоти літер, допомагають розкрити такий шифр.
+[Шифр Цезаря](#caesar-cipher) — приклад підстановочного шифру з простою заміною.
+Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/Підстановочний_шифр).
+
+## Шифр Цезаря {#caesar-cipher}
+
+Шифр Цезаря — [підстановочний шифр](#substitution-cipher) із простою заміною, у якому кожну літеру замінюють літерою на сталу кількість позицій далі в абетці.
+Після останньої літери відлік продовжується з початку абетки.
+Наприклад, для англійської абетки зі зсувом на три позиції `A` перетворюється на `D`, а `Z` — на `C`.
+Це навчальний приклад, а не спосіб захисту даних: усі можливі зсуви легко перебрати.
+Докладніше читайте на [сторінці у Вікіпедії](https://uk.wikipedia.org/wiki/Шифр_Цезаря).
+
+[CS50x]: https://cs50.harvard.edu/x/
+[CS50x (2019, ua)]: https://prometheus.org.ua/prometheus-free/osnovy-programuvannya-cs50-2019/
+[CS50 2D]: https://cs50.harvard.edu/games
+[CS50 AI]: https://cs50.harvard.edu/ai
+[CS50 AI (2023, ua)]: https://prometheus.org.ua/prometheus-free/cs50-introduction-to-ai-with-python/
+[CS50 Web]: https://cs50.harvard.edu/web/
+[CS50 Web (2020, ua)]: https://prometheus.org.ua/prometheus-free/webprogramuvannya-python-javascript-cs50/
+[CS50 Python]: https://cs50.harvard.edu/python
+[CS50 R]: https://cs50.harvard.edu/r
+[CS50 SQL]: https://cs50.harvard.edu/sql
+[CS50 Business]: https://cs50.harvard.edu/business
+[CS50 Business (2024, ua)]: https://prometheus.org.ua/prometheus-free/cs50-programming-for-business/
+[CS50 Cyber]: https://cs50.harvard.edu/cybersecurity
+[CS50 Cyber (2023, ua)]: https://prometheus.org.ua/prometheus-free/cs50-cybersecurity/
+[CS50 Law]: https://cs50.harvard.edu/law
+[CS50 Scratch]: https://cs50.harvard.edu/scratch
 
 [CS00]: https://sgo-go.github.io/cs00/
