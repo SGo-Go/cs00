@@ -31,6 +31,10 @@ ruff.toml
 tools
 .user
 
+# Quarto generated
+README_files/
+README.html
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

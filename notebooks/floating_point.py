@@ -6,19 +6,15 @@ import marimo
 __generated_with = "0.25.2"
 app = marimo.App(width="medium")
 
-
-@app.cell
-def _():
+with app.setup(hide_code=True):
     import struct
     from decimal import Decimal, InvalidOperation
 
     import marimo as mo
 
-    return Decimal, InvalidOperation, mo, struct
-
 
 @app.cell
-def _(mo):
+def _():
     mo.md(r"""
     # Числа з рухомою комою
 
@@ -46,7 +42,7 @@ def _():
 
 
 @app.cell
-def _(FORMATS, mo):
+def _(FORMATS):
     precision = mo.ui.dropdown(options=FORMATS, value="float32 (одинарна точність)", label="Формат")
     number = mo.ui.text(value="0.1", label="Число")
     mo.hstack([number, precision], justify="start", gap=2)
@@ -54,7 +50,7 @@ def _(FORMATS, mo):
 
 
 @app.cell
-def _(mo, number, precision, struct):
+def _(number, precision):
     fmt, exponent_bits, mantissa_bits = precision.value
     total_bits = 1 + exponent_bits + mantissa_bits
     bias = 2 ** (exponent_bits - 1) - 1
@@ -88,7 +84,7 @@ def _(mo, number, precision, struct):
 
 
 @app.cell
-def _(COLORS, bits, exponent_bits, mo):
+def _(COLORS, bits, exponent_bits):
     def bit_cell(bit: str, color: str) -> str:
         background = color if bit == "1" else "white"
         text = "white" if bit == "1" else color
@@ -116,14 +112,11 @@ def _(COLORS, bits, exponent_bits, mo):
 
 @app.cell
 def _(
-    Decimal,
-    InvalidOperation,
     bias,
     exponent_bits,
     exponent_field,
     mantissa_bits,
     mantissa_field,
-    mo,
     number,
     sign_bits,
     stored,
@@ -164,7 +157,7 @@ def _(
 
 
 @app.cell
-def _(Decimal, mo):
+def _():
     total = 0.1 + 0.2
     mo.md(f"""
     ## Чому `0.1 + 0.2 != 0.3`
@@ -173,10 +166,10 @@ def _(Decimal, mo):
 
     | Вираз | Точне збережене значення (float64) |
     | ----- | ---------------------------------- |
-    | `0.1` | `{Decimal(0.1)}` |
-    | `0.2` | `{Decimal(0.2)}` |
+    | `0.1` | `{Decimal.from_float(0.1)}` |
+    | `0.2` | `{Decimal.from_float(0.2)}` |
     | `0.1 + 0.2` | `{Decimal(total)}` |
-    | `0.3` | `{Decimal(0.3)}` |
+    | `0.3` | `{Decimal.from_float(0.3)}` |
 
     У Python `0.1 + 0.2 == 0.3` дає `{total == 0.3}`.
     Тому дробові числа порівнюють з допуском, наприклад через `math.isclose(0.1 + 0.2, 0.3)`.
