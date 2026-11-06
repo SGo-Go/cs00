@@ -2,10 +2,16 @@
 """Tests for the course visualizations."""
 
 import pytest
+from cs00.scenes.data_encoding.binary import BinaryCounting, bit_string, hex_digit
+from cs00.scenes.data_encoding.floating_point import (
+    Float32Parts,
+    FloatingPoint,
+    float32_parts,
+    float32_stored,
+    superscript,
+)
 from cs00_visuals.render import slug
 from cs00_visuals.scenes import SCENES
-from cs00_visuals.scenes.lecture01_binary import BinaryCounting, bit_string, hex_digit
-from cs00_visuals.scenes.lecture01_float import Float32Parts, float32_parts, float32_stored, superscript
 
 
 @pytest.mark.parametrize(("number", "expected"), [(0, "0"), (9, "9"), (10, "A"), (15, "F")])
@@ -29,6 +35,12 @@ def test_scene_names_are_unique() -> None:
     """Keep output file names unique."""
     names = [slug(scene) for scene in SCENES]
     assert len(names) == len(set(names))
+
+
+def test_registry_uses_data_encoding_scenes() -> None:
+    """Keep the renderer connected to the public scene classes."""
+    assert BinaryCounting in SCENES
+    assert FloatingPoint in SCENES
 
 
 def test_float32_parts_of_one() -> None:
