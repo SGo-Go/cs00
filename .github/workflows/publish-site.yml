@@ -27,14 +27,16 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: quarto-dev/quarto-actions/setup@v2
-      - uses: astral-sh/setup-uv@v6
-      # pycairo and manimpango have no Linux wheels, so they build against these libraries.
-      - name: Install system libraries for Manim
+      - uses: astral-sh/setup-uv@v7
+      # Manim builds native dependencies, and Quarto needs unzip to install Chrome.
+      - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends libcairo2-dev libpango1.0-dev pkg-config
+          sudo apt-get install -y --no-install-recommends libcairo2-dev libpango1.0-dev pkg-config unzip
+      - name: Install Chrome for Mermaid diagrams
+        run: quarto install chrome-headless-shell --no-prompt
       - name: Install Python dependencies
         run: uv sync --group docs --group visuals
       - name: Render visualizations
@@ -45,7 +47,7 @@ jobs:
         run: quarto render docs/quarto
       - name: Build API reference
         run: uv run --no-sync sphinx-build -W -b html docs/sphinx docs/quarto/_site/api
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: docs/quarto/_site
 
@@ -57,4 +59,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
