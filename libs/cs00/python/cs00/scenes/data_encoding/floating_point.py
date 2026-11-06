@@ -18,7 +18,7 @@ from manim import (
     Write,
 )
 
-from cs00_visuals.style import ACCENT, EXPONENT, FONT, MANTISSA, MUTED, SIGN, TEXT
+from cs00.scenes.style import ACCENT, EXPONENT, FONT, MANTISSA, MUTED, SIGN, TEXT
 
 BIAS = 127
 MANTISSA_BITS = 23

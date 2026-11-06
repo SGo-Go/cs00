@@ -18,7 +18,7 @@
 | --- | --- |
 | `libs/cs00/` | Core Python library shared by all assignments |
 | `libs/visuals/` | [Manim](https://www.manim.community/) animations for lectures (`cs00-visuals`) |
-| `notebooks/` | Interactive [marimo](https://marimo.io/) notebooks, e.g. `marimo edit notebooks/binary_counter.py` |
+| `assets/` | Lecture materials and interactive notebooks; see [assets/README.md](assets/README.md) |
 | `assignments/assignment-00/` | Library for assignment 0 (depends on `cs00`) |
 | `docs/quarto/` | Course website |
 | `docs/sphinx/` | API reference of the Python libraries |
@@ -39,10 +39,16 @@ sphinx-build -W -b html docs/sphinx docs/sphinx/_build/html
 
 New packages are added to `docs/sphinx/api.rst`.
 
+## Rendering the course site
+
+Install executable Quarto figure dependencies with `uv sync --inexact --group docs`.
+Render the full site with executable content using `QUARTO_PYTHON="$PWD/.venv/bin/python" quarto render docs/quarto --execute`.
+The publishing workflow explicitly selects this interpreter so Quarto can use the installed Jupyter dependencies.
+
 ## Lecture visualizations
 
 Animations are written with [Manim Community](https://docs.manim.community/), the maintained fork of the 3Blue1Brown library.
-Each scene is a class in `libs/visuals/python/cs00_visuals/scenes/` and is registered in `SCENES` in that package's `__init__.py`.
+Lecture 1 scenes are classes in `libs/cs00/python/cs00/scenes/data_encoding/` and are registered in `SCENES` in `libs/visuals/python/cs00_visuals/scenes/__init__.py`.
 
 Manim builds `pycairo` and `manimpango` from source on Linux, so install the system libraries first:
 

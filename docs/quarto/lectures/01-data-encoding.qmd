@@ -187,10 +187,10 @@ print(0.1 + 0.2)   # 0.30000000000000004
 
 | Зошит | Що можна дослідити | Відкрити |
 | ------ | ------------------- | ---------- |
-| Двійковий лічильник | Біти, розрядні ваги та запис числа у двійковій, вісімковій і шістнадцятковій системах | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/notebooks/binary_counter.py) |
-| Шифр Цезаря | Зсув символів української та англійської абеток, шифрування й розшифрування | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/notebooks/caesar_cipher.py) |
-| Кодування Гаффмана | Частоти символів, дерево та префіксні коди, стискання й відновлення тексту | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/notebooks/huffman_coding.py) |
-| Числа з рухомою комою | Біти знака, порядку й мантиси, формати float16/32/64 та похибки округлення | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/notebooks/floating_point.py) |
+| Двійковий лічильник | Біти, розрядні ваги та запис числа у двійковій, вісімковій і шістнадцятковій системах | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/binary_counter.py/wasm) |
+| Шифр Цезаря | Зсув символів української та англійської абеток, шифрування й розшифрування | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm) |
+| Кодування Гаффмана | Частоти символів, дерево та префіксні коди, стискання й відновлення тексту | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/huffman_coding.py/wasm) |
+| Числа з рухомою комою | Біти знака, порядку й мантиси, формати float16/32/64 та похибки округлення | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/floating_point.py/wasm) |
 
 ## Додаткові матеріали
 

@@ -1,5 +1,5 @@
 [project]
-dependencies = [ "manim>=0.19" ]
+dependencies = [ "cs00", "manim>=0.19" ]
 description = "Manim visualizations for CS00 lectures"
 name = "cs00-visuals"
 requires-python = ">=3.12"

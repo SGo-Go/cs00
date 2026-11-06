@@ -14,10 +14,10 @@ import shutil
 import tempfile
 from pathlib import Path
 
+from cs00.scenes.style import BACKGROUND
 from manim import Scene, tempconfig
 
 from .scenes import SCENES
-from .style import BACKGROUND
 
 # Manim quality presets: draft 480p15, web 720p30, youtube 1080p60, 4k 2160p60.
 QUALITIES: dict[str, str] = {

@@ -14,7 +14,7 @@ from manim import (
     Write,
 )
 
-from cs00_visuals.style import ACCENT, FONT, HEX, MUTED, OFF, ON, TEXT
+from cs00.scenes.style import ACCENT, FONT, HEX, MUTED, OFF, ON, TEXT
 
 
 def bit_string(number: int, width: int) -> str:
