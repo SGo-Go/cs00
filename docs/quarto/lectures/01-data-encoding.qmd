@@ -194,8 +194,7 @@ print(0.1 + 0.2)   # 0.30000000000000004
 
 ## Додаткові матеріали
 
-- [Розділ I: *Системи числення*](../assets/courant-robbins-ch1-1996-translation-ua.qmd) книги [@courant-robbins-1996].
-  Російською: [@courant-robbins-2001-ru].
+- [Розділ I: *Системи числення*](../assets/courant-robbins-1941-translation-ua/courant-robbins-ch1-1941-translation-ua.qmd) [@courant-robbins-ch1-translation-ua] (переклад розділу книги «Що таке математика?» [@courant-robbins-1941]).
 - [Unicode у Вікіпедії](https://uk.wikipedia.org/wiki/Unicode)
 - [UTF-8 у Вікіпедії](https://uk.wikipedia.org/wiki/UTF-8)
 - [Unicode HOWTO у документації Python](https://docs.python.org/3/howto/unicode.html)

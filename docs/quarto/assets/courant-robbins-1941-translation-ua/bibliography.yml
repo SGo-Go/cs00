@@ -1,0 +1,132 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+references:
+  - id: courant-robbins-1941
+    type: book
+    title: &courant-robbins-title "What Is Mathematics? An Elementary Approach to Ideas and Methods"
+    language: en
+    author: &courant-robbins-authors
+      - family: Courant
+        given: Richard
+      - family: Robbins
+        given: Herbert
+    publisher: Oxford University Press
+    publisher-place: New York
+    issued: 1941
+    genre: Non-fiction
+    keyword: Mathematics
+    URL: "https://uk.wikipedia.org/wiki/Що_таке_математика%3F"
+    note: "Wikipedia lists 521 pages and OCLC 16608993; ISBN 0-19-502517-2 identifies a later paperback."
+
+  - id: courant-robbins-1978-paperback
+    type: book
+    title: *courant-robbins-title
+    language: en
+    author: *courant-robbins-authors
+    publisher: Oxford University Press
+    publisher-place: New York
+    issued: 1978
+    medium: paperback
+    ISBN: "0-19-502517-2"
+    note: "First issued as an Oxford University Press paperback in 1978."
+
+  - id: courant-robbins-1996
+    type: book
+    title: "What Is Mathematics? An Elementary Approach to Ideas and Methods"
+    edition: "2"
+    author:
+      - family: Courant
+        given: Richard
+      - family: Robbins
+        given: Herbert
+    editor:
+      - family: Stewart
+        given: Ian
+    publisher: Oxford University Press
+    publisher-place: New York
+    issued: 1996
+    ISBN: "978-0-19-510519-3"
+    URL: "https://www.cimat.mx/~gil/docencia/2017/mate_elem/%5BCourant,Robbins%5DWhat_Is_Mathematics%282nd_edition_1996%29v2.pdf"
+    note: "Chapter I, The Natural Numbers: integer representation and other number systems."
+
+  - id: courant-robbins-2001-ru
+    type: book
+    title: "Что такое математика? Элементарный очерк идей и методов"
+    language: ru
+    edition: "3"
+    author:
+      - family: Курант
+        given: Рихард
+      - family: Роббинс
+        given: Герберт
+    editor:
+      - family: Колмогоров
+        given: А. Н.
+    publisher: МЦНМО
+    publisher-place: Москва
+    issued: 2001
+    ISBN: "978-5-900916-45-3"
+    URL: "https://old.mccme.ru//free-books//pdf/kurant.pdf"
+    note: "Глава I, Натуральные числа."
+
+  - id: singh-1997
+    type: book
+    title: "Fermat's Last Theorem: The Story of a Riddle That Confounded the World's Greatest Minds for 358 Years"
+    language: en
+    author:
+      - family: Singh
+        given: Simon
+    publisher: Fourth Estate
+    publisher-place: London
+    issued: 2002
+    ISBN: "978-1-84115-791-7"
+    wikipedia: "https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem_(book)"
+    URL: "https://dn721601.ca.archive.org/0/items/fermats-last-theorem-a-collection/Fermat%27s%20Last%20Theorem%20%28%20PDFDrive%20%29.pdf"
+    note: "The history of Fermat's Last Theorem and Andrew Wiles's proof."
+
+  - id: singh-2000-ru
+    type: book
+    title: "Великая теорема Ферма"
+    language: ru
+    author:
+      - family: Сингх
+        given: С.
+    publisher: МЦНМО
+    publisher-place: Москва
+    issued: 2000
+    URL: "https://royallib.com/book/singh_saymon/velikaya_teorema_ferma.html"
+
+  - id: wikibooks-fermat-2013
+    type: book
+    title: "Fermat's Last Theorem"
+    language: en
+    author:
+      - literal: Wikibooks contributors
+    publisher: Wikibooks
+    issued: 2013
+    number-of-pages: "46"
+    URL: "https://en.wikibooks.org/wiki/Fermat's_Last_Theorem"
+    note: "A Wikibooks work translated from Italian, distinct from Simon Singh's book."
+
+  - id: courant-robbins-ch1-translation-ua
+    type: chapter
+    title: "Розділ I. Натуральні числа"
+    container-title: "Що таке математика? Елементарний виклад ідей та методів"
+    author:
+      - family: Курант
+        given: Ріхард
+      - family: Роббінс
+        given: Герберт
+    language: uk
+    publisher: SGo-Go
+    issued: 2026
+    URL: "https://sgo-go.github.io/cs00/assets/courant-robbins-1941-translation-ua/courant-robbins-ch1-1941-translation-ua.html"
+    abstract: >-
+      Український переклад розділу про натуральні числа, системи числення, математичну індукцію та основи теорії чисел
+      із 2-ого англійського видання (1996), з додатковими примітками 3-ого російського видання.
+    keyword:
+      - натуральні числа
+      - системи числення
+      - математична індукція
+      - прості числа
+      - теорія чисел
+      - алгоритм Евкліда
