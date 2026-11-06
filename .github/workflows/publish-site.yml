@@ -40,6 +40,8 @@ jobs:
       - name: Render visualizations
         run: uv run --no-sync python -m cs00_visuals.render --quality web
       - name: Render site
+        env:
+          QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
         run: quarto render docs/quarto
       - name: Build API reference
         run: uv run --no-sync sphinx-build -W -b html docs/sphinx docs/quarto/_site/api
