@@ -13,6 +13,7 @@ bibliography:
   - references/algorithms.yml
   - references/number-systems.yml
   - references/problem-solving.yml
+  - references/courses.yml
 
 website:
   title: "CS00"

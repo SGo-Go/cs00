@@ -1,0 +1,24 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Generative AI and weight-space programming.
+
+references:
+  - id: takehi-et-al-2026-weight-space-programming
+    type: webpage
+    title: "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights"
+    author:
+      - family: Takehi
+        given: Rikiya
+      - family: Teoh
+        given: Jayden
+      - family: Zhang
+        given: Alex
+      - family: Khattab
+        given: Omar
+    issued:
+      date-parts:
+        - - 2026
+          - 11
+          - 2
+    URL: "https://rikiyat-github-io.translate.goog/blog/weight-space-programming/?_x_tr_sl=en&_x_tr_tl=uk&_x_tr_pto=wapp"
+    # URL: https://rikiyat.github.io/blog/weight-space-programming/
+
