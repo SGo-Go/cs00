@@ -107,6 +107,19 @@ references:
     URL: "https://en.wikibooks.org/wiki/Fermat's_Last_Theorem"
     note: "A Wikibooks work translated from Italian, distinct from Simon Singh's book."
 
+  - id: weber-1893-kronecker
+    type: article-journal
+    title: "Leopold Kronecker"
+    author:
+      - family: Weber
+        given: Heinrich
+    container-title: "Jahresbericht der Deutschen Mathematiker-Vereinigung"
+    volume: "2"
+    page: "5-31"
+    issued: 1893
+    URL: "https://gdz.sub.uni-goettingen.de/id/PPN37721857X_0002"
+    note: "On p. 19, Weber attributes the quotation to a lecture by Kronecker in 1886."
+
   - id: courant-robbins-ch1-translation-ua
     type: chapter
     title: "Розділ I. Натуральні числа"

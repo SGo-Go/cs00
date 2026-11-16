@@ -1,0 +1,42 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Courses and tutorials related to generative AI and deep learning.
+
+references:
+  - id: mit-6s978-ai-engineering-2026
+    type: webpage
+    title: "6.S978 Engineering AI Systems and Agents: AI Engineering"
+    publisher: "MIT OASYS Lab, Massachusetts Institute of Technology"
+    publisher-place: Cambridge, MA
+    issued: 2026
+    genre: Graduate course website
+    abstract: "Course on engineering language-model systems to be reliable, efficient, and maintainable through requirements, system design, stakeholder feedback, and evaluation."
+    note: "Fall 2026. Instructor: Omar Khattab."
+    URL: "https://ai-eng.oasys-lab.org/"
+
+  - id: mit-6-7960-deep-learning-2026
+    type: webpage
+    title: "6.7960 Deep Learning"
+    publisher: "Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science"
+    publisher-place: Cambridge, MA
+    issued: 2026
+    genre: Graduate course website
+    abstract: "Course covering deep-learning architectures, optimization, generalization, representation learning, and applications in vision, language, and robotics."
+    note: "Fall 2026. Instructors: Phillip Isola and Kaiming He."
+    URL: "https://deeplearning6-7960.github.io/#schedule"
+
+  - id: ganesh-2026-agentic-coding-tutorial
+    type: webpage
+    title: "6.7960 Agentic Coding Tutorial"
+    author:
+      - family: Ganesh
+        given: Anakha
+    publisher: GitHub
+    issued:
+      date-parts:
+        - - 2026
+          - 9
+          - 22
+    genre: Software tutorial repository
+    abstract: "Hands-on tutorial on using coding agents to build, test, visualize, and run a small PyTorch experiment."
+    note: "Created September 22, 2026; repository metadata last updated October 18, 2026. No license is specified."
+    URL: "https://github.com/anakhag07/deep-learning-agentic-coding-tutorial"

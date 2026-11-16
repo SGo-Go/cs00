@@ -1,3 +1,4 @@
+/.bootstrap_venv
 uv.lock
 
 .agents/skills

@@ -3,6 +3,7 @@
 
 from cs00.scenes.data_encoding.binary import BinaryCounting
 from cs00.scenes.data_encoding.floating_point import FloatingPoint
+from cs00.scenes.data_encoding.modular import IntegerModuloCircle
 from manim import Scene
 
-SCENES: tuple[type[Scene], ...] = (BinaryCounting, FloatingPoint)
+SCENES: tuple[type[Scene], ...] = (BinaryCounting, FloatingPoint, IntegerModuloCircle)

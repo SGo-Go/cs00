@@ -13,6 +13,7 @@ bibliography:
   - references/algorithms.yml
   - references/number-systems.yml
   - references/problem-solving.yml
+  - references/courses.yml
 
 website:
   title: "CS00"
@@ -47,7 +48,7 @@ website:
         text: "GitHub"
   page-footer:
     left: "© 2026 SGo-Go. Усі права захищено."
-    right: "Зроблено за допомогою [Quarto](https://quarto.org/)."
+    # right: "Зроблено за допомогою [Quarto](https://quarto.org/)."
 
 format:
   html:

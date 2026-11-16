@@ -10,6 +10,7 @@ from cs00.scenes.data_encoding.floating_point import (
     float32_stored,
     superscript,
 )
+from cs00.scenes.data_encoding.modular import IntegerModuloCircle
 from cs00_visuals.render import slug
 from cs00_visuals.scenes import SCENES
 
@@ -41,6 +42,7 @@ def test_registry_uses_data_encoding_scenes() -> None:
     """Keep the renderer connected to the public scene classes."""
     assert BinaryCounting in SCENES
     assert FloatingPoint in SCENES
+    assert IntegerModuloCircle in SCENES
 
 
 def test_float32_parts_of_one() -> None:
