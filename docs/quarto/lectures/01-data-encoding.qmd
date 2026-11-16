@@ -380,6 +380,26 @@ flowchart TD
 
 Токени відрізняються від символів Unicode і байтів UTF-8.
 Їхня кількість важлива, бо обсяг тексту, який модель може опрацювати за один раз, обмежений.
+Спробувати, як працюють справжні токенізатори, можна на онлайн-майданчиках.[^tokenizer-playgrounds]
+
+[^tokenizer-playgrounds]: Наприклад, <https://tiktokenizer.vercel.app/>.
+
+:::: {.content-visible when-format="html"}
+
+::: {.callout-note title="Try tiktokenizer.vercel.app" collapse="true"}
+
+<iframe
+    src="https://tiktokenizer.vercel.app/"
+    title="Токенізатор Tiktokenizer"
+    width="100%"
+    height="700"
+    loading="lazy"
+    style="border: 1px solid #cbd5e1; border-radius: 6px;">
+</iframe>
+
+:::
+
+::::
 
 Докладніше: [про токени](https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens) та [про мовні моделі](05-software-ai.qmd#що-таке-llm).
 
@@ -456,3 +476,4 @@ print(0.1 + 0.2)   # 0.30000000000000004
 - [Unicode у Вікіпедії](https://uk.wikipedia.org/wiki/Unicode)
 - [UTF-8 у Вікіпедії](https://uk.wikipedia.org/wiki/UTF-8)
 - [Unicode HOWTO у документації Python](https://docs.python.org/3/howto/unicode.html)
+- [Markdown Basics у документації Quarto](https://quarto.org/docs/authoring/markdown-basics.html)
