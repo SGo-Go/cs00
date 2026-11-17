@@ -5,4 +5,5 @@
 
 **/*.quarto_ipynb
 /site_libs/
-/media/visuals/
+/media/lecture*/video/
+/media/lecture*/img/*.png

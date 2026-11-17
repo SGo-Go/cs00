@@ -12,7 +12,7 @@ import zlib
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[1]
-STILL = re.compile(r"media/visuals/[\w-]+\.png")
+STILL = re.compile(r"media/lecture\d+/img/[\w-]+\.png")
 WIDTH, HEIGHT = 320, 180
 GREY = (69, 71, 90)
 

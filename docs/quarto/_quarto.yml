@@ -5,7 +5,7 @@ project:
   output-dir: _site
   pre-render: scripts/visuals_placeholders.py
   resources:
-    - media/visuals/
+    - media/
 
 lang: uk
 bibliography:

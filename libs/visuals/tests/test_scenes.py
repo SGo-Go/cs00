@@ -1,6 +1,8 @@
 # Copyright (C) 2026 SGo-Go. All rights reserved.
 """Tests for the course visualizations."""
 
+from pathlib import Path
+
 import pytest
 from cs00.scenes.data_encoding.binary import BinaryCounting, bit_string, hex_digit
 from cs00.scenes.data_encoding.floating_point import (
@@ -11,8 +13,9 @@ from cs00.scenes.data_encoding.floating_point import (
     superscript,
 )
 from cs00.scenes.data_encoding.modular import IntegerModuloCircle
-from cs00_visuals.render import slug
+from cs00_visuals.render import render_scene, slug
 from cs00_visuals.scenes import SCENES
+from manim import Dot, Scene
 
 
 @pytest.mark.parametrize(("number", "expected"), [(0, "0"), (9, "9"), (10, "A"), (15, "F")])
@@ -30,6 +33,23 @@ def test_bit_string(number: int, expected: str) -> None:
 def test_slug() -> None:
     """Derive kebab-case file names from scene class names."""
     assert slug(BinaryCounting) == "binary-counting"
+
+
+@pytest.mark.parametrize("movie", [False, True])
+def test_render_scene_groups_media(tmp_path: Path, movie: bool) -> None:
+    """Write generated media into type-specific folders below a lecture."""
+
+    class RenderProbe(Scene):
+        def construct(self) -> None:
+            self.add(Dot())
+            self.wait(0.1)
+
+    output = tmp_path / "lecture01"
+    output.mkdir()
+    result = render_scene(RenderProbe, output, "draft", movie=movie)
+    expected = output / ("video" if movie else "img") / ("render-probe.mp4" if movie else "render-probe.png")
+    assert result == expected
+    assert result.stat().st_size > 0
 
 
 def test_scene_names_are_unique() -> None:
