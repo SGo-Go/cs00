@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" role="img" aria-labelledby="title desc">
+  <title id="title">Відеоконтейнер: кадри та аудіодоріжки</title>
+  <desc id="desc">Контейнер MP4 або MKV містить відеопотік із чотирма послідовними кадрами та дві можливі аудіодоріжки, синхронізовані за спільною шкалою часу.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#374151"/>
+    </marker>
+    <g id="frame">
+      <rect width="112" height="60" rx="3" fill="#e5f2fb" stroke="#52758b"/>
+      <path d="M 1 43 H 111 V 59 H 1 Z" fill="#d5e8d2"/>
+      <path d="M 1 43 H 111" stroke="#63865b"/>
+    </g>
+  </defs>
+  <rect width="720" height="320" fill="#ffffff"/>
+  <rect x="10" y="10" width="700" height="256" rx="6" fill="#f7f9fa" stroke="#788891" stroke-width="2"/>
+  <g font-family="sans-serif" font-size="16" fill="#20302b">
+    <text x="28" y="40" font-size="19" font-weight="bold">Відеофайл-контейнер (MP4, MKV)</text>
+    <path d="M 10 56 H 710" stroke="#bac5cb"/>
+    <g stroke="#c7d0d5" stroke-dasharray="4 4">
+      <path d="M 154 72 V 256"/>
+      <path d="M 286 72 V 256"/>
+      <path d="M 418 72 V 256"/>
+      <path d="M 550 72 V 256"/>
+    </g>
+    <text x="28" y="122">Відеопотік</text>
+    <g text-anchor="middle" font-size="14">
+      <text x="210" y="84">Кадр 1</text>
+      <text x="342" y="84">Кадр 2</text>
+      <text x="474" y="84">Кадр 3</text>
+      <text x="606" y="84">Кадр 4</text>
+    </g>
+    <use href="#frame" x="154" y="94"/>
+    <use href="#frame" x="286" y="94"/>
+    <use href="#frame" x="418" y="94"/>
+    <use href="#frame" x="550" y="94"/>
+    <g fill="#d64b40" stroke="#9b3028">
+      <circle cx="174" cy="125" r="11"/>
+      <circle cx="328" cy="125" r="11"/>
+      <circle cx="482" cy="125" r="11"/>
+      <circle cx="636" cy="125" r="11"/>
+    </g>
+    <text x="28" y="193">Аудіо 1</text>
+    <rect x="154" y="170" width="508" height="34" rx="3" fill="#e4f2e8" stroke="#81a48c"/>
+    <path d="M 158 187 H 172 L 178 181 L 184 197 L 190 175 L 196 192 L 202 187 H 220 L 228 179 L 236 198 L 244 176 L 252 192 L 260 187 H 280 L 288 182 L 296 193 L 304 179 L 312 187 H 336 L 344 174 L 352 199 L 360 177 L 368 192 L 376 187 H 398 L 406 180 L 414 195 L 422 177 L 430 187 H 456 L 464 183 L 472 193 L 480 179 L 488 187 H 510 L 518 175 L 526 199 L 534 179 L 542 191 L 550 187 H 574 L 582 180 L 590 194 L 598 178 L 606 187 H 658" fill="none" stroke="#287147" stroke-width="2"/>
+    <text x="28" y="239">Аудіо 2</text>
+    <rect x="154" y="216" width="508" height="34" rx="3" fill="#fff0db" stroke="#c6a575"/>
+    <path d="M 158 233 H 190 L 196 229 L 202 239 L 208 225 L 214 233 H 250 L 258 222 L 266 245 L 274 224 L 282 238 L 290 233 H 322 L 330 228 L 338 241 L 346 225 L 354 233 H 390 L 398 230 L 406 239 L 414 226 L 422 233 H 458 L 466 222 L 474 245 L 482 225 L 490 237 L 498 233 H 534 L 542 227 L 550 242 L 558 224 L 566 233 H 604 L 612 229 L 620 239 L 628 227 L 636 233 H 658" fill="none" stroke="#946214" stroke-width="2"/>
+    <path d="M 154 286 H 678" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="154" y="309" font-size="14">0</text>
+    <text x="416" y="309" text-anchor="middle" font-size="14">Спільна шкала часу</text>
+    <text x="680" y="309" text-anchor="end" font-size="14">Час</text>
+  </g>
+</svg>

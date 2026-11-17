@@ -18,24 +18,21 @@ def _():
     # Шифр Цезаря
 
     Кожна літера замінюється літерою, що стоїть на кілька позицій далі в алфавіті.
-    Після останньої літери рахунок продовжується з початку, як на циферблаті.M
-    Інші символи, наприклад пробіли й розділові знаки, не змінюються.
+    Після останньої літери рахунок продовжується з початку, як на циферблаті.
+    Перед шифруванням або розшифруванням залишаються лише літери вибраного алфавіту у верхньому регістрі.
     """)
     return
 
 
 @app.function
 def caesar(text: str, shift: int, alphabet: str) -> str:
-    """Shift every letter of `alphabet` in `text` by `shift` positions, keeping case and other symbols."""
+    """Keep selected-alphabet letters, uppercase them, and apply the shift."""
     size = len(alphabet)
     result = []
-    for char in text:
-        upper = char.upper()
-        if upper in alphabet:
-            shifted = alphabet[(alphabet.index(upper) + shift) % size]
-            result.append(shifted if char.isupper() else shifted.lower())
-        else:
-            result.append(char)
+    for char in text.upper():
+        if char in alphabet:
+            shifted = alphabet[(alphabet.index(char) + shift) % size]
+            result.append(shifted)
     return "".join(result)
 
 
@@ -54,9 +51,9 @@ def _():
 
 @app.cell(hide_code=True)
 def _(language):
-    default_text = "Привіт, світе!" if language.selected_key == "Українська" else "Hello, world!"
+    default_text = "Почнемо шифрувати" if language.selected_key == "Українська" else "Let's start encrypting"
     shift = mo.ui.slider(0, len(language.value) - 1, value=3, label="Зсув", show_value=True)
-    message = mo.ui.text_area(value=default_text, label="Текст", full_width=True)
+    message = mo.ui.text_area(value=caesar(default_text, 0, language.value), label="Текст", full_width=True)
     mo.vstack([shift, message])
     return message, shift
 
@@ -76,7 +73,7 @@ def _(language, message, mode, shift):
 
 @app.cell(hide_code=True)
 def _(language, message, shift):
-    used_letters = {char.upper() for char in message.value} & set(language.value)
+    used_letters = set(caesar(message.value, 0, language.value))
     mo.vstack(
         [
             mo.md("## Шифрувальний круг"),
@@ -161,9 +158,7 @@ def caesar_wheel_svg(alphabet: str, offset: int, used: set[str]) -> str:
 @app.function(hide_code=True)
 def show_caesar_wheel(alphabet: str, offset: int, used: set[str]) -> mo.Html:
     """Display the cipher wheel for the selected alphabet and offset."""
-    return mo.Html(
-            f'<div style="display:flex;justify-content:center">{caesar_wheel_svg(alphabet, offset, used)}</div>'
-        )
+    return mo.Html(f'<div style="display:flex;justify-content:center">{caesar_wheel_svg(alphabet, offset, used)}</div>')
 
 
 if __name__ == "__main__":

@@ -27,7 +27,7 @@ QUALITIES: dict[str, str] = {
     "4k": "fourk_quality",
 }
 
-DEFAULT_OUTPUT = Path("docs/quarto/media/visuals")
+DEFAULT_OUTPUT = Path("docs/quarto/media/lecture01")
 
 
 def slug(scene_class: type[Scene]) -> str:
@@ -36,7 +36,7 @@ def slug(scene_class: type[Scene]) -> str:
 
 
 def render_scene(scene_class: type[Scene], output_dir: Path, quality: str, *, movie: bool) -> Path:
-    """Render one scene as an MP4 video or as a PNG of its last frame and copy it to `output_dir`."""
+    """Render a scene into the lecture's video or img subfolder."""
     with tempfile.TemporaryDirectory() as media_dir:
         options: dict[str, object] = {
             "quality": QUALITIES[quality],
@@ -55,7 +55,8 @@ def render_scene(scene_class: type[Scene], output_dir: Path, quality: str, *, mo
             scene.render()
             writer = scene.renderer.file_writer
             source = Path(writer.movie_file_path if movie else writer.image_file_path)
-            target = output_dir / f"{slug(scene_class)}{source.suffix}"
+            target = output_dir / ("video" if movie else "img") / f"{slug(scene_class)}{source.suffix}"
+            target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
     return target
 

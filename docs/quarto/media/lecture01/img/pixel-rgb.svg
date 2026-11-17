@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" viewBox="0 0 640 200" role="img" aria-labelledby="title desc">
+  <title id="title">A pixel and its RGB components</title>
+  <desc id="desc">A highlighted pixel in a grid has red intensity 255, green 128, and blue 64, producing the color #FF8040.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse" x="16" y="52">
+      <rect width="24" height="24" fill="#e2e8eb" stroke="#ffffff" stroke-width="2"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="640" height="200" fill="#ffffff"/>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle" fill="#1f2937">
+    <text x="64" y="30">Pixels</text>
+    <rect x="16" y="52" width="96" height="96" fill="url(#grid)"/>
+    <rect x="64" y="76" width="24" height="24" fill="#ff8040" stroke="#1f2937" stroke-width="2"/>
+    <path d="M 90 88 L 166 88" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="294" y="30">RGB (8 + 8 + 8 bits)</text>
+    <rect x="192" y="52" width="60" height="72" rx="3" fill="#ff0000"/>
+    <rect x="264" y="52" width="60" height="72" rx="3" fill="#008000"/>
+    <rect x="336" y="52" width="60" height="72" rx="3" fill="#000040"/>
+    <text x="222" y="150">R: 255</text>
+    <text x="294" y="150">G: 128</text>
+    <text x="366" y="150">B: 64</text>
+    <path d="M 414 88 L 484 88" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="550" y="30">1 pixel</text>
+    <rect x="508" y="52" width="84" height="72" rx="3" fill="#ff8040" stroke="#1f2937"/>
+    <text x="550" y="150">#FF8040</text>
+    <text x="294" y="184">24 bits = 3 bytes</text>
+  </g>
+</svg>
