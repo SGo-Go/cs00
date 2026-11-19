@@ -60,8 +60,6 @@ format:
     toc-title: "На цій сторінці"
     smooth-scroll: true
     code-copy: true
-  revealjs:
-    css: styles-tables.css
 
 execute:
   freeze: auto

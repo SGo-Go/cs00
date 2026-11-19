@@ -1,0 +1,5 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+
+format:
+  revealjs:
+    css: ../styles-tables.css
