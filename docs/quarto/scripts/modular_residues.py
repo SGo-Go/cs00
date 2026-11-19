@@ -1,10 +1,79 @@
 # Copyright (C) 2026 SGo-Go. All rights reserved.
 """Build the interactive modular-residue figure used in lecture 1."""
 
+from typing import NamedTuple
+
 import plotly.graph_objects as go
 
 PMODS = tuple(2**exponent for exponent in range(1, 9))
 LABEL_RADIUS = 1.18
+INTEGER_BIT_WIDTHS = tuple(range(2, 9))
+INTEGER_AXIS_BASE_OPACITY = 0.75
+
+INTEGER_AXIS_HOVER_SCRIPT = """
+const graph = document.getElementById('{plot_id}');
+const traceIndexes = [0, 1];
+graph.on('plotly_hover', (event) => {
+    const residue = event.points[0].customdata[4];
+    const opacities = graph.data.map((trace) =>
+        trace.customdata.map((point) => point[4] === residue ? 1 : 0.12)
+    );
+    Plotly.restyle(graph, {'marker.opacity': opacities}, traceIndexes);
+});
+graph.on('plotly_unhover', () => {
+    const opacities = graph.data.map((trace) => trace.customdata.map(() => 0.78));
+    Plotly.restyle(graph, {'marker.opacity': opacities}, traceIndexes);
+});
+"""
+
+
+class _IntegerAxisData(NamedTuple):
+    values: list[int]
+    colors: list[str]
+    unsigned_symbols: list[str]
+    signed_symbols: list[str]
+    unsigned_customdata: list[list[int | str]]
+    signed_customdata: list[list[int | str]]
+    tick_values: list[int]
+    axis_range: list[float]
+
+
+def _integer_axis_data(bits: int) -> _IntegerAxisData:
+    modulus = 2**bits
+    values = list(range(-modulus, 2 * modulus))
+    residues = [value % modulus for value in values]
+    colors = [f"hsl({residue * 360 / modulus:.1f}, 65%, 48%)" for residue in residues]
+    bit_width_hex = (bits + 3) // 4
+    binary_values = [format(residue, f"0{bits}b") for residue in residues]
+    hex_values = [format(residue, f"0{bit_width_hex}X") for residue in residues]
+    signed_values = [residue - modulus if residue >= modulus // 2 else residue for residue in residues]
+    unsigned_symbols = ["circle" if 0 <= value < modulus else "circle-open" for value in values]
+    signed_symbols = ["circle" if -(modulus // 2) <= value < modulus // 2 else "circle-open" for value in values]
+    unsigned_customdata = [
+        [value, binary_value, hex_value, modulus, residue, residue, signed_value]
+        for value, binary_value, hex_value, modulus, residue, signed_value in zip(
+            values, binary_values, hex_values, [modulus] * len(values), residues, signed_values, strict=True
+        )
+    ]
+    signed_customdata = [
+        [value, binary_value, hex_value, modulus, residue, residue, signed_value]
+        for value, binary_value, hex_value, modulus, residue, signed_value in zip(
+            values, binary_values, hex_values, [modulus] * len(values), residues, signed_values, strict=True
+        )
+    ]
+    tick_stride = max(1, modulus // 4)
+    tick_values = list(range(-modulus, 2 * modulus, tick_stride))
+    axis_range = [-modulus - 0.5, 2 * modulus - 0.5]
+    return _IntegerAxisData(
+        values,
+        colors,
+        unsigned_symbols,
+        signed_symbols,
+        unsigned_customdata,
+        signed_customdata,
+        tick_values,
+        axis_range,
+    )
 
 
 def _point_data(
@@ -125,3 +194,134 @@ def create_modular_residue_figure(pmod: int = 16, repr_min: int = -1, repr_max: 
         ],
     )
     return figure
+
+
+def create_integer_axis_figure(bits: int = 4) -> go.Figure:
+    """Build an interactive unsigned and two's-complement number-line figure.
+
+    Args:
+        bits: Bit width to display initially. Supported values are 3 through 8.
+
+    Returns:
+        A Plotly figure with unsigned and signed lanes, a bit-width slider,
+        and markers colored by their residue class.
+
+    Raises:
+        ValueError: If ``bits`` is outside the supported range.
+
+    """
+    if bits not in INTEGER_BIT_WIDTHS:
+        raise ValueError(f"bits must be in the range 3 through 8, got {bits}")
+
+    axis_data = _integer_axis_data(bits)
+    point_count = len(axis_data.values)
+    base_opacity = [INTEGER_AXIS_BASE_OPACITY] * point_count
+    hovertemplate = (
+        "Число на осі: %{customdata[0]}<br>"  # noqa: RUF001
+        "Бітове подання: %{customdata[1]} (0x%{customdata[2]})<br>"
+        "Клас за модулем %{customdata[3]}: %{customdata[4]}<br>"
+        "Беззнакове: %{customdata[5]}<br>"
+        "Знакове: %{customdata[6]}<extra></extra>"
+    )
+
+    figure = go.Figure()
+    figure.add_trace(
+        go.Scatter(
+            x=axis_data.values,
+            y=[1] * point_count,
+            customdata=axis_data.unsigned_customdata,
+            mode="markers",
+            marker={
+                "color": axis_data.colors,
+                "opacity": base_opacity,
+                "size": 9,
+                "symbol": axis_data.unsigned_symbols,
+                "line": {"color": "#ffffff", "width": 1},
+            },
+            name="Беззнакове",
+            hovertemplate=hovertemplate,
+            showlegend=False,
+        )
+    )
+    figure.add_trace(
+        go.Scatter(
+            x=axis_data.values,
+            y=[0] * point_count,
+            customdata=axis_data.signed_customdata,
+            mode="markers",
+            marker={
+                "color": axis_data.colors,
+                "opacity": base_opacity,
+                "size": 9,
+                "symbol": axis_data.signed_symbols,
+                "line": {"color": "#ffffff", "width": 1},
+            },
+            name="Доповнення до двійки",
+            hovertemplate=hovertemplate,
+            showlegend=False,
+        )
+    )
+
+    steps: list[dict[str, object]] = []
+    for current_bits in INTEGER_BIT_WIDTHS:
+        current_data = _integer_axis_data(current_bits)
+        current_count = len(current_data.values)
+        current_opacity = [INTEGER_AXIS_BASE_OPACITY] * current_count
+        steps.append(
+            {
+                "label": str(current_bits),
+                "method": "update",
+                "args": [
+                    {
+                        "x": [current_data.values, current_data.values],
+                        "y": [[1] * current_count, [0] * current_count],
+                        "customdata": [current_data.unsigned_customdata, current_data.signed_customdata],
+                        "marker.color": [current_data.colors, current_data.colors],
+                        "marker.opacity": [current_opacity, current_opacity],
+                        "marker.symbol": [current_data.unsigned_symbols, current_data.signed_symbols],
+                    },
+                    {
+                        "title.text": _integer_axis_title(current_bits),
+                        "xaxis.range": current_data.axis_range,
+                        "xaxis.tickvals": current_data.tick_values,
+                    },
+                ],
+            }
+        )
+
+    figure.update_layout(
+        title={"text": _integer_axis_title(bits), "x": 0.5},
+        height=440,
+        margin={"l": 145, "r": 25, "t": 75, "b": 95},
+        xaxis={
+            "title": "Число на осі",  # noqa: RUF001
+            "range": axis_data.axis_range,
+            "tickmode": "array",
+            "tickvals": axis_data.tick_values,
+            "zeroline": True,
+            "zerolinecolor": "#68736f",
+            "gridcolor": "#e4e9e7",
+        },
+        yaxis={
+            "range": [-0.55, 1.55],
+            "tickmode": "array",
+            "tickvals": [1, 0],
+            "ticktext": ["Беззнакове", "Доповнення до двійки"],
+            "showgrid": False,
+            "zeroline": False,
+        },
+        sliders=[
+            {
+                "active": INTEGER_BIT_WIDTHS.index(bits),
+                "currentvalue": {"prefix": "Кількість бітів: "},
+                "pad": {"t": 30},
+                "steps": steps,
+            }
+        ],
+    )
+    return figure
+
+
+def _integer_axis_title(bits: int) -> str:
+    """Return the title for a bit width and its corresponding modulus."""
+    return f"{bits}-бітові числа: класи за модулем {2**bits}"

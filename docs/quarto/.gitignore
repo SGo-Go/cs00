@@ -2,6 +2,7 @@
 /_site/
 /_freeze/
 *_files/
+/.tmp*
 
 **/*.quarto_ipynb
 /site_libs/
