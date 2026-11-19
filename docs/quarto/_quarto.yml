@@ -53,12 +53,15 @@ website:
 format:
   html:
     language: _language-uk.yml
+    css: styles-tables.css
     theme:
       light: [cosmo, styles.scss]
     toc: true
     toc-title: "На цій сторінці"
     smooth-scroll: true
     code-copy: true
+  revealjs:
+    css: styles-tables.css
 
 execute:
   freeze: auto

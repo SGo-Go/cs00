@@ -475,8 +475,40 @@ print(numpy.uint16(0xFF).astype(numpy.int8))
 
 # Текст — теж послідовність чисел
 
+<!-- ## ASCII, Unicode та UTF-8 -->
+
+```{mermaid}
+flowchart LR
+  A("<b>ASCII</b><br/>128 кодів · 0–127") -->|"ті самі кодові точки"| U("<b>Unicode</b><br/>U+0000–U+007F")
+  U -->|"кодові точки → байти"| B("<b>UTF-8</b><br/>1–4 байти на кодову точку")
+  A -.->|"ASCII-байти не змінюються"| B
+
+  classDef ascii fill:#fff1cc,stroke:#e6a23c,color:#233238,stroke-width:2px,font-size:18px;
+  classDef unicode fill:#e4f0f3,stroke:#174e67,color:#233238,stroke-width:2px,font-size:18px;
+  classDef utf8 fill:#f5e4de,stroke:#a64b34,color:#233238,stroke-width:2px,font-size:18px;
+  class A ascii;
+  class U unicode;
+  class B utf8;
+  linkStyle 0 stroke:#e6a23c,stroke-width:2px;
+  linkStyle 1 stroke:#174e67,stroke-width:2px;
+  linkStyle 2 stroke:#a64b34,stroke-width:2px,stroke-dasharray:6 4;
+```
 
 
+## ASCII: 128 базових кодів
+
+|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x | NUL | *SOH* | *STX* | *ETX* | EOT | *ENQ* | *ACK* | BEL | *BS* | HT | LF | VT | FF | CR | SO | SI |
+| 1x | *DLE* | DC1 | DC2 | DC3 | DC4 | *NAK* | SYN | *ETB* | *CAN* | *EM* | **SUB** | *ESC* | *FS* | *GS* | *RS* | *US* |
+| 2x | SP | ! | " | # | $ | % | & | ' | ( | ) | * | + | , | - | . | / |
+| 3x | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| 4x | **&#64;** | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+| 5x | P | Q | R | S | T | U | V | W | X | Y | Z | [ | **&#92;** | ] | *^* | *&#95;* |
+| 6x | **&#96;** | *a* | *b* | *c* | *d* | *e* | *f* | *g* | *h* | *i* | *j* | *k* | *l* | *m* | *n* | *o* |
+| 7x | *p* | *q* | *r* | *s* | *t* | *u* | *v* | *w* | *x* | *y* | *z* | *{* | **&#124;** | *}* | **~** | DEL |
+
+: ASCII {.striped .hover}
 
 ## Як прочитати файл?
 
