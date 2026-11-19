@@ -16,7 +16,6 @@ lecture01/
     ├── hex_viewer.py
     ├── image_viewer.py
     └── many_time_pad.py
-    └── many_time_pad.py
 ```
 
 Сцени для анімацій розташовані окремо в [cs00.scenes.data_encoding](../../libs/cs00/python/cs00/scenes/data_encoding/).
@@ -33,7 +32,6 @@ lecture01/
 | [Шифр Цезаря](notebooks/caesar_cipher.py) | Зсув, шифрування та розшифрування | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm) |
 | [Числа з рухомою комою](notebooks/floating_point.py) | Формати float16/32/64 та похибки | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/floating_point.py/wasm) |
 | [Кодування Гаффмана](notebooks/huffman_coding.py) | Префіксні коди та стискання тексту | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/huffman_coding.py/wasm) |
-| [Багаторазове використання потоку ключа](notebooks/many_time_pad.py) | XOR, одноразовий блокнот і витік інформації через повторне використання ключа | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm) |
 
 Для локального запуску з кореня репозиторію, наприклад:
 
