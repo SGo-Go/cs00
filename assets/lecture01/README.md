@@ -10,6 +10,7 @@ lecture01/
 └── notebooks/
     ├── binary_counter.py
     ├── caesar_cipher.py
+    ├── data_encoding.py
     ├── floating_point.py
     ├── huffman_coding.py
     ├── hex_viewer.py
@@ -24,6 +25,7 @@ lecture01/
 | --- | --- | --- |
 | [Пікселі та байти зображення](notebooks/image_viewer.py) | Масштабування, вибір ділянки та hex-байти RGB і відтінків сірого | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/image_viewer.py/wasm) |
 | [Двійковий лічильник](notebooks/binary_counter.py) | Біти та системи числення | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/binary_counter.py/wasm) |
+| [Кодування даних у Python](notebooks/data_encoding.py) | Числа, bytes, ASCII, Unicode, UTF-8 і читання файлів | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm) |
 | [Hex-переглядач файлів](notebooks/hex_viewer.py) | Перегляд байтів та ASCII з вибором зміщення й розміру вікна | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/hex_viewer.py/wasm) |
 | [Шифр Цезаря](notebooks/caesar_cipher.py) | Зсув, шифрування та розшифрування | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm) |
 | [Числа з рухомою комою](notebooks/floating_point.py) | Формати float16/32/64 та похибки | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/floating_point.py/wasm) |

@@ -1,0 +1,663 @@
+---
+title: "«Так» і «Ні»"
+subtitle: "Як комп'ютери розуміють дані"
+author: "CS00 · Лекція 1"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    progress: true
+    controls: true
+    transition: slide
+    width: 1280
+    height: 720
+    margin: 0.06
+    center: false
+    footer: "CS00 · Лекція 1"
+    code-copy: true
+execute:
+  freeze: auto
+---
+
+```{=html}
+<style>
+.reveal {
+  color: #233238;
+  font-family: "Aptos", "DejaVu Sans", sans-serif;
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #174e67;
+  font-family: "Aptos Display", "DejaVu Sans", sans-serif;
+  text-transform: none;
+}
+.reveal h2 {
+  border-bottom: 3px solid #e6a23c;
+  padding-bottom: .18em;
+}
+.reveal strong { color: #a64b34; }
+.reveal .slide-number { color: #174e67; }
+.reveal .small { font-size: .68em; }
+.reveal table { font-size: .72em; }
+.reveal img { max-height: 480px; object-fit: contain; }
+</style>
+```
+
+# Біт, байт, кілобайт, ... {background-image="https://static.theoneswelove.ch/assets/images/movies/The-Matrix-1999/still/The-Matrix-1999-still-1726071590190-1.jpg" background-opacity="0.85"}
+
+## Перший електронний цифровий комп'ютер [^Z1-computer] [^MESM]
+
+[^Z1-computer]: Ще раніше існував електромеханічний комп'ютер [Z1](https://uk.wikipedia.org/wiki/Z1_(комп'ютер)).
+[^MESM]: Першу в СРСР електронну обчислювальну машину [МЕСМ](https://uk.wikipedia.org/wiki/МЕСМ) створили в Києві.
+
+<!-- [електронні лампи](https://uk.wikipedia.org/wiki/Електронна_лампа) для зберігання бітів -->
+
+::: {.columns}
+::: {.column width="55%"}
+![](https://upload.wikimedia.org/wikipedia/commons/0/01/Atanasoff-Berry_Computer_at_Durhum_Center.jpg "Комп'ютер Атанасова — Беррі (ABC)"){width=100%}
+:::
+::: {.column width="45%"}
+**Комп'ютер ABC**
+
+| Характеристика | Значення |
+| --- | ---: |
+| Рік завершення | 1942 |
+| [Вакуумні лампи](https://uk.wikipedia.org/wiki/Електронна_лампа) | Понад 300 |
+| Частота живлення | 60 Гц |
+| Пам'ять | 3 000 біт |
+| Маса | 320 кг |
+:::
+:::
+
+## Комп'ютер працює з двома станами
+
+[off]: https://upload.wikimedia.org/wikipedia/commons/2/26/Bulbgraph_Off.svg
+[on]: https://upload.wikimedia.org/wikipedia/commons/1/12/Bulbgraph.svg
+
+| Сигналу немає | Є сигнал |
+| :---: | :---: |
+| ![Вимкнена лампа][off]{width=72} | ![Увімкнена лампа][on]{width=72} |
+| **0** | **1** |
+
+Один такий стан — **біт**.
+
+::: {.columns .fragment}
+::: {.column width="50%"}
+**10001011**
+:::
+::: {.column width="50%"}
+![on][on]{height=1em} ![off][off]{height=1em} ![off][off]{height=1em} ![off][off]{height=1em} ![on][on]{height=1em} ![off][off]{height=1em} ![on][on]{height=1em} ![on][on]{height=1em}
+:::
+:::
+
+## Двійкові дані в кіно
+
+![Червона та синя пігулки](https://upload.wikimedia.org/wikipedia/commons/5/52/Red_and_blue_pill.jpg)
+
+## Скільки значень дають біти?
+
+| Кількість бітів | Степінь двійки | Усі стани | Кількість значень |
+|----------------:|:-------------:|:----------|------------------:|
+| 1 | $2$ | `0`, `1` | 2 |
+| 2 | $2 \cdot 2$ | `00`, `01`, `10`, `11` | 4 |
+| 3 | $2 \cdot 2 \cdot 2$ | `000`, `001`, `010`, `011`, `100`, `101`, `110`, `111` | 8 |
+
+## Скільки значень дають біти?
+
+$$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
+
+- $n$ — кількість бітів.
+- $N$ — кількість комбінацій.
+
+## Скільки значень дають біти?
+
+| Кількість бітів | Степінь двійки                   | Скільки різних значень |
+|----------------:|:--------------------------------:|-----------------------:|
+|               8 | $2^8$                            |                    256 |
+|          **10** | **$2^{10}$**                     |               **1024** |
+|              16 | $2^{16}$                         |                  65536 |
+|              32 | $2^{32}$                         |             4294967296 |
+|              64 | $2^{64}$                         |   18446744073709551616 |
+
+## Самоперевірка {background-image="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202505/MIT-FreeAtoms-01-press.jpg" background-opacity="0.18"}
+
+Скількох бітів достатньо, щоб пронумерувати всі атоми у спостережуваному Всесвіті?
+
+::: {.callout-note title="Число Еддінгтона"}
+[Число Еддінгтона](https://en.wikipedia.org/wiki/Eddington_number) оцінює кількість протонів у спостережуваному Всесвіті як приблизно $10^{80}$.
+Отже, атомів не більше, ніж протонів: кожен атом містить щонайменше один протон.
+:::
+
+::: {.callout-tip title="Підказка"}
+::: {.incremental}
+- скільки бітів потрібно, щоб закодувати 10 значень?
+- $2^{10} = 1024 \approx 1000 = 10^3$
+:::
+:::
+
+## Байт і розміри даних
+
+**8 бітів = 1 байт.**
+
+Байт може мати **256** різних значень.
+
+::: {.fragment}
+Для більших обсягів є **кіло**байти, **мега**байти й **гіга**байти. 
+
+::: {.callout-warning title="Запитання"}
+Скільки байтів у кілобайті?
+:::
+:::
+
+## Порядки величин даних: десяткові та двійкові
+
+| Одиниця | Десяткова кількість байтів | SI | Двійкова кількість байтів | JEDEC | МЕК (IEC)[^IEC-prefixes] |
+| --- | ---------------------------: |:--:| --------------------------: |:-----:|:---------:|
+| байт | $1$ | B | $1$ | B | B |
+| кілобайт | $10^3$ | **kB** | $2^{10}$ | **KB** | KiB |
+| мегабайт | $10^6$ | MB | $2^{20}$ | MB | MiB |
+| гігабайт | $10^9$ | GB | $2^{30}$ | GB | GiB |
+
+- десяткові: $\times 1000 = 10^3$
+- двійкові: $\times 1024 = 2^{10}$
+
+[^IEC-prefixes]: Для двійкових кратних МЕК (IEC) використовує префікси «кібі-», «мебі-», «гібі-» тощо.
+
+<!-- У SI kB, MB і GB — десяткові одиниці; у JEDEC KB, MB і GB — двійкові. -->
+
+## Порядки величин даних: експонента
+
+<figure id="fig-orders-of-magnitude" class="figure">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Orders_of_magnitude_(english_annotations,_horizontal_layout).png" alt="Об'єкти у різних порядках величини: від субатомних масштабів (вгорі) до спостережуваного Всесвіту (знизу)." class="figure-img img-fluid">
+  <figcaption class="figure-caption">Об'єкти у різних порядках величини: від субатомних масштабів до спостережуваного Всесвіту.</figcaption>
+</figure>
+
+<!-- ![Діаграма порядків величин](https://upload.wikimedia.org/wikipedia/commons/f/fa/Orders_of_magnitude_(english_annotations%252C_horizontal_layout).png){width=100%} -->
+
+
+
+## Самоперевірка
+
+1. Який кілобайт більший: kB чи KB (KiB) — і на скільки байтів?
+
+2. А яка різниця в байтах між десятковими та двійковими терабайтами? Скільки ця різниця становить в GB і GiB?
+
+:::: {.callout-tip title="Підказки" .fragment}
+- $2^{10} = 1024$
+
+::: {.fragment .blur }
+- $2^{30} = 1073741824$
+:::
+
+::::
+
+# 
+<!-- # Позиційні системи числення -->
+
+::: {.r-fit-text .text-center}
+० १ २ ३ ४ ५ ६ ७ ८ ९
+:::
+::: {.fragment .r-fit-text .text-center}
+⠴ ⠂ ⠆ ⠒ ⠲ ⠢ ⠖ ⠶ ⠦ ⠔
+:::
+::: {.fragment .r-fit-text .text-center}
+〇 一 二 三 四 五 六 七 八 九
+:::
+::: {.fragment .r-fit-text .text-center}
+0 1 2 3 4 5 6 7 8 9
+:::
+# 
+
+<!-- 
+::: {.fragment .r-fit-text .text-center}
+Цифри — цеглинки чисел
+:::
+-->
+
+## Позиційний запис: десятковий
+
+- Цифри (цеглинки чисел): **0**, **1**, ..., **9**
+- вага позиції — степінь 10.
+
+$$2026_{10}=2\cdot10^3+0\cdot10^2+2\cdot10^1+6\cdot10^0$$
+
+## Позиційний запис: двійковий
+
+- Цифри: **0** і **1**.
+- вага позиції — степінь 2.
+
+$$101_2=1\cdot2^2+0\cdot2^1+1\cdot2^0=5_{10}$$
+
+## Позиційний запис: шістнадцятковий
+
+- Цифри: 
+
+  ::: {.incremental}
+  - **0**, ..., **9** (всього 10, 6 бракує)
+  - **A**, **B**, **C**, **D**, **E**, **F**
+  :::
+
+- вага позиції — степінь 16.
+
+::: {.fragment}
+$$2026_{10}=7\cdot16^2+14\cdot16^1+10\cdot16^0=7EA_{16}$$
+:::
+
+## Лічба чотирма бітами
+
+Як змінюється запис числа під час додавання одиниці?
+
+{{< video ../media/lecture01/video/binary-counting.mp4 >}}
+
+## Навіщо потрібна шістнадцяткова система?
+
+Одна hex-цифра відповідає **чотирьом бітам**.
+
+::: {.columns}
+::: {.column width="50%"}
+| Двійкова група | Hex |
+| --- | --- |
+| **0000** | **0** |
+| **0001** | **1** |
+| **0010** | **2** |
+| **0011** | **3** |
+| **0100** | **4** |
+| **0101** | **5** |
+| **0110** | **6** |
+| **0111** | **7** |
+:::
+::: {.column width="50%"}
+| Двійкова група | Hex |
+| --- | --- |
+| **1000** | **8** |
+| **1001** | **9** |
+| **1010** | **A** |
+| **1011** | **B** |
+| **1100** | **C** |
+| **1101** | **D** |
+| **1110** | **E** |
+| **1111** | **F** |
+:::
+:::
+
+## Самоперевірка
+
+- Який зараз рік у двійковій системі числення?
+- Яке шістнадцяткове число йде після $ABCDEF_{16}$?
+
+::: {.callout-tip title="Підказка" }
+
+::: {.incremental}
+- $2026_{10}=7EA_{16}$
+- $7_{16}=0111_2$, $A_{16}=1010_2$, $E_{16}=1110_2$
+- $\left(\underbrace{0111}_{7_{16}}\,\underbrace{1110}_{E_{16}}\,\underbrace{1010}_{A_{16}}\right)_2$
+<!-- - ![off][off]{height=1em}![on][on]{height=1em}![on][on]{height=1em}![on][on]{height=1em}![on][on]{height=1em}![on][on]{height=1em}![on][on]{height=1em}![off][off]{height=1em}![on][on]{height=1em}![off][off]{height=1em}![on][on]{height=1em}![off][off]{height=1em} -->
+:::
+
+:::
+
+<!-- Тому $2026_{10}=111111001010_2=7EA_{16}$. -->
+
+## Беззнакові цілі числа
+
+::: {.columns}
+::: {.column width="50%"}
+**8-бітовий беззнаковий тип**
+
+- $00_{16} \to 0$
+- $01_{16} \to 1$
+- $0A_{16} \to 10$
+- $FF_{16} \to 255 = 2^8-1$
+:::
+::: {.column width="50%"}
+**16-бітовий беззнаковий тип**
+
+- $0000_{16} \to 0$
+- $0001_{16} \to 1$
+- $000A_{16} \to 10$
+- $FFFF_{16} \to 65535 = 2^{16}-1$
+:::
+:::
+
+## Переповнення: що, якщо бітів замало?
+
+$$
+\begin{array}{r}
+\mathtt{\phantom{0}\boxed{1000'0000}_2}\\
+\underline{+\mathtt{\phantom{0}\boxed{1000'0000}}_2}\\
+\mathtt{1'\boxed{0000'0000}_2}
+\end{array}
+$$
+
+::: {.callout-caution title="Переповнення (overflow)"}
+Переповнення — це вихід результату за межі значень, які можна зберегти в заданій кількості бітів.
+:::
+
+## Переповнення як класи лишків
+
+::: {.callout-note title="Класи лишків для 8-бітових чисел $\pmod{256}$"}
+Зберігається остача за модулем $256$. **Класи лишків** визначають **еквівалентні** числа:
+
+$$0 \equiv 256 \equiv 2\cdot256 \equiv \cdots \equiv -256 \equiv -2\cdot256 \equiv \cdots \equiv 256\cdot k \pmod{256}$$
+:::
+
+::: {.callout-note title="Модульна арифметика зберігає суму й добуток"}
+Якщо числа еквівалентні за модулем $m$, їх можна замінювати у сумі та добутку:
+
+$$a\equiv a',\ b\equiv b'\pmod m \quad\Longrightarrow\quad a+b\equiv a'+b'\pmod m$$
+
+$$a\equiv a',\ b\equiv b'\pmod m \quad\Longrightarrow\quad ab\equiv a'b'\pmod m$$
+:::
+
+## Самоперевірка
+
+Назвіть приклади еквівалентних чисел для **10** за модулем **256**, додатних і від'ємних.
+
+::: {.callout-tip title="Підказка" .fragment}
+$$10 \equiv 0 + 10 \equiv 256 + 10 \equiv -256 + 10 \equiv 256 \cdot k + 10 \pmod{256}$$
+:::
+
+## Класи лишків у повсякденному житті
+
+Які **циклічні процеси** та прилади з повсякденного життя працюють за модульною арифметикою? За яким модулем?
+
+::: {.callout-tip title="Годинник" .fragment}
+<iframe src="https://free.timeanddate.com/clock/iaonrbck/n317/szw110/szh110/cf100/hnce1ead6" frameborder="0" width="30%"></iframe>
+:::
+
+## Класи лишків на колі
+
+
+```{python}
+#| echo: false
+#| fig-alt: "Інтерактивне коло класів лишків. Повзунок змінює модуль від 2 до 256 (повний байт), початкове значення — 16."
+
+%run ../scripts/modular_residues.py
+from IPython.display import HTML, display
+
+figure = create_modular_residue_figure(repr_min=-2, repr_max=3)
+
+display(HTML(figure.to_html(full_html=False, include_plotlyjs="cdn", include_mathjax=False)))
+```
+
+<!-- 
+## Класи лишків
+
+::: {.content-visible when-format="html"}
+{{< video ../media/lecture01/video/integer-modulo-circle.mp4 >}}
+::: 
+
+-->
+
+## Числа на осі: беззнакове й знакове подання
+
+```{python}
+#| echo: false
+
+%run ../scripts/modular_residues.py
+from IPython.display import HTML, display
+
+figure = create_integer_axis_figure()
+display(HTML(figure.to_html(
+  full_html=False,
+  include_plotlyjs="cdn",
+  include_mathjax=False,
+  post_script=INTEGER_AXIS_HOVER_SCRIPT,
+)))
+```
+
+
+
+## Від'ємні числа: доповнення до двійки
+
+У $n$ бітах число $-x$ кодують як $2^n-|x|$.
+
+::: {.callout-important title="Старший біт визначає знак числа"}
+
+- **0** — число невід'ємне.
+- **1** — найближче до нуля від'ємне $\equiv \pmod{2^n}$.
+
+:::
+
+::: {.callout-note title="Приклад для 8 бітів"}
+
+$$
+-5\equiv 256-5 \equiv 251=11111011_2 \pmod{256}
+$$
+
+:::
+
+
+## Самоперевірка
+
+1. У доповненні до двійки більше додатних чи від'ємних значень? Нуль не рахуємо.
+2. Якому числу відповідає $\mathtt{FF}_{16}$ в 8-бітовому доповненні до двійки? А в 16-бітовому доповненні до двійки?
+3. (*) Коли виникає переповнення при роботі із числами в доповненні до двійки?
+
+## Типи даних
+
+Бітовий запис тлумачить **тип даних**: знаковість і розрядність.
+
+::: {.columns}
+::: {.column width="50%"}
+**Той самий байт — різні значення**
+
+| Запис | Тип | Значення |
+| --- | --- | ---: |
+| `FF` | `uint8` | 255 |
+| `FF` | `int8` | −1 |
+
+Знакове розширення: `FF` → `FFFF` = −1.
+Нульове доповнення: `FF` → `00FF` = 255.
+:::
+::: {.column width="50%"}
+**Розрядність визначає діапазон**
+
+- `int8`, `uint8`, …, `int64`, `uint64`.
+- `u` — unsigned; `int` — ціле; число — біти.
+<!-- - Знаковий: $-2^{n-1}\ldots2^{n-1}-1$; беззнаковий: $0\ldots2^n-1$. -->
+
+:::
+:::
+
+## Типи даних Python
+
+- Python `int`: довільна точність.
+- NumPy `int8`, `uint8`, ..., `int64`, `uint64`: фіксована ширина.
+
+```{python}
+#| echo: true
+import numpy
+
+print(numpy.uint16(0xFF).astype(numpy.uint8))
+print(numpy.uint16(0xFF).astype(numpy.int8))
+```
+
+
+# Текст — теж послідовність чисел
+
+<!-- ## ASCII, Unicode та UTF-8 -->
+
+```{mermaid}
+flowchart LR
+  A("<b>ASCII</b><br/>128 кодів · 0–127") -->|"ті самі кодові точки"| U("<b>Unicode</b><br/>U+0000–U+007F")
+  U -->|"кодові точки → байти"| B("<b>UTF-8</b><br/>1–4 байти на кодову точку")
+  A -.->|"ASCII-байти не змінюються"| B
+
+  classDef ascii fill:#fff1cc,stroke:#e6a23c,color:#233238,stroke-width:2px,font-size:18px;
+  classDef unicode fill:#e4f0f3,stroke:#174e67,color:#233238,stroke-width:2px,font-size:18px;
+  classDef utf8 fill:#f5e4de,stroke:#a64b34,color:#233238,stroke-width:2px,font-size:18px;
+  class A ascii;
+  class U unicode;
+  class B utf8;
+  linkStyle 0 stroke:#e6a23c,stroke-width:2px;
+  linkStyle 1 stroke:#174e67,stroke-width:2px;
+  linkStyle 2 stroke:#a64b34,stroke-width:2px,stroke-dasharray:6 4;
+```
+
+
+## ASCII: 128 базових кодів
+
+|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x | NUL | *SOH* | *STX* | *ETX* | EOT | *ENQ* | *ACK* | BEL | *BS* | HT | LF | VT | FF | CR | SO | SI |
+| 1x | *DLE* | DC1 | DC2 | DC3 | DC4 | *NAK* | SYN | *ETB* | *CAN* | *EM* | **SUB** | *ESC* | *FS* | *GS* | *RS* | *US* |
+| 2x | SP | ! | " | # | $ | % | & | ' | ( | ) | * | + | , | - | . | / |
+| 3x | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = | > | ? |
+| 4x | **&#64;** | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |
+| 5x | P | Q | R | S | T | U | V | W | X | Y | Z | [ | **&#92;** | ] | *^* | *&#95;* |
+| 6x | **&#96;** | *a* | *b* | *c* | *d* | *e* | *f* | *g* | *h* | *i* | *j* | *k* | *l* | *m* | *n* | *o* |
+| 7x | *p* | *q* | *r* | *s* | *t* | *u* | *v* | *w* | *x* | *y* | *z* | *{* | **&#124;** | *}* | **~** | DEL |
+
+: ASCII {.striped .hover}
+
+## Алфавіт vs. іерогліфи
+
+::: {.r-fit-text .text-center}
+
+**休** [$\to$ **亻** + **木**]{.fragment}
+
+:::
+
+::: {.callout-tip title="Компоненти ієрогліфа" .fragment}
+
+- **亻** (**人**) людина
+- **木** дерево
+- людина + дерево = відпочивати
+:::
+
+
+## Алфавіт vs. іерогліфи
+
+::: {.callout-tip title="Приклади" .incremental}
+
+- **林** i **森**
+- **众**
+- **从**
+
+:::
+
+
+## Unicode (Юнікод) та UTF-8
+
+- Юнікод призначає символам **кодові точки**(`U+...`)
+- UTF-8 кодує кожну точку від 1 до 4 байтів.
+
+| Символ | Кодова точка | Байти UTF-8 |
+| --- | --- | --- |
+| `1` | `U+0031` | `31` |
+| `A` | `U+0041` | `41` |
+| `Л` | `U+041B` | `D0 9B` |
+| `❤️` | `U+2764 U+FE0F` | `E2 9D A4 EF B8 8F` |
+
+## Приклад: емодзі-серце
+
+```{python}
+#| echo: true
+import unicodedata
+
+heart_emoji = "❤️"
+print(heart_emoji.encode("utf-8").hex(" ").upper())
+print("Кодові точки символу:")
+for heart_character in heart_emoji:
+    print(f"U+{ord(heart_character):04X} {unicodedata.name(heart_character)}: {heart_character!r}")
+```
+
+<!-- Один видимий символ може складатися з кількох кодових точок. -->
+
+## Токени
+
+- **Мовні моделі**: GPT-4 (ChatGPT), gemini тощо.
+- **Токени** — одиниці тексту для мовних моделей
+
+```{mermaid}
+%%| fig-alt: "Вхідний текст перетворюється токенізатором на ідентифікатори токенів; модель передбачає ідентифікатори відповіді, які токенізатор перетворює на вихідний текст."
+flowchart LR
+    A(["Вхідний текст"]) --> B["Токенізатор"]
+    B -->|Ідентифікатори вхідних токенів| C["Мовна модель"]
+    C -->|Ідентифікатори токенів відповіді| D["Токенізатор"]
+    D --> E(["Текст відповіді"])
+    classDef text fill:#e6f4ea,stroke:#367c4b,color:#173e25
+    classDef process fill:#e8f0fe,stroke:#4167a8,color:#1c355c
+    class A,E text
+    class B,C,D process
+```
+
+## Токени
+
+<iframe
+    src="https://tiktokenizer.vercel.app/"
+    title="Токенізатор Tiktokenizer"
+    width="100%"
+    height="700"
+    loading="lazy"
+    style="border: 1px solid #cbd5e1; border-radius: 6px;">
+</iframe>
+
+
+# Файл: як тлумачити?
+
+<!-- Ті самі байти можна тлумачити як текст, зображення, звук або інструкції. -->
+
+- **Текстовий файл**: коди символів + домовлене кодування.
+
+- **Бінарний файл**: байти + формат інтерпретує відповідна програма.
+
+<!-- Наприклад, PNG починається з підпису `PNG`. -->
+
+## Піксель: одна клітинка зображення
+
+Растрове зображення — це сітка пікселів.
+
+Кожен піксель має колір, який часто задають складовими **R**, **G** і **B**.
+
+![](../media/lecture01/img/pixel-rgb.svg){fig-alt="Піксель у сітці задається інтенсивностями червоного, зеленого та синього світла."}
+
+## Відео — кадри, звук і час
+
+Відео = відеопотік (зображення з певною частотою) + аудіодоріжка
+
+![](../media/lecture01/img/video-container.svg){fig-alt="Послідовні кадри й дві аудіодоріжки синхронізовано на спільній шкалі часу."}
+
+## Спробувати
+
+- [Переглянути байти файлу у hex](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/hex_viewer.py/wasm).
+- [Збільшити пікселі зображення](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/image_viewer.py/wasm).
+
+## Стиснення: зберегти все чи відкинути частину?
+
+::: {.columns}
+::: {.column width="50%"}
+**Без втрат**
+
+Вихідні дані відновлюються точно.
+
+Приклади: ZIP, PNG, FLAC.
+
+:::
+::: {.column width="50%"}
+**З втратами**
+
+Частина малопомітних деталей відкидається.
+
+Приклади: JPEG, MP3, H.264.
+
+:::
+:::
+
+## Коротші коди для частіших символів
+
+Стисніть текст у [зошиті Гаффмана](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/huffman_coding.py/wasm).
+
+## Шифрування приховує зміст
+
+Шифрування перетворює відкритий текст на шифротекст за допомогою ключа.
+
+У шифрі Цезаря ключ — це зсув літер в абетці.
+
+Переберіть ключі у [зошиті шифру Цезаря](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm).
+
+Це навчальний шифр, не придатний для захисту секретів.
+
+## Що спробувати далі?
+
+- Спробуйте працювати з дробовими числами у [зошиті про рухому кому](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/floating_point.py/wasm).
