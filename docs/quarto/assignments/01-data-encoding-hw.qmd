@@ -1,0 +1,42 @@
+---
+title: "Завдання 1. Кодування даних"
+---
+
+## Інструкції
+
+- Прочитайте [конспект лекції 1 «Так» і «Ні»](../lectures/01-data-encoding.qmd) та розв'яжіть вправи для самоперевірки.
+- Попрацюйте з інтерактивними зошитами, щоб закріпити матеріал лекції.
+- Виконайте завдання з інтерактивного зошита [Кодування даних у Python](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm).
+- Для поглибленого закріплення матеріалу лекції:
+  - Прочитайте [розділ I «Системи числення»](../assets/courant-robbins-1941-translation-ua/courant-robbins-ch1-1941-translation-ua.qmd) [@courant-robbins-ch1-translation-ua] — переклад розділу книги «Що таке математика?» Ріхарда Куранта й Герберта Роббінса.
+  - Виконайте завдання зі зламу шифру Вернама в інтерактивному зошиті [Атака на шифр Вернама](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm).
+
+
+## Інтерактивні зошити  {#marimo-notebooks}
+
+### Зошити для дослідження
+
+
+| Зошит | Що можна дослідити | Відкрити |
+| ------ | ------------------- | ---------- |
+| Двійковий лічильник | Біти, розрядні ваги та запис числа у двійковій, вісімковій і шістнадцятковій системах | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/binary_counter.py/wasm) |
+| Переглядач файлів у шістнадцятковому форматі | Вміст файлів у шістнадцятковому форматі й ASCII, початкове зміщення та розмір вікна | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/hex_viewer.py/wasm) |
+| Пікселі та байти зображення | Масштабування до окремих пікселів, вибір ділянки та hex-байти RGB і відтінків сірого | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/image_viewer.py/wasm) |
+| Кодування Гаффмана | Частоти символів, дерево та префіксні коди, стискання й відновлення тексту | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/huffman_coding.py/wasm) |
+| Шифр Цезаря | Зсув символів української та англійської абеток, шифрування й розшифрування | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm) |
+
+## Зошити з вправами
+
+| Зошит | Для практики | Відкрити |
+| --- | --- | --- |
+| Кодування даних у Python | Числа, байти, ASCII, Unicode та UTF-8 | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm) |
+| (*) Атака на шифр Вернама | XOR, шифр Вернама і витік інформації через повторне використання ключа | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm) |
+
+## (*) Додаткові матеріали для лекції 01
+
+- [Розділ I: *Системи числення*](../assets/courant-robbins-1941-translation-ua/courant-robbins-ch1-1941-translation-ua.qmd) [@courant-robbins-ch1-translation-ua] (переклад розділу книги «Що таке математика?» Ріхарда Куранта й Герберта Роббінса).
+- [Unicode у Вікіпедії](https://uk.wikipedia.org/wiki/Unicode)
+- [UTF-8 у Вікіпедії](https://uk.wikipedia.org/wiki/UTF-8)
+- [Unicode HOWTO у документації Python](https://docs.python.org/3/howto/unicode.html)
+- [Markdown Basics у документації Quarto](https://quarto.org/docs/authoring/markdown-basics.html)
+

@@ -40,3 +40,14 @@ references:
     abstract: "Hands-on tutorial on using coding agents to build, test, visualize, and run a small PyTorch experiment."
     note: "Created September 22, 2026; repository metadata last updated October 18, 2026. No license is specified."
     URL: "https://github.com/anakhag07/deep-learning-agentic-coding-tutorial"
+
+  - id: stanford-cs255-introduction-to-cryptography-2026
+    type: webpage
+    title: "CS 255: Introduction to Cryptography"
+    publisher: "Stanford University, Department of Computer Science"
+    publisher-place: Stanford, CA
+    issued: 2026
+    genre: University course website
+    abstract: "Course introducing cryptographic primitives and their correct use to protect information in computer systems."
+    note: "Winter 2026."
+    URL: "https://cs255.stanford.edu/index.html"

@@ -15,7 +15,7 @@ def xor_bytes(left: bytes, right: bytes) -> bytes:
     """XOR equal-length byte strings, rejecting accidental truncation."""
     if len(left) != len(right):
         raise ValueError("XOR inputs must have equal lengths.")
-    return bytes(left_byte ^ right_byte for left_byte, right_byte in zip(left, right))
+    return bytes(left_byte ^ right_byte for left_byte, right_byte in zip(left, right, strict=True))
 
 
 @app.function(hide_code=True)
