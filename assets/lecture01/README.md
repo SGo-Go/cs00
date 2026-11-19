@@ -14,7 +14,8 @@ lecture01/
     ├── floating_point.py
     ├── huffman_coding.py
     ├── hex_viewer.py
-    └── image_viewer.py
+    ├── image_viewer.py
+    └── many_time_pad.py
 ```
 
 Сцени для анімацій розташовані окремо в [cs00.scenes.data_encoding](../../libs/cs00/python/cs00/scenes/data_encoding/).
@@ -25,6 +26,7 @@ lecture01/
 | --- | --- | --- |
 | [Пікселі та байти зображення](notebooks/image_viewer.py) | Масштабування, вибір ділянки та hex-байти RGB і відтінків сірого | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/image_viewer.py/wasm) |
 | [Двійковий лічильник](notebooks/binary_counter.py) | Біти та системи числення | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/binary_counter.py/wasm) |
+| [Багаторазове використання потоку ключа](notebooks/many_time_pad.py) | XOR, одноразовий блокнот і витік інформації через повторне використання ключа | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm) |
 | [Кодування даних у Python](notebooks/data_encoding.py) | Числа, bytes, ASCII, Unicode, UTF-8 і читання файлів | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm) |
 | [Hex-переглядач файлів](notebooks/hex_viewer.py) | Перегляд байтів та ASCII з вибором зміщення й розміру вікна | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/hex_viewer.py/wasm) |
 | [Шифр Цезаря](notebooks/caesar_cipher.py) | Зсув, шифрування та розшифрування | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm) |

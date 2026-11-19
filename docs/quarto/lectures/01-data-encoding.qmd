@@ -21,6 +21,8 @@ title: "Лекція 1. «Так» і «Ні»: як комп'ютери роз�
 - розрізняти текстові й бінарні файли;
 - здогадуватися, чому комп'ютер іноді помиляється в дробових числах.
 
+Після лекції виконайте [Завдання 1: Кодування даних](../assignments/01-data-encoding-hw.qmd).
+
 ## Історія двох станів
 
 ### Біт - найменша одиниця інформації {#bit}
@@ -773,13 +775,13 @@ print(0.1 + 0.2)
 4. Відкрийте невеликий файл зображення в текстовому редакторі. Що ви бачите і чому?
 5. Перевірте функцію `to_binary` з бібліотеки завдання: `cs00_assignment_00.binary.to_binary`. -->
 
-## Запитання для самоперевірки
+<!-- ## Запитання для самоперевірки
 
 - Чим біт відрізняється від байта?
 - Чому для тексту потрібне кодування?
-- Чим UTF-8 відрізняється від Unicode?
+- Чим UTF-8 відрізняється від Unicode? -->
 
-## Інтерактивні зошити marimo {#marimo-notebooks}
+<!-- ## Інтерактивні зошити marimo {#marimo-notebooks}
 
 Відкрийте зошити в [molab](https://molab.marimo.io/), щоб змінювати значення й досліджувати результати в браузері:
 
@@ -790,12 +792,4 @@ print(0.1 + 0.2)
 | Пікселі та байти зображення | Масштабування до окремих пікселів, вибір ділянки та hex-байти RGB і відтінків сірого | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/image_viewer.py/wasm) |
 | Кодування Гаффмана | Частоти символів, дерево та префіксні коди, стискання й відновлення тексту | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/huffman_coding.py/wasm) |
 | Шифр Цезаря | Зсув символів української та англійської абеток, шифрування й розшифрування | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm) |
-| Числа з рухомою комою | Біти знака, порядку й мантиси, формати float16/32/64 та похибки округлення | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/floating_point.py/wasm) |
-
-## Додаткові матеріали
-
-- [Розділ I: *Системи числення*](../assets/courant-robbins-1941-translation-ua/courant-robbins-ch1-1941-translation-ua.qmd) [@courant-robbins-ch1-translation-ua] (переклад розділу книги «Що таке математика?» Ріхардa Курантa і Гербертa Роббінсa).
-- [Unicode у Вікіпедії](https://uk.wikipedia.org/wiki/Unicode)
-- [UTF-8 у Вікіпедії](https://uk.wikipedia.org/wiki/UTF-8)
-- [Unicode HOWTO у документації Python](https://docs.python.org/3/howto/unicode.html)
-- [Markdown Basics у документації Quarto](https://quarto.org/docs/authoring/markdown-basics.html)
+| Числа з рухомою комою | Біти знака, порядку й мантиси, формати float16/32/64 та похибки округлення | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/floating_point.py/wasm) | -->
