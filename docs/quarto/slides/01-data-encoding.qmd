@@ -181,9 +181,10 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 Ви позичили **5 €** під **1% щомісяця**.
 Скільки буде через 1, 10, 25 і 50 років?
 
+::: {.callout-tip title="Відповіді" .fragment}
+
 $$A = 5 \cdot (1.01)^{12t}, \qquad t = \text{кількість років}$$
 
-::: {.callout-tip title="Відповіді" .fragment}
 ::: {.incremental}
 - **1 рік:** 5,63 €
 - **10 років:** 16,50 €
@@ -382,7 +383,7 @@ $$10 \equiv 0 + 10 \equiv 256 + 10 \equiv -256 + 10 \equiv 256 \cdot k + 10 \pmo
 <iframe src="https://free.timeanddate.com/clock/iaonrbck/n317/szw110/szh110/cf100/hnce1ead6" frameborder="0" width="30%"></iframe>
 :::
 
-[^mathologer-video]: *Times Tables, Mandelbrot and the Heart of Mathematics* by Mathologer https://youtu.be/qhbuKbxJsk8
+[^mathologer-video]: *Times Tables, Mandelbrot and the Heart of Mathematics* by Mathologer <https://youtu.be/qhbuKbxJsk8>
 
 ## Класи лишків на колі
 
@@ -670,13 +671,28 @@ flowchart LR
 
 ## Шифрування приховує зміст
 
-Шифрування перетворює відкритий текст на шифротекст за допомогою ключа.
+::: {.callout-tip title="Шифрування" .fragment}
+відкритий текст $\xrightarrow{\text{ключ}}$ шифротекст.
+:::
 
-У шифрі Цезаря ключ — це зсув літер в абетці.
+
+::: {.callout-tip title="Шифр Цезаря" .fragment}
+ключ — це зсув літер в абетці.
+
+Це навчальний шифр, не придатний для захисту секретів.
+
+:::
+
+## Самоперевірка
+
+Розшифруйте цей текст, використовуючи шифр Цезаря:
+
+```text
+КЧЕЗИСДДШЬСУЦСДДРДСЗОЕФЕЦДЯУЮУЄЕЖСГЮЗР
+```
 
 Переберіть ключі у [зошиті шифру Цезаря](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm).
 
-Це навчальний шифр, не придатний для захисту секретів.
 
 ## Що спробувати далі?
 
