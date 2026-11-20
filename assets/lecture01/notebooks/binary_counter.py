@@ -10,7 +10,7 @@ with app.setup(hide_code=True):
     import marimo as mo
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     mo.md("""
     # Двійковий лічильник
@@ -21,21 +21,21 @@ def _():
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     width = mo.ui.dropdown(options={"4 біти": 4, "8 бітів": 8}, value="8 бітів", label="Кількість бітів")
     width
     return (width,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(width):
     number = mo.ui.slider(0, 2**width.value - 1, value=min(42, 2**width.value - 1), label="Число", show_value=True)
     number
     return (number,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(number, width):
     ON, OFF, HEX = "#2e7d32", "#cfd8dc", "#1565c0"
 
@@ -67,7 +67,7 @@ def _(number, width):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(number, width):
     value = number.value
     mo.md(
@@ -83,7 +83,7 @@ def _(number, width):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     mo.vstack(
         [

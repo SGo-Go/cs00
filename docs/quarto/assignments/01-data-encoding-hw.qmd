@@ -40,3 +40,7 @@ title: "Завдання 1. Кодування даних"
 - [Unicode HOWTO у документації Python](https://docs.python.org/3/howto/unicode.html)
 - [Markdown Basics у документації Quarto](https://quarto.org/docs/authoring/markdown-basics.html)
 
+### Рекомендовані відео
+
+- [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer [@mathologer-times-tables-mandelbrot-heart-mathematics].
+

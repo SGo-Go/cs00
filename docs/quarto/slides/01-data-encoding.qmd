@@ -42,7 +42,10 @@ execute:
 </style>
 ```
 
-# Біт, байт, кілобайт, ... {background-image="https://static.theoneswelove.ch/assets/images/movies/The-Matrix-1999/still/The-Matrix-1999-still-1726071590190-1.jpg" background-opacity="0.85"}
+# {background-image="https://live.staticflickr.com/1392/1388783865_704b5cf42b_c.jpg" background-opacity="0.75"}
+
+
+# Біт, байт, кілобайт, ... {background-image="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/049a564b-0c72-4af6-8e7c-7f1d77037a6b/d2zlkd-1dbf1dfa-bb76-40ad-9c3a-834780d4d9cc.jpg/v1/fill/w_1024,h_768,q_75,strp/neobart__by_raffskizze_d2zlkd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6Ii9mLzA0OWE1NjRiLTBjNzItNGFmNi04ZTdjLTdmMWQ3NzAzN2E2Yi9kMnpsa2QtMWRiZjFkZmEtYmI3Ni00MGFkLTljM2EtODM0NzgwZDRkOWNjLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.jGFXPf0OeTErIzLrMfZ6la2vlqzQ7NPHdpkzy6ETZpY" background-opacity="0.85"}
 
 ## Перший електронний цифровий комп'ютер [^Z1-computer] [^MESM]
 
@@ -173,6 +176,22 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 
 <!-- ![Діаграма порядків величин](https://upload.wikimedia.org/wikipedia/commons/f/fa/Orders_of_magnitude_(english_annotations%252C_horizontal_layout).png){width=100%} -->
 
+## Експоненційне зростання
+
+Ви позичили **5 €** під **1% щомісяця**.
+Скільки буде через 1, 10, 25 і 50 років?
+
+::: {.callout-tip title="Відповіді" .fragment}
+
+$$A = 5 \cdot (1.01)^{12t}, \qquad t = \text{кількість років}$$
+
+::: {.incremental}
+- **1 рік:** 5,63 €
+- **10 років:** 16,50 €
+- **25 років:** 99,11 €
+- **50 років:** 1'957,92 €
+:::
+:::
 
 
 ## Самоперевірка
@@ -200,12 +219,12 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 ⠴ ⠂ ⠆ ⠒ ⠲ ⠢ ⠖ ⠶ ⠦ ⠔
 :::
 ::: {.fragment .r-fit-text .text-center}
-〇 一 二 三 四 五 六 七 八 九
-:::
-::: {.fragment .r-fit-text .text-center}
 0 1 2 3 4 5 6 7 8 9
 :::
-# 
+
+<!-- ::: {.fragment .r-fit-text .text-center}
+〇 一 二 三 四 五 六 七 八 九
+::: -->
 
 <!-- 
 ::: {.fragment .r-fit-text .text-center}
@@ -356,13 +375,15 @@ $$a\equiv a',\ b\equiv b'\pmod m \quad\Longrightarrow\quad ab\equiv a'b'\pmod m$
 $$10 \equiv 0 + 10 \equiv 256 + 10 \equiv -256 + 10 \equiv 256 \cdot k + 10 \pmod{256}$$
 :::
 
-## Класи лишків у повсякденному житті
+## Класи лишків у повсякденному житті [^mathologer-video]
 
 Які **циклічні процеси** та прилади з повсякденного життя працюють за модульною арифметикою? За яким модулем?
 
 ::: {.callout-tip title="Годинник" .fragment}
 <iframe src="https://free.timeanddate.com/clock/iaonrbck/n317/szw110/szh110/cf100/hnce1ead6" frameborder="0" width="30%"></iframe>
 :::
+
+[^mathologer-video]: *Times Tables, Mandelbrot and the Heart of Mathematics* by Mathologer <https://youtu.be/qhbuKbxJsk8>
 
 ## Класи лишків на колі
 
@@ -650,13 +671,28 @@ flowchart LR
 
 ## Шифрування приховує зміст
 
-Шифрування перетворює відкритий текст на шифротекст за допомогою ключа.
+::: {.callout-tip title="Шифрування" .fragment}
+відкритий текст $\xrightarrow{\text{ключ}}$ шифротекст.
+:::
 
-У шифрі Цезаря ключ — це зсув літер в абетці.
+
+::: {.callout-tip title="Шифр Цезаря" .fragment}
+ключ — це зсув літер в абетці.
+
+Це навчальний шифр, не придатний для захисту секретів.
+
+:::
+
+## Самоперевірка
+
+Розшифруйте цей текст, використовуючи шифр Цезаря:
+
+```text
+КЧЕЗИСДДШЬСУЦСДДРДСЗОЕФЕЦДЯУЮУЄЕЖСГЮЗР
+```
 
 Переберіть ключі у [зошиті шифру Цезаря](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm).
 
-Це навчальний шифр, не придатний для захисту секретів.
 
 ## Що спробувати далі?
 

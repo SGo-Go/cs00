@@ -152,3 +152,12 @@ references:
     publisher: Время
     publisher-place: Ленинград
     issued: 1926
+
+  - id: mathologer-times-tables-mandelbrot-heart-mathematics
+    type: webpage
+    title: "Times Tables, Mandelbrot and the Heart of Mathematics"
+    author:
+      - literal: Mathologer
+    container-title: YouTube
+    genre: Video
+    URL: "https://youtu.be/qhbuKbxJsk8"
