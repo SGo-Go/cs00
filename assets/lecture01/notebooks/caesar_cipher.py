@@ -24,7 +24,7 @@ def _():
     return
 
 
-@app.function
+@app.function(hide_code=True)
 def caesar(text: str, shift: int, alphabet: str) -> str:
     """Keep selected-alphabet letters, uppercase them, and apply the shift."""
     size = len(alphabet)

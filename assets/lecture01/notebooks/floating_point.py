@@ -13,7 +13,7 @@ with app.setup(hide_code=True):
     import marimo as mo
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     mo.md(r"""
     # Числа з рухомою комою
@@ -156,7 +156,7 @@ def _(
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     total = 0.1 + 0.2
     mo.md(f"""

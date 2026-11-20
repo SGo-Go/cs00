@@ -28,7 +28,7 @@ def _():
     return
 
 
-@app.function
+@app.function(hide_code=True)
 def format_hex_dump(data: bytes, start_offset: int = 0, byte_count: int = MAX_WINDOW_BYTES) -> str:
     """Format a bounded byte range as offset, hexadecimal bytes, and ASCII."""
     safe_offset = min(max(start_offset, 0), len(data))

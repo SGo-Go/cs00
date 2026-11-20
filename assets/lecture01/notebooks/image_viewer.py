@@ -27,7 +27,7 @@ with app.setup(hide_code=True):
         hex_dump: str
 
 
-@app.function
+@app.function(hide_code=True)
 def load_image(contents: bytes) -> Image.Image:
     """Decode an uploaded image, applying orientation and bounding memory use."""
     with Image.open(BytesIO(contents)) as opened:
@@ -38,7 +38,7 @@ def load_image(contents: bytes) -> Image.Image:
         return oriented.convert("L" if oriented.mode in {"1", "L", "LA"} else "RGB")
 
 
-@app.function
+@app.function(hide_code=True)
 def sample_image(mode: str = "RGB") -> Image.Image:
     """Create a small sample with known channel values."""
     sample = Image.new("RGB", (16, 12))
@@ -46,7 +46,7 @@ def sample_image(mode: str = "RGB") -> Image.Image:
     return sample.convert(mode)
 
 
-@app.function
+@app.function(hide_code=True)
 def inspect_region(image: Image.Image, start_x: int, start_y: int, size: int) -> PixelRegion:
     """Extract a bounded region and hex rows with full decoded-image offsets."""
     if image.mode not in {"RGB", "L"}:
@@ -67,7 +67,7 @@ def inspect_region(image: Image.Image, start_x: int, start_y: int, size: int) ->
     return PixelRegion(origin_x, origin_y, crop, "\n".join(rows))
 
 
-@app.function
+@app.function(hide_code=True)
 def magnify_pixels(image: Image.Image, scale: int) -> Image.Image:
     """Enlarge a bounded pixel region without interpolating colors."""
     factor = min(max(int(scale), 1), 32)
