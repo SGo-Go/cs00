@@ -42,6 +42,7 @@ CS00 — це перший крок до інформатики.
 
 - [конспект лекції](lectures/01-data-encoding.qmd),
 - [слайди](slides/01-data-encoding.html),
+- [cheatsheet](cheatsheets/01-data-encoding-sheet.qmd)
 - [домашнє завдання](assignments/01-data-encoding-hw.qmd).
 
 :::

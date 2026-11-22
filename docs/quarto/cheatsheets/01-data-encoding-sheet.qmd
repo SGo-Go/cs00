@@ -1,0 +1,323 @@
+---
+title: "Кодування даних і Python: короткий довідник"
+lang: uk
+number-sections: false
+format:
+  html:
+    toc: false
+    smooth-scroll: true
+  typst:
+    papersize: a4
+    columns: 3
+    citeproc: true
+    margin:
+      x: 8mm
+      y: 7mm
+    fontsize: 8pt
+    page-numbering: false
+    include-in-header:
+      text: |
+        #set page(flipped: true)
+        #set par(justify: false, leading: 0.82em)
+        #show heading: set text(size: 9pt, weight: "bold", fill: rgb("#174e67"))
+        #set heading(numbering: none)
+execute:
+  eval: false
+---
+
+::: {.content-visible when-format="html"}
+<style>
+body {
+  color: #233238;
+  font-family: "Aptos", "DejaVu Sans", sans-serif;
+}
+.sheet {
+  column-count: 3;
+  column-gap: 1.4rem;
+  column-rule: 1px solid #d5dfe2;
+  column-fill: balance;
+}
+.sheet h1 {
+  column-span: all;
+  color: #174e67;
+  border-bottom: 2px solid #e6a23c;
+  padding-bottom: .2rem;
+}
+.sheet h2, .sheet h3 {
+  color: #174e67;
+  break-after: avoid-column;
+  border-left: 3px solid #e6a23c;
+  padding-left: .35rem;
+  margin-bottom: .35rem;
+}
+.sheet p, .sheet ul, .sheet ol, .sheet pre, .sheet table {
+  break-inside: avoid-column;
+}
+.sheet p { margin-block: .35rem; }
+.sheet table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: .88em;
+}
+.sheet th, .sheet td { padding: .18rem .25rem; }
+.sheet th { background: #e8f0f3; }
+.sheet pre {
+  padding: .45rem;
+  background: #f2f6f7;
+  border-left: 2px solid #e6a23c;
+  font-size: .82em;
+  white-space: pre-wrap;
+}
+.sheet code {
+  color: #8c3f2d;
+}
+.sheet + .sheet {
+  margin-top: 2rem;
+  padding-top: .5rem;
+  border-top: 1px solid #aebfc5;
+}
+@media (max-width: 900px) {
+  .sheet { column-count: 2; }
+}
+@media (max-width: 620px) {
+  .sheet { column-count: 1; }
+}
+@media print {
+  .sheet + .sheet { break-before: page; }
+}
+</style>
+:::
+
+::: {.sheet}
+
+# 1. Кодування даних
+
+## Біти й стани
+
+| Поняття | Швидке правило |
+| --- | --- |
+| Біт | `0` або `1` |
+| $n$ бітів | $2^n$ рядків |
+| Байт | 8 бітів = 256 значень |
+
+**Рекурсія:** $k_1=2$, $k_{n+1}=2k_n$; отже, $k_n=2^n$.
+
+## Поширені степені двійки
+
+| $n$ | $2^n$ | Орієнтир |
+| ---: | ---: | --- |
+| 8 | 256 | значень у байті |
+| 10 | 1,024 | байтів у KiB |
+| 16 | 65,536 | станів у 16 бітах |
+| 20 | 1,048,576 | байтів у MiB |
+| 30 | $\approx 1.07 \times 10^9$ | байтів у GiB |
+| 32 | $\approx 4.29 \times 10^9$ | станів у 32 бітах |
+| 40 | $\approx 1.10 \times 10^{12}$ | байтів у TiB |
+| 64 | $\approx 1.84 \times 10^{19}$ | станів у 64 бітах |
+
+## Системи числення
+
+| Основа | Цифри | Приклад |
+| ---: | --- | --- |
+| 2 | `0`, `1` | $1010_2 = 10_{10}$ |
+| 10 | `0`–`9` | $2026_{10}$ |
+| 16 | `0`–`9`, `A`–`F` | $7EA_{16} = 2026_{10}$ |
+
+**Hex:** 1 цифра = 4 біти; $111111001010_2 = 7EA_{16}$.
+
+## Цілі числа
+
+| Подання | Діапазон для $n$ бітів |
+| --- | --- |
+| Беззнакове | $0 \ldots 2^n-1$ |
+| Доповнення до двійки | $-2^{n-1} \ldots 2^{n-1}-1$ |
+
+Ті самі біти, різне тлумачення: `FF` = 255 (`uint8`) або −1 (`int8`).
+
+**Беззнакове переповнення:** значення за модулем $2^n$.
+
+## Розміри даних
+
+| Десяткові | Двійкові |
+| --- | --- |
+| kB = $10^3$ B | KB = KiB = $2^{10}$ B |
+| MB = $10^6$ B | MiB = $2^{20}$ B |
+| GB = $10^9$ B | GiB = $2^{30}$ B |
+| TB = $10^{12}$ B | TiB = $2^{40}$ B |
+| PB = $10^{15}$ B | PiB = $2^{50}$ B |
+
+## Текст і кодування
+
+| Шар | Пам'ятайте |
+| --- | --- |
+| ASCII | 7 біт; коди 0–127. |
+| Unicode | Символи мають кодові точки, наприклад `U+041B`. |
+| UTF-8 | 1–4 байти на кодову точку; сумісний з ASCII. |
+| Приклади | `A` $\to$ `41`; `Л` $\to$ `D0 9B`. |
+| Видимий знак | Може складатися з кількох кодових точок. |
+
+## Дробові числа
+
+Розклад `float32` від старшого біта до молодшого:
+
+| Знак | Порядок | Дріб |
+|:---:|:---:|:---:|
+| $s$ | $E$ | $F$ |
+| 1 біт | 8 бітів | 23 біти |
+| Біт 31 | Біти $30 \ldots 23$ | Біти $22 \ldots 0$ |
+
+Разом: $1+8+23=32$ біти.
+
+| Порядок $E$ | Дріб $F$ | Значення |
+| ---: | ---: | --- |
+| 0 | 0 | $+0$ або $-0$ |
+| 0 | $F\ne0$ | Субнормальне число |
+| 255 | 0 | $+\infty$ або $-\infty$ |
+| 255 | $F\ne0$ | `NaN` |
+
+Скінченна точність округлює значення: `0.1 + 0.2` може відрізнятися від `0.3`.
+
+## Файли й медіа
+
+| Тема | Формула або правило |
+| --- | --- |
+| Файл | Байти + формат інтерпретації. |
+| Відео | Кадри + аудіо + часові мітки. |
+| Стиснення | Без втрат — точне відновлення; з втратами — частина даних зникає. |
+| Шифрування | Відкритий текст + ключ $\to$ шифротекст. |
+
+### Растрові зображення
+
+Для растра без стиснення та службових даних:
+
+$$S = w \times h \times \frac{\mathrm{bpp}}{8}\text{ байтів}$$
+
+$w$ — ширина, $h$ — висота в пікселях, `bpp` — бітова глибина на піксель.
+
+| Формат | Бітова глибина, bpp | Тип даних |
+| --- | ---: | --- |
+| RGB | 24, 32 (з альфа-каналом) | Колір |
+| Відтінки сірого | 8, 16 | Відтінки сірого |
+
+:::
+
+```{=typst}
+#pagebreak()
+```
+
+::: {.sheet}
+
+# 2. Python: короткий вступ
+
+## Основи
+
+| Запис | Значення |
+| --- | --- |
+| `=` | Присвоїти |
+| `==` | Порівняти |
+| `type(x)` | Перевірити тип |
+| `print(x)` | Вивести значення |
+
+| Тип | Англійська назва | Українське значення |
+| --- | --- | --- |
+| `int` | integer | ціле число |
+| `float` | floating-point number | число з рухомою комою |
+| `str` | string | рядок |
+| `bool` | Boolean | логічне значення |
+| `list` | list | список |
+| `tuple` | tuple | кортеж |
+
+```python
+count = 3
+count += 1
+count == 4
+```
+
+## Запис чисел
+
+| Префікс літерала | Специфікатор `format` | Система числення |
+| --- | --- | --- |
+| `0b` | `b` | двійкова |
+| немає | `d` | десяткова |
+| `0x` | `x` або `X` | шістнадцяткова |
+
+```python
+value = 0b1010
+int("1010", 2)   # 10
+format(value, "X")  # 'A'
+```
+
+## Керування потоком
+
+```python
+if score >= 50:
+  print("так")
+else:
+  print("ні")
+
+for number in range(1, 5):  # 1, 2, 3, 4
+  print(number)
+```
+
+## Рядки
+
+```python
+text = "Привіт"
+len(text)           # кількість кодових точок
+ord("A"), chr(65)   # 65, 'A'
+```
+
+## Списки, кортежі й зрізи
+
+| Операція | Приклад |
+| --- | --- |
+| Створити список | `[10, 20, 30]` |
+| Створити кортеж | `(10, 20, 30)` |
+| Перший / останній | `items[0]`, `items[-1]` |
+| Зріз, `stop` не включено | `items[start:stop]` |
+
+```python
+items = [10, 20, 30]
+items[1:3]  # [20, 30]
+```
+
+## Байти й UTF-8
+
+| Дія | Метод |
+| --- | --- |
+| Текст $\to$ байти | `text.encode("utf-8")` |
+| Байти $\to$ текст | `data.decode("utf-8")` |
+| Байти $\to$ hex | `data.hex(" ")` |
+
+`bytes` незмінний; `bytearray` змінюваний.
+
+```python
+data = "Л".encode("utf-8")  # D0 9B
+list(data)                  # цілі числа 0–255
+```
+
+## Числа NumPy
+
+```python
+import numpy as np
+
+np.uint8(255)  # from 0 to 255
+np.int8(-1)    # from -128 to 127
+```
+
+Python `int` має довільну точність; NumPy-типи мають фіксовану ширину.
+
+## Шляхи й файли
+
+```python
+from pathlib import Path
+
+with Path("data.txt").open(encoding="utf-8") as file:
+  text = file.read()  # str
+
+with Path("image.png").open("rb") as file:
+  data = file.read()  # bytes
+```
+
+:::
