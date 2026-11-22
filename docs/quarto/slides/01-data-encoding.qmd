@@ -106,10 +106,28 @@ execute:
 
 ## Скільки значень дають біти?
 
-$$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
+$$
+\begin{array}{c}
+\overbrace{\boxed{\bullet}\underbrace{\boxed{\bullet\;\bullet\;\cdots\;\bullet}}_{n\text{ біт}}}^{(n+1)\text{ біт}} \quad k_{n+1}
+\\[0.6em]
+\swarrow \qquad \searrow
+\\[0.6em]
+\boxed{\texttt{0}}\overbrace{\boxed{\bullet\;\bullet\;\cdots\;\bullet}}^{n\text{ біт}} \quad k_n
+\qquad
+\boxed{\texttt{1}}\overbrace{\boxed{\bullet\;\bullet\;\cdots\;\bullet}}^{n\text{ біт}} \quad k_n
+\end{array}
+$$
+
+$$
+k_{n+1} = k_n + k_n = 2 k_n
+$$
+
+## Скільки значень дають біти?
+
+$$k_n = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 
 - $n$ — кількість бітів.
-- $N$ — кількість комбінацій.
+- $k_n$ — кількість комбінацій.
 
 ## Скільки значень дають біти?
 

@@ -36,9 +36,22 @@ CS00 — це перший крок до інформатики.
 
 ::: {.callout-tip .callout-announcement title="Оголошення"}
 
+**Тиждень 2.** (`2026-11-28`) Продовження першої лекції.
+
+Матеріали:
+
+- [конспект лекції](lectures/01-data-encoding.qmd),
+- [слайди](slides/01-data-encoding.html),
+- [домашнє завдання](assignments/01-data-encoding-hw.qmd).
+
+:::
+
+::: {.callout-tip .callout-announcement title="Оголошення"}
+
 **Тиждень 1.** Перше заняття відбудеться за [розкладом](schedule.qmd) `2026-11-21`.
 
 Матеріали:
+
 - [конспект лекції](lectures/01-data-encoding.qmd),
 - [слайди](slides/01-data-encoding.html),
 - [домашнє завдання](assignments/01-data-encoding-hw.qmd).

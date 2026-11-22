@@ -29,8 +29,8 @@ title: "Завдання 1. Кодування даних"
 
 | Зошит | Для практики | Відкрити |
 | --- | --- | --- |
-| Кодування даних у Python | Числа, байти, ASCII, Unicode та UTF-8 | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm) |
-| (*) Атака на шифр Вернама | XOR, шифр Вернама і витік інформації через повторне використання ключа | [Відкрити](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm) |
+| Кодування даних у Python | Числа, байти, ASCII, Unicode та UTF-8 | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm) |
+| (*) Атака на шифр Вернама | XOR, шифр Вернама і витік інформації через повторне використання ключа | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm) |
 
 ## (*) Додаткові матеріали для лекції 01
 
