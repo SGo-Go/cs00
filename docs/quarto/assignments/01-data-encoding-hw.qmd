@@ -9,8 +9,12 @@ title: "Завдання 1. Кодування даних"
 - Виконайте завдання з інтерактивного зошита [Кодування даних у Python](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/data_encoding.py/wasm).
 - Для поглибленого закріплення матеріалу лекції:
   - Прочитайте [розділ I «Системи числення»](../assets/courant-robbins-1941-translation-ua/courant-robbins-ch1-1941-translation-ua.qmd) [@courant-robbins-ch1-translation-ua] — переклад розділу книги «Що таке математика?» Ріхарда Куранта й Герберта Роббінса.
+  - Прочитайте про лічбу й системи числення у статті М. Григорчука [@hryhorchuk-2021-symbolika-system-chyslennia] [^borodin-1978-uk-on-numbers].
+  - Опрацюйте модульну арифметику за курсом *Introduction to number theory*[@open-university-2017-introduction-number-theory], його PDF-уривком[@open-university-2017-introduction-number-theory-pdf] і книгою М. Кроуфорда [@crawford-introduction-number-theory].
+  - Перегляньте навчальні матеріали NCCE *Data representations*[@ncce-gcse-data-representations].
   - Виконайте завдання зі зламу шифру Вернама в інтерактивному зошиті [Атака на шифр Вернама](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm).
 
+[^borodin-1978-uk-on-numbers]: У книзі О. І. Бородіна «Історія розвитку поняття про число і системи числення»[@borodin-1978-uk] можна знайти більш детальну інформацію про числа і системи числення.
 
 ## Інтерактивні зошити  {#marimo-notebooks}
 
@@ -42,5 +46,12 @@ title: "Завдання 1. Кодування даних"
 
 ### Рекомендовані відео
 
-- [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer [@mathologer-times-tables-mandelbrot-heart-mathematics].
+- Системи числення
+
+  - [Коротка історія систем числення [TED-Ed]](https://youtu.be/ZVJo0i5gM48) [@tsikava-nauka-2-history-number-systems-ted-ed].
+  - [Системи счисления, ЛШЮП 2024](https://www.youtube.com/watch?v=W4nUBKxyczE) [@faifel-2024-shkola-programmistov-systems-of-numeration].
+
+- Модульна арифметика
+
+  - [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer [@mathologer-times-tables-mandelbrot-heart-mathematics].
 

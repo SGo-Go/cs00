@@ -96,3 +96,22 @@ references:
     issued: 1976
     # math.ru returned 502 during checking, so this link was not opened.
     URL: "https://math.ru/lib/book/djvu/000040"
+
+  - id: kanel-belov-kovaldzhi-2026
+    type: book
+    title: "Как решают нестандартные задачи"
+    language: ru
+    author:
+      - family: Канель-Белов
+        given: Алексей Яковлевич
+      - family: Ковальджи
+        given: Александр Кириллович
+    edition: "17-е, стереотипное"
+    publisher: МЦНМО
+    publisher-place: Москва
+    issued: 2026
+    number-of-pages: 96
+    ISBN: "978-5-4439-4923-9"
+    abstract: "Presents classical approaches to olympiad problems through commentary, examples, and 200 practice problems grouped by grade."
+    note: "Рекомендуемые темы: делимость и остатки, алгоритм Евклида."
+    URL: "https://biblio.mccme.ru/node/330496"
