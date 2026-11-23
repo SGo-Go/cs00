@@ -13,6 +13,7 @@ title: "Завдання 1. Кодування даних"
   - Опрацюйте модульну арифметику за курсом *Introduction to number theory*[@open-university-2017-introduction-number-theory], його PDF-уривком[@open-university-2017-introduction-number-theory-pdf] і книгою М. Кроуфорда [@crawford-introduction-number-theory].
   - Перегляньте навчальні матеріали NCCE *Data representations*[@ncce-gcse-data-representations].
   - Виконайте завдання зі зламу шифру Вернама в інтерактивному зошиті [Атака на шифр Вернама](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/many_time_pad.py/wasm).
+  - (**) Розв'язуйте задачі на системи числення та модульну арифметику з [архівів математичних гуртків](https://matholymp.danmysak.com/problem-sets/) [@mysak-math-circle-problem-sets].
 
 [^borodin-1978-uk-on-numbers]: У книзі О. І. Бородіна «Історія розвитку поняття про число і системи числення»[@borodin-1978-uk] можна знайти більш детальну інформацію про числа і системи числення.
 

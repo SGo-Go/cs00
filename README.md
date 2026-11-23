@@ -57,24 +57,25 @@ sudo apt-get install libcairo2-dev libpango1.0-dev pkg-config
 uv sync --inexact --group visuals
 ```
 
-Render every scene to an MP4 video and a PNG still in `docs/quarto/media/visuals/`:
+Render every scene to an MP4 video in `docs/quarto/media/lecture01/video/` and a PNG still in `docs/quarto/media/lecture01/img/`:
 
 ```sh
 uv run --no-sync python -m cs00_visuals.render
 ```
 
 Use `--still-only` for a quick check, `--only BinaryCounting` for one scene, and `--quality youtube` (1080p60) or `--quality 4k` for upload-ready videos.
+Use `--output docs/quarto/media/lectureNN` to choose another lecture's media directory; the renderer creates its `video/` and `img/` subfolders.
 Rendered files are gitignored, and the publish workflow renders them before building the site.
 
 Lectures show the video on the web and the still in the PDF:
 
 ```markdown
 ::: {.content-visible when-format="html"}
-{{< video ../media/visuals/binary-counting.mp4 >}}
+{{< video ../media/lecture01/video/binary-counting.mp4 >}}
 :::
 
 ::: {.content-visible unless-format="html"}
-![Description](../media/visuals/binary-counting.png)
+![Description](../media/lecture01/img/binary-counting.png)
 :::
 ```
 
