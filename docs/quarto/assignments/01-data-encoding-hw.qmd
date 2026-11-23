@@ -25,6 +25,7 @@ title: "Завдання 1. Кодування даних"
 | Зошит | Що можна дослідити | Відкрити |
 | ------ | ------------------- | ---------- |
 | Двійковий лічильник | Біти, розрядні ваги та запис числа у двійковій, вісімковій і шістнадцятковій системах | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/binary_counter.py/wasm) |
+| (**) [Множення за модулем степеня двійки](../../../assets/lecture01/notebooks/modular_multiplication.py) | Відображення $x$ у $mx \bmod 2^k$ на колі залишків | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/modular_multiplication.py/wasm) |
 | Переглядач файлів у шістнадцятковому форматі | Вміст файлів у шістнадцятковому форматі й ASCII, початкове зміщення та розмір вікна | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/hex_viewer.py/wasm) |
 | Пікселі та байти зображення | Масштабування до окремих пікселів, вибір ділянки та hex-байти RGB і відтінків сірого | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/image_viewer.py/wasm) |
 | Кодування Гаффмана | Частоти символів, дерево та префіксні коди, стискання й відновлення тексту | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/huffman_coding.py/wasm) |
@@ -54,5 +55,7 @@ title: "Завдання 1. Кодування даних"
 
 - Модульна арифметика
 
-  - [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer [@mathologer-times-tables-mandelbrot-heart-mathematics].
+  - [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer [@mathologer-times-tables-mandelbrot-heart-mathematics].[^modular-multiplication]
+
+[^modular-multiplication]: Інтерактивна візуалізація: [Множення за модулем степеня двійки](../../../assets/lecture01/notebooks/modular_multiplication.py) — відображення $x$ у $mx \bmod 2^k$ на колі залишків ([відкрити в Molab](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/modular_multiplication.py/wasm)).
 
