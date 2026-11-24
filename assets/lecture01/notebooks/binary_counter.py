@@ -9,6 +9,8 @@ app = marimo.App(width="medium")
 with app.setup(hide_code=True):
     import marimo as mo
 
+    ON, OFF, HEX = "#2e7d32", "#cfd8dc", "#1565c0"
+
 
 @app.cell(hide_code=True)
 def _():
@@ -37,8 +39,6 @@ def _(width):
 
 @app.cell(hide_code=True)
 def _(number, width):
-    ON, OFF, HEX = "#2e7d32", "#cfd8dc", "#1565c0"
-
     def bit_box(bit: str, weight: int) -> str:
         background = ON if bit == "1" else OFF
         color = "white" if bit == "1" else "#455a64"

@@ -95,6 +95,35 @@ def _number_line_point(value: int) -> np.ndarray:
     return np.array([x, -0.25, 0.0])
 
 
+def _number_line_residue_classes(pmod: int) -> VGroup:
+    return VGroup(
+        *(
+            VGroup(
+                *(
+                    Dot(_number_line_point(value), radius=0.045, color=_residue_color(value))
+                    for value in range(INTEGER_AXIS_RANGE[0], INTEGER_AXIS_RANGE[1] + 1)
+                    if value % pmod == residue
+                )
+            )
+            for residue in range(pmod)
+        )
+    )
+
+
+def _map_residue_classes_to_circle(class_dots: VGroup, pmod: int) -> VGroup:
+    return VGroup(
+        *(
+            VGroup(
+                *(
+                    Dot(_circle_point(residue, pmod, CIRCLE_RADIUS), radius=0.045, color=_residue_color(residue))
+                    for _ in range(len(residue_dots))
+                )
+            )
+            for residue, residue_dots in enumerate(class_dots)
+        )
+    )
+
+
 class IntegerModuloCircle(Scene):
     """Demonstrate the modulo-8 equivalence classes of integers from -8 to 15.
 
@@ -132,19 +161,7 @@ class IntegerModuloCircle(Scene):
                 for value in (-8, -4, 0, 4, 8, 12, 15)
             )
         )
-        integer_classes = [
-            VGroup(
-                *(
-                    Dot(_number_line_point(value), radius=0.045, color=_residue_color(value))
-                    for value in range(INTEGER_AXIS_RANGE[0], INTEGER_AXIS_RANGE[1] + 1)
-                    if value % pmod_8 == residue
-                )
-            )
-            for residue in range(pmod_8)
-        ]
-        class_dots = VGroup(
-            *integer_classes,
-        )
+        class_dots = _number_line_residue_classes(pmod_8)
         number_line = VGroup(axis, class_dots)
         caption = Text(f"Цілі числа від {MINUS}8 до 15", font=FONT, font_size=28, color=ACCENT).to_edge(
             DOWN,
@@ -162,17 +179,7 @@ class IntegerModuloCircle(Scene):
         self.wait(0.8 / self.animation_speed)
 
         circle = Circle(radius=CIRCLE_RADIUS, color=MUTED, stroke_width=2).move_to(CIRCLE_CENTER)
-        mapped_classes = [
-            VGroup(
-                *(
-                    Dot(_circle_point(residue, pmod_8, CIRCLE_RADIUS), radius=0.045, color=_residue_color(residue))
-                    for _ in range(len(class_dots))
-                )
-            )
-            for residue, class_dots in enumerate(integer_classes)
-        ]
-        circle_classes = VGroup(*mapped_classes)
-        circle_with_classes = VGroup(circle, circle_classes)
+        circle_with_classes = VGroup(circle, _map_residue_classes_to_circle(class_dots, pmod_8))
         self.play(
             axis.animate.set_opacity(0),
             FadeOut(axis_ticks),

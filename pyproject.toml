@@ -1,7 +1,7 @@
 [project]
 dependencies = [ "cs00", "cs00-assignment-00", "marimo>=0.25.2" ]
 name = "workspace"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 version = "0.0.0"
 
 [dependency-groups]
@@ -42,6 +42,49 @@ qc = [
   "yamllint>=1.38.0",
 ]
 visuals = [ "cs00-visuals" ]
+
+[tool.ruff]
+cache-dir = "~/.cache/ruff"
+exclude = [ "third_party/" ]
+line-length = 120
+respect-gitignore = true
+target-version = "py314"
+
+[tool.ruff.format]
+docstring-code-format = true
+indent-style = "space"
+quote-style = "double"
+
+[tool.ruff.lint]
+fixable = [ "ALL" ]
+ignore = [ "D203", "D213", "RUF001" ]
+select = [
+  "ANN", # flake8-annotations (function annotations)
+  "B",   # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "D",   # pydocstyle
+  "E",   # pycodestyle errors
+  "F",   # Pyflakes
+  "I",   # We use "black" isort. Comment if Ruff breaks it.
+  "N",   # pep8-naming
+  "RUF", # Ruff-specific rules
+  "UP",  # pyupgrade: this ruleset is "aggressive", use only with manual inspection of changes
+  "W",   # pycodestyle warnings
+]
+unfixable = [ "RUF100" ]
+
+[tool.ruff.lint.per-file-ignores]
+"assets/**/notebooks/*.py" = [
+  "ANN001",
+  "ANN202",
+  "ANN401",
+  "B018",
+  "E501",
+  "N802",
+  "N803",
+  "N806",
+  "N816",
+]
 
 [tool.uv.sources]
 cs00 = {workspace = true}

@@ -112,6 +112,8 @@ references:
     issued: 2026
     number-of-pages: 96
     ISBN: "978-5-4439-4923-9"
-    abstract: "Presents classical approaches to olympiad problems through commentary, examples, and 200 practice problems grouped by grade."
+    abstract: >-
+      Presents classical approaches to olympiad problems through commentary, examples, and 200 practice problems grouped
+      by grade.
     note: "Рекомендуемые темы: делимость и остатки, алгоритм Евклида."
     URL: "https://biblio.mccme.ru/node/330496"

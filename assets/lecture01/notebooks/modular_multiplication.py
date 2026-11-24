@@ -26,7 +26,8 @@ def _():
     Змініть степінь $k$ або множник $m$ і спостерігайте за візерунком.
     Для непарного $m$ множення переставляє всі залишки, а парний множник згортає їх у меншу множину.
 
-    [^mathologer-video]: [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer.
+    [^mathologer-video]: [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8)
+        by Mathologer.
     """)
     return
 

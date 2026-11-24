@@ -12,6 +12,13 @@ with app.setup(hide_code=True):
 
     import marimo as mo
 
+    FORMATS = {
+        "float16 (половинна точність)": ("e", 5, 10),
+        "float32 (одинарна точність)": ("f", 8, 23),
+        "float64 (подвійна точність)": ("d", 11, 52),
+    }
+    COLORS = {"sign": "#c62828", "exponent": "#1565c0", "mantissa": "#2e7d32"}
+
 
 @app.cell(hide_code=True)
 def _():
@@ -31,18 +38,6 @@ def _():
 
 @app.cell
 def _():
-    # struct format, exponent bits, mantissa bits
-    FORMATS = {
-        "float16 (половинна точність)": ("e", 5, 10),
-        "float32 (одинарна точність)": ("f", 8, 23),
-        "float64 (подвійна точність)": ("d", 11, 52),
-    }
-    COLORS = {"sign": "#c62828", "exponent": "#1565c0", "mantissa": "#2e7d32"}
-    return COLORS, FORMATS
-
-
-@app.cell
-def _(FORMATS):
     precision = mo.ui.dropdown(options=FORMATS, value="float32 (одинарна точність)", label="Формат")
     number = mo.ui.text(value="0.1", label="Число")
     mo.hstack([number, precision], justify="start", gap=2)
@@ -84,7 +79,7 @@ def _(number, precision):
 
 
 @app.cell
-def _(COLORS, bits, exponent_bits):
+def _(bits, exponent_bits):
     def bit_cell(bit: str, color: str) -> str:
         background = color if bit == "1" else "white"
         text = "white" if bit == "1" else color
@@ -133,7 +128,10 @@ def _(
         formula = f"{sign_text}{fraction:.12g} \\times 2^{{{1 - bias}}}"
     else:
         kind = "нормальне число"
-        formula = f"{sign_text}{1 + fraction:.12g} \\times 2^{{{raw_exponent} - {bias}}} = {sign_text}{1 + fraction:.12g} \\times 2^{{{raw_exponent - bias}}}"
+        formula = (
+            f"{sign_text}{1 + fraction:.12g} \\times 2^{{{raw_exponent} - {bias}}} = "
+            f"{sign_text}{1 + fraction:.12g} \\times 2^{{{raw_exponent - bias}}}"
+        )
 
     exact = Decimal(stored)
     try:

@@ -55,12 +55,6 @@ def _integer_axis_data(bits: int) -> _IntegerAxisData:
             values, binary_values, hex_values, [modulus] * len(values), residues, signed_values, strict=True
         )
     ]
-    signed_customdata = [
-        [value, binary_value, hex_value, modulus, residue, residue, signed_value]
-        for value, binary_value, hex_value, modulus, residue, signed_value in zip(
-            values, binary_values, hex_values, [modulus] * len(values), residues, signed_values, strict=True
-        )
-    ]
     tick_stride = max(1, modulus // 4)
     tick_values = list(range(-modulus, 2 * modulus, tick_stride))
     axis_range = [-modulus - 0.5, 2 * modulus - 0.5]
@@ -70,7 +64,7 @@ def _integer_axis_data(bits: int) -> _IntegerAxisData:
         unsigned_symbols,
         signed_symbols,
         unsigned_customdata,
-        signed_customdata,
+        unsigned_customdata,
         tick_values,
         axis_range,
     )
@@ -86,6 +80,31 @@ def _point_data(
     labels = [str(residue) if residue % label_stride == 0 else "" for residue in residues]
     representatives = [[residue + r * pmod for r in range(repr_min, repr_max + 1)] for residue in residues]
     return angles, radii, labels, representatives
+
+
+def _modulus_slider_steps(repr_min: int, repr_max: int) -> list[dict[str, object]]:
+    steps: list[dict[str, object]] = []
+    for current_pmod in PMODS:
+        step_angles, step_radii, step_labels, step_examples = _point_data(
+            current_pmod, repr_min=repr_min, repr_max=repr_max
+        )
+        steps.append(
+            {
+                "label": str(current_pmod),
+                "method": "update",
+                "args": [
+                    {
+                        "theta": [step_angles, step_angles],
+                        "r": [step_radii, [LABEL_RADIUS] * current_pmod],
+                        "text": [step_labels, step_labels],
+                        "customdata": [step_examples, step_examples],
+                    },
+                    {"title.text": f"Класи лишків за модулем {current_pmod}"},
+                    [1, 2],
+                ],
+            }
+        )
+    return steps
 
 
 def create_modular_residue_figure(pmod: int = 16, repr_min: int = -1, repr_max: int = 2) -> go.Figure:
@@ -154,28 +173,6 @@ def create_modular_residue_figure(pmod: int = 16, repr_min: int = -1, repr_max: 
         )
     )
 
-    steps = []
-    for current_pmod in PMODS:
-        step_angles, step_radii, step_labels, step_examples = _point_data(
-            current_pmod, repr_min=repr_min, repr_max=repr_max
-        )
-        steps.append(
-            {
-                "label": str(current_pmod),
-                "method": "update",
-                "args": [
-                    {
-                        "theta": [step_angles, step_angles],
-                        "r": [step_radii, [LABEL_RADIUS] * current_pmod],
-                        "text": [step_labels, step_labels],
-                        "customdata": [step_examples, step_examples],
-                    },
-                    {"title.text": f"Класи лишків за модулем {current_pmod}"},
-                    [1, 2],
-                ],
-            }
-        )
-
     figure.update_layout(
         title={"text": f"Класи лишків за модулем {pmod}", "x": 0.5},
         height=480,
@@ -189,7 +186,7 @@ def create_modular_residue_figure(pmod: int = 16, repr_min: int = -1, repr_max: 
                 "active": PMODS.index(pmod),
                 "currentvalue": {"prefix": "Модуль p = "},
                 "pad": {"t": 36},
-                "steps": steps,
+                "steps": _modulus_slider_steps(repr_min, repr_max),
             }
         ],
     )
@@ -217,7 +214,7 @@ def create_integer_axis_figure(bits: int = 4) -> go.Figure:
     point_count = len(axis_data.values)
     base_opacity = [INTEGER_AXIS_BASE_OPACITY] * point_count
     hovertemplate = (
-        "Число на осі: %{customdata[0]}<br>"  # noqa: RUF001
+        "Число на осі: %{customdata[0]}<br>"
         "Бітове подання: %{customdata[1]} (0x%{customdata[2]})<br>"
         "Клас за модулем %{customdata[3]}: %{customdata[4]}<br>"
         "Беззнакове: %{customdata[5]}<br>"
@@ -294,7 +291,7 @@ def create_integer_axis_figure(bits: int = 4) -> go.Figure:
         height=440,
         margin={"l": 145, "r": 25, "t": 75, "b": 95},
         xaxis={
-            "title": "Число на осі",  # noqa: RUF001
+            "title": "Число на осі",
             "range": axis_data.axis_range,
             "tickmode": "array",
             "tickvals": axis_data.tick_values,

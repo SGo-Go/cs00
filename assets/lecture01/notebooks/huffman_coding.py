@@ -19,8 +19,8 @@ with app.setup(hide_code=True):
 
         weight: int
         symbol: str | None = None
-        left: "HuffmanNode | None" = None
-        right: "HuffmanNode | None" = None
+        left: HuffmanNode | None = None
+        right: HuffmanNode | None = None
 
     class HeapEntry(NamedTuple):
         """A priority-queue entry with a deterministic tie breaker."""

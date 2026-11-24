@@ -40,6 +40,8 @@ def test_render_scene_groups_media(tmp_path: Path, movie: bool) -> None:
     """Write generated media into type-specific folders below a lecture."""
 
     class RenderProbe(Scene):
+        """Minimal scene used to test rendered output paths."""
+
         def construct(self) -> None:
             self.add(Dot())
             self.wait(0.1)

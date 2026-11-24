@@ -21,7 +21,6 @@ title: "Завдання 1. Кодування даних"
 
 ### Зошити для дослідження
 
-
 | Зошит | Що можна дослідити | Відкрити |
 | ------ | ------------------- | ---------- |
 | Двійковий лічильник | Біти, розрядні ваги та запис числа у двійковій, вісімковій і шістнадцятковій системах | [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/binary_counter.py/wasm) |
@@ -58,4 +57,3 @@ title: "Завдання 1. Кодування даних"
   - [*Times Tables, Mandelbrot and the Heart of Mathematics*](https://youtu.be/qhbuKbxJsk8) by Mathologer [@mathologer-times-tables-mandelbrot-heart-mathematics].[^modular-multiplication]
 
 [^modular-multiplication]: Інтерактивна візуалізація: [Множення за модулем степеня двійки](../../../assets/lecture01/notebooks/modular_multiplication.py) — відображення $x$ у $mx \bmod 2^k$ на колі залишків ([відкрити в Molab](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/modular_multiplication.py/wasm)).
-
