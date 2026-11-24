@@ -2,6 +2,234 @@
 # Books on numbers, numeral systems and binary code, including books for children and teenagers.
 
 references:
+  - id: borodin-1978-uk
+    type: book
+    title: "Історія розвитку поняття про число і системи числення"
+    language: uk
+    author:
+      - family: Бородін
+        given: Олексій Іванович
+    edition: "3-тє"
+    publisher: Радянська школа
+    issued: 1978
+    note: >-
+      Навчальний посібник українською мовою; авторська основа — лекції для вчителів математики й студентів
+      Донецького педінституту.
+    # URL: "https://prom.ua/p1912963662-borodin-borodin-istoriya.html"
+
+  - id: borodin-1970-number-theory-uk
+    type: book
+    title: "Теорія чисел"
+    language: uk
+    author:
+      - family: Бородін
+        given: Олексій Іванович
+    publisher: Вища школа
+    publisher-place: Київ
+    issued: 1970
+    number-of-pages: 275
+    note: >-
+      Підручник для студентів фізико-математичних факультетів педагогічних інститутів.
+    # URL:
+    #   https://retrokniga.com/estestvennye-i-tekhnicheskie-nauki/mathematics/
+    #   borod%D1%96n-o-%D1%96-teor%D1%96ya-chisel
+
+  - id: hryhorchuk-2021-symbolika-system-chyslennia
+    type: article-journal
+    title: "Символіка систем числення"
+    language: uk
+    author:
+      - family: Григорчук
+        given: Микола
+    container-title: "Світогляд"
+    volume: 16
+    issue: 3
+    issued: 2021
+    ISSN: 1819-7329
+    URL: "https://www.mao.kiev.ua/biblio/jscans/svitogliad/svit-2021-16-3/svitoglyad-3-2021-grigorchuk-011.pdf"
+
+  - id: crawford-introduction-number-theory
+    type: book
+    title: "Introduction to Number Theory"
+    language: en
+    author:
+      - family: Crawford
+        given: Mathew
+    publisher: Art of Problem Solving
+    issued: 2019
+    medium: Paperback
+    number-of-pages: 336
+    abstract: >-
+      Introduces primes, divisors, prime factorization, bases, modular arithmetic,
+      divisibility rules, and linear congruences for students in grades 7–10.
+    note: "A separate solutions manual is listed as 144 pages."
+    URL: "https://classic.artofproblemsolving.com/store/book/intro-number-theory"
+
+  - id: open-university-2017-introduction-number-theory
+    type: webpage
+    title: "Introduction to number theory"
+    language: en
+    author:
+      - literal: The Open University
+    publisher: The Open University
+    issued:
+      date-parts:
+        - - 2017
+          - 9
+          - 27
+    genre: Free online course
+    abstract: >-
+      Introductory course on Euclid's algorithm, congruences, modular arithmetic, multiplicative inverses, and linear
+      congruences.
+    note: >-
+      Updated 2019-05-03; an extract from module MST125 Essential Mathematics 2. The official PDF extract,
+      17mst125u3-extract.pdf, is listed separately below.
+    URL: "https://www.open.edu/openlearn/science-maths-technology/introduction-number-theory/content-section-0"
+
+  - id: open-university-2017-introduction-number-theory-pdf
+    type: report
+    title: "Introduction to number theory: course extract (MST125)"
+    language: en
+    author:
+      - literal: The Open University
+    publisher: The Open University
+    issued: 2017
+    genre: Course PDF
+    note: >-
+      Official downloadable file: 17mst125u3-extract.pdf. Companion course: Introduction to number theory
+      (https://www.open.edu/openlearn/science-maths-technology/introduction-number-theory/content-section-0).
+    URL: "https://www.open.edu/openlearn/mod/resource/view.php?id=70395"
+
+  - id: ncce-gcse-data-representations
+    type: webpage
+    title: "Data representations"
+    language: en
+    author:
+      - literal: NCCE
+    publisher: Teach Computing, National Centre for Computing Education
+    issued: 2025
+    genre: GCSE curriculum unit
+    abstract: >-
+      Unit covering binary and hexadecimal number systems and the representation
+      of text, images, and sound, with lessons on storage and compression.
+    note: "The linked unit guide was updated 2025-04-15."
+    URL: "https://teachcomputing.org/curriculum/key-stage-4/data-representations"
+
+  # Videos
+  - id: faifel-2024-shkola-programmistov-systems-of-numeration
+    type: webpage
+    title: "Лекция: Системы счисления"
+    language: ru
+    author:
+      - family: Файфель
+        given: Борис Леонидович
+    container-title: YouTube
+    publisher: Школа программистов ЛШЮП
+    issued: 2024
+    genre: Video
+    URL: "https://www.youtube.com/watch?v=W4nUBKxyczE"
+
+  - id: tsikava-nauka-2-history-number-systems-ted-ed
+    type: webpage
+    title: "Коротка історія систем числення [TED-Ed]"
+    language: uk
+    author:
+      - literal: Цікава наука 2
+    container-title: YouTube
+    genre: Video
+    URL: "https://youtu.be/ZVJo0i5gM48"
+
+  - id: mathologer-times-tables-mandelbrot-heart-mathematics
+    type: webpage
+    title: "Times Tables, Mandelbrot and the Heart of Mathematics"
+    author:
+      - family: Polster
+        given: Burkard
+    container-title: YouTube
+    publisher: Mathologer
+    issued: 2015
+    genre: Video
+    URL: "https://youtu.be/qhbuKbxJsk8"
+
+  # Problem sets
+  - id: mysak-math-circle-problem-sets
+    type: webpage
+    title: "Задачі та матеріали гуртків"
+    language: uk
+    author:
+      - family: Мисак
+        given: Данило
+    genre: Archive of mathematical-circle problem sets
+    abstract: >-
+      An archive of mathematical-circle problem sets organized by curator and topic, including number theory collections
+      on Euler's theorem, quadratic residues, Fermat and Wilson, and the Chinese remainder theorem.
+    note: "Матеріали доступні українською та російською мовами."
+    URL: "https://matholymp.danmysak.com/problem-sets/"
+
+  - id: genkin-itenberg-fomin-1994
+    type: book
+    title: "Ленинградские математические кружки"
+    language: ru
+    author:
+      - family: Генкин
+        given: Сергей Александрович
+      - family: Итенберг
+        given: Илья Владимирович
+      - family: Фомин
+        given: Дмитрий Владимирович
+    publisher: АСА
+    publisher-place: Киров
+    issued: 1994
+    number-of-pages: 272
+    ISBN: "978-5-87400-072-1"
+    note: >-
+      Пособие для внеклассной работы; при участии И. С. Рубанова. Рекомендуемые темы: делимость и остатки,
+      системы счисления.
+    URL: "https://www.mathedu.ru/text/genkin_i_dr_leningradskie_matematicheskie_kruzhki_1994"
+
+  - id: alfutova-ustinov-2002
+    type: book
+    title: "Алгебра и теория чисел: сборник задач для математических школ"
+    language: ru
+    author:
+      - family: Алфутова
+        given: Надежда Борисовна
+      - family: Устинов
+        given: Алексей Владимирович
+    publisher: МЦНМО
+    publisher-place: Москва
+    issued: 2002
+    number-of-pages: 264
+    ISBN: "978-5-94057-038-7"
+    abstract: "Problem collection for advanced high-school students covering algebra and number theory."
+    note: "Рекомендуемые темы: делимость, сравнения, доказательства в теории чисел, диофантовы уравнения."
+    URL: "https://mccme.ru/free-books/pdf/alfutova.pdf"
+
+  # TODO: revise resources below
+  - id: perelman-1926-ru
+    type: book
+    title: "Занимательная арифметика. Загадки и диковинки в мире чисел"
+    language: ru
+    author:
+      - family: Перельман
+        given: Яков Исидорович
+    publisher: Время
+    publisher-place: Ленинград
+    issued: 1926
+
+  - id: bbc-bitesize-gcse-computer-science
+    type: webpage
+    title: "GCSE Computer Science"
+    language: en
+    author:
+      - literal: BBC Bitesize
+    publisher: BBC
+    genre: GCSE learning resources
+    abstract: "Revision resources for GCSE Computer Science, organized by exam board."
+    note: "Exam boards: AQA, Cambridge OCR, Edexcel, and Eduqas."
+    URL: "https://www.bbc.co.uk/bitesize/subjects/z34k7ty"
+
+  # Pre-school educational books
   - id: schmandt-besserat-1999
     type: book
     title: The History of Counting
@@ -15,6 +243,7 @@ references:
     publisher: Morrow Junior Books
     publisher-place: New York
     issued: 1999
+    genre: Educational, pre-school
     ISBN: "978-0-688-14119-6"
 
   - id: anno-1977
@@ -27,6 +256,7 @@ references:
     publisher: Crowell
     publisher-place: New York
     issued: 1977
+    genre: Educational, pre-school
 
   - id: enzensberger-1998-en
     type: book
@@ -44,6 +274,7 @@ references:
     publisher: Metropolitan Books
     publisher-place: New York
     issued: 1998
+    genre: Educational, pre-school
     ISBN: "978-0-8050-5770-6"
     original-title: Der Zahlenteufel
 
@@ -61,6 +292,7 @@ references:
       - family: Бернер
         given: Ротраут Сюзанна
     publisher: Nebo BookLab Publishing
+    genre: Educational, pre-school
     issued: 2024
     ISBN: "978-617-7914-74-6"
     original-title: Der Zahlenteufel
@@ -74,6 +306,7 @@ references:
     publisher: Scholastic Press
     publisher-place: New York
     issued: 1997
+    genre: Educational, pre-school
     ISBN: "978-0-590-93998-0"
 
   - id: schwartz-1985
@@ -87,22 +320,10 @@ references:
       - family: Kellogg
         given: Steven
     publisher: Lothrop, Lee & Shepard
+    genre: Educational, pre-school
     publisher-place: New York
     issued: 1985
     ISBN: "978-0-688-04050-5"
-
-  - id: liso-2019
-    type: book
-    title: How Do Computers Follow Instructions?
-    language: en
-    author:
-      - family: Liso
-        given: J. T.
-    illustrator:
-      - family: Bassani
-        given: Srimalie
-    publisher: Flowerpot Press
-    issued: 2019
 
   - id: blum-1997
     type: book
@@ -114,17 +335,7 @@ references:
     publisher: Sterling
     publisher-place: New York
     issued: 1997
-
-  - id: world-book-numbers
-    type: book
-    title: "Numbers"
-    collection-title: Building Blocks of Mathematics
-    language: en
-    author:
-      - literal: World Book
-    publisher: World Book
-    ISBN: "978-0-7166-1436-4"
-    URL: "https://www.worldbook.com/Numbers"
+    genre: Educational, pre-school
 
   - id: prilutskaya-2021-ru
     type: book
@@ -142,22 +353,28 @@ references:
     ISBN: "978-5-907302-68-6"
     URL: "https://www.labirint.ru/books/796306/"
 
-  - id: perelman-1926-ru
+  - id: liso-2019
     type: book
-    title: "Занимательная арифметика. Загадки и диковинки в мире чисел"
-    language: ru
+    title: How Do Computers Follow Instructions?
+    language: en
     author:
-      - family: Перельман
-        given: Яков Исидорович
-    publisher: Время
-    publisher-place: Ленинград
-    issued: 1926
+      - family: Liso
+        given: J. T.
+    illustrator:
+      - family: Bassani
+        given: Srimalie
+    genre: Educational, pre-school
+    publisher: Flowerpot Press
+    issued: 2019
 
-  - id: mathologer-times-tables-mandelbrot-heart-mathematics
-    type: webpage
-    title: "Times Tables, Mandelbrot and the Heart of Mathematics"
+  - id: world-book-numbers
+    type: book
+    title: "Numbers"
+    collection-title: Building Blocks of Mathematics
+    language: en
     author:
-      - literal: Mathologer
-    container-title: YouTube
-    genre: Video
-    URL: "https://youtu.be/qhbuKbxJsk8"
+      - literal: World Book
+    publisher: World Book
+    genre: Educational, pre-school
+    ISBN: "978-0-7166-1436-4"
+    URL: "https://www.worldbook.com/Numbers"

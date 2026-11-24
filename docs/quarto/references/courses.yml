@@ -9,7 +9,9 @@ references:
     publisher-place: Cambridge, MA
     issued: 2026
     genre: Graduate course website
-    abstract: "Course on engineering language-model systems to be reliable, efficient, and maintainable through requirements, system design, stakeholder feedback, and evaluation."
+    abstract: >-
+      Course on engineering language-model systems to be reliable, efficient, and
+      maintainable through requirements, system design, stakeholder feedback, and evaluation.
     note: "Fall 2026. Instructor: Omar Khattab."
     URL: "https://ai-eng.oasys-lab.org/"
 
@@ -20,7 +22,9 @@ references:
     publisher-place: Cambridge, MA
     issued: 2026
     genre: Graduate course website
-    abstract: "Course covering deep-learning architectures, optimization, generalization, representation learning, and applications in vision, language, and robotics."
+    abstract: >-
+      Course covering deep-learning architectures, optimization, generalization,
+      representation learning, and applications in vision, language, and robotics.
     note: "Fall 2026. Instructors: Phillip Isola and Kaiming He."
     URL: "https://deeplearning6-7960.github.io/#schedule"
 
@@ -48,6 +52,7 @@ references:
     publisher-place: Stanford, CA
     issued: 2026
     genre: University course website
-    abstract: "Course introducing cryptographic primitives and their correct use to protect information in computer systems."
+    abstract: >-
+      Course introducing cryptographic primitives and their correct use to protect information in computer systems.
     note: "Winter 2026."
     URL: "https://cs255.stanford.edu/index.html"

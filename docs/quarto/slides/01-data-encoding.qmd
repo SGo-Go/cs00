@@ -19,6 +19,9 @@ execute:
   freeze: auto
 ---
 
+<!-- Reveal.js repeats top-level and section headings; Quarto's slide dividers also resemble Markdown tables. -->
+<!-- markdownlint-disable-file MD024 MD025 MD055 MD056 -->
+
 ```{=html}
 <style>
 .reveal {
@@ -42,10 +45,15 @@ execute:
 </style>
 ```
 
+<!-- Quarto background-image attributes require bare URLs, which MD034 flags as bare links. -->
+<!-- markdownlint-disable MD034 -->
 # {background-image="https://live.staticflickr.com/1392/1388783865_704b5cf42b_c.jpg" background-opacity="0.75"}
+<!-- markdownlint-enable MD034 -->
 
-
+<!-- Quarto background-image attributes require bare URLs, which MD034 flags as bare links. -->
+<!-- markdownlint-disable MD034 -->
 # Біт, байт, кілобайт, ... {background-image="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/049a564b-0c72-4af6-8e7c-7f1d77037a6b/d2zlkd-1dbf1dfa-bb76-40ad-9c3a-834780d4d9cc.jpg/v1/fill/w_1024,h_768,q_75,strp/neobart__by_raffskizze_d2zlkd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6Ii9mLzA0OWE1NjRiLTBjNzItNGFmNi04ZTdjLTdmMWQ3NzAzN2E2Yi9kMnpsa2QtMWRiZjFkZmEtYmI3Ni00MGFkLTljM2EtODM0NzgwZDRkOWNjLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.jGFXPf0OeTErIzLrMfZ6la2vlqzQ7NPHdpkzy6ETZpY" background-opacity="0.85"}
+<!-- markdownlint-enable MD034 -->
 
 ## Перший електронний цифровий комп'ютер [^Z1-computer] [^MESM]
 
@@ -56,7 +64,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="55%"}
-![](https://upload.wikimedia.org/wikipedia/commons/0/01/Atanasoff-Berry_Computer_at_Durhum_Center.jpg "Комп'ютер Атанасова — Беррі (ABC)"){width=100%}
+![Комп'ютер Атанасова — Беррі (ABC)](https://upload.wikimedia.org/wikipedia/commons/0/01/Atanasoff-Berry_Computer_at_Durhum_Center.jpg "Комп'ютер Атанасова — Беррі (ABC)"){width=100%}
 :::
 ::: {.column width="45%"}
 **Комп'ютер ABC**
@@ -99,17 +107,35 @@ execute:
 ## Скільки значень дають біти?
 
 | Кількість бітів | Степінь двійки | Усі стани | Кількість значень |
-|----------------:|:-------------:|:----------|------------------:|
+| ----------------: | :-------------: | :---------- | ------------------: |
 | 1 | $2$ | `0`, `1` | 2 |
 | 2 | $2 \cdot 2$ | `00`, `01`, `10`, `11` | 4 |
 | 3 | $2 \cdot 2 \cdot 2$ | `000`, `001`, `010`, `011`, `100`, `101`, `110`, `111` | 8 |
 
 ## Скільки значень дають біти?
 
-$$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
+$$
+\begin{array}{c}
+\overbrace{\boxed{\bullet}\underbrace{\boxed{\bullet\;\bullet\;\cdots\;\bullet}}_{n\text{ біт}}}^{(n+1)\text{ біт}} \quad k_{n+1}
+\\[0.6em]
+\swarrow \qquad \searrow
+\\[0.6em]
+\boxed{\texttt{0}}\overbrace{\boxed{\bullet\;\bullet\;\cdots\;\bullet}}^{n\text{ біт}} \quad k_n
+\qquad
+\boxed{\texttt{1}}\overbrace{\boxed{\bullet\;\bullet\;\cdots\;\bullet}}^{n\text{ біт}} \quad k_n
+\end{array}
+$$
+
+$$
+k_{n+1} = k_n + k_n = 2 k_n
+$$
+
+## Скільки значень дають біти?
+
+$$k_n = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 
 - $n$ — кількість бітів.
-- $N$ — кількість комбінацій.
+- $k_n$ — кількість комбінацій.
 
 ## Скільки значень дають біти?
 
@@ -121,7 +147,10 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 |              32 | $2^{32}$                         |             4294967296 |
 |              64 | $2^{64}$                         |   18446744073709551616 |
 
+<!-- Quarto background-image attributes require bare URLs, which MD034 flags as bare links. -->
+<!-- markdownlint-disable MD034 -->
 ## Самоперевірка {background-image="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202505/MIT-FreeAtoms-01-press.jpg" background-opacity="0.18"}
+<!-- markdownlint-enable MD034 -->
 
 Скількох бітів достатньо, щоб пронумерувати всі атоми у спостережуваному Всесвіті?
 
@@ -132,6 +161,7 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 
 ::: {.callout-tip title="Підказка"}
 ::: {.incremental}
+
 - скільки бітів потрібно, щоб закодувати 10 значень?
 - $2^{10} = 1024 \approx 1000 = 10^3$
 :::
@@ -144,7 +174,7 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 Байт може мати **256** різних значень.
 
 ::: {.fragment}
-Для більших обсягів є **кіло**байти, **мега**байти й **гіга**байти. 
+Для більших обсягів є **кіло**байти, **мега**байти й **гіга**байти.
 
 ::: {.callout-warning title="Запитання"}
 Скільки байтів у кілобайті?
@@ -154,7 +184,7 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 ## Порядки величин даних: десяткові та двійкові
 
 | Одиниця | Десяткова кількість байтів | SI | Двійкова кількість байтів | JEDEC | МЕК (IEC)[^IEC-prefixes] |
-| --- | ---------------------------: |:--:| --------------------------: |:-----:|:---------:|
+| --- | ---------------------------: | :--: | --------------------------: | :-----: | :---------: |
 | байт | $1$ | B | $1$ | B | B |
 | кілобайт | $10^3$ | **kB** | $2^{10}$ | **KB** | KiB |
 | мегабайт | $10^6$ | MB | $2^{20}$ | MB | MiB |
@@ -186,13 +216,13 @@ $$N = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 $$A = 5 \cdot (1.01)^{12t}, \qquad t = \text{кількість років}$$
 
 ::: {.incremental}
+
 - **1 рік:** 5,63 €
 - **10 років:** 16,50 €
 - **25 років:** 99,11 €
 - **50 років:** 1'957,92 €
 :::
 :::
-
 
 ## Самоперевірка
 
@@ -201,15 +231,17 @@ $$A = 5 \cdot (1.01)^{12t}, \qquad t = \text{кількість років}$$
 2. А яка різниця в байтах між десятковими та двійковими терабайтами? Скільки ця різниця становить в GB і GiB?
 
 :::: {.callout-tip title="Підказки" .fragment}
+
 - $2^{10} = 1024$
 
 ::: {.fragment .blur }
+
 - $2^{30} = 1073741824$
 :::
 
 ::::
 
-# 
+#
 <!-- # Позиційні системи числення -->
 
 ::: {.r-fit-text .text-center}
@@ -226,7 +258,7 @@ $$A = 5 \cdot (1.01)^{12t}, \qquad t = \text{кількість років}$$
 〇 一 二 三 四 五 六 七 八 九
 ::: -->
 
-<!-- 
+<!--
 ::: {.fragment .r-fit-text .text-center}
 Цифри — цеглинки чисел
 :::
@@ -248,7 +280,7 @@ $$101_2=1\cdot2^2+0\cdot2^1+1\cdot2^0=5_{10}$$
 
 ## Позиційний запис: шістнадцятковий
 
-- Цифри: 
+- Цифри:
 
   ::: {.incremental}
   - **0**, ..., **9** (всього 10, 6 бракує)
@@ -273,6 +305,7 @@ $$2026_{10}=7\cdot16^2+14\cdot16^1+10\cdot16^0=7EA_{16}$$
 
 ::: {.columns}
 ::: {.column width="50%"}
+
 | Двійкова група | Hex |
 | --- | --- |
 | **0000** | **0** |
@@ -306,6 +339,7 @@ $$2026_{10}=7\cdot16^2+14\cdot16^1+10\cdot16^0=7EA_{16}$$
 ::: {.callout-tip title="Підказка" }
 
 ::: {.incremental}
+
 - $2026_{10}=7EA_{16}$
 - $7_{16}=0111_2$, $A_{16}=1010_2$, $E_{16}=1110_2$
 - $\left(\underbrace{0111}_{7_{16}}\,\underbrace{1110}_{E_{16}}\,\underbrace{1010}_{A_{16}}\right)_2$
@@ -387,7 +421,6 @@ $$10 \equiv 0 + 10 \equiv 256 + 10 \equiv -256 + 10 \equiv 256 \cdot k + 10 \pmo
 
 ## Класи лишків на колі
 
-
 ```{python}
 #| echo: false
 #| fig-alt: "Інтерактивне коло класів лишків. Повзунок змінює модуль від 2 до 256 (повний байт), початкове значення — 16."
@@ -400,12 +433,12 @@ figure = create_modular_residue_figure(repr_min=-2, repr_max=3)
 display(HTML(figure.to_html(full_html=False, include_plotlyjs="cdn", include_mathjax=False)))
 ```
 
-<!-- 
+<!--
 ## Класи лишків
 
 ::: {.content-visible when-format="html"}
 {{< video ../media/lecture01/video/integer-modulo-circle.mp4 >}}
-::: 
+:::
 
 -->
 
@@ -426,8 +459,6 @@ display(HTML(figure.to_html(
 )))
 ```
 
-
-
 ## Від'ємні числа: доповнення до двійки
 
 У $n$ бітах число $-x$ кодують як $2^n-|x|$.
@@ -446,7 +477,6 @@ $$
 $$
 
 :::
-
 
 ## Самоперевірка
 
@@ -493,7 +523,6 @@ print(numpy.uint16(0xFF).astype(numpy.uint8))
 print(numpy.uint16(0xFF).astype(numpy.int8))
 ```
 
-
 # Текст — теж послідовність чисел
 
 <!-- ## ASCII, Unicode та UTF-8 -->
@@ -515,10 +544,9 @@ flowchart LR
   linkStyle 2 stroke:#a64b34,stroke-width:2px,stroke-dasharray:6 4;
 ```
 
-
 ## ASCII: 128 базових кодів
 
-|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+| | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0x | NUL | *SOH* | *STX* | *ETX* | EOT | *ENQ* | *ACK* | BEL | *BS* | HT | LF | VT | FF | CR | SO | SI |
 | 1x | *DLE* | DC1 | DC2 | DC3 | DC4 | *NAK* | SYN | *ETB* | *CAN* | *EM* | **SUB** | *ESC* | *FS* | *GS* | *RS* | *US* |
@@ -546,7 +574,6 @@ flowchart LR
 - людина + дерево = відпочивати
 :::
 
-
 ## Алфавіт vs. іерогліфи
 
 ::: {.callout-tip title="Приклади" .incremental}
@@ -556,7 +583,6 @@ flowchart LR
 - **从**
 
 :::
-
 
 ## Unicode (Юнікод) та UTF-8
 
@@ -614,7 +640,6 @@ flowchart LR
     style="border: 1px solid #cbd5e1; border-radius: 6px;">
 </iframe>
 
-
 # Файл: як тлумачити?
 
 <!-- Ті самі байти можна тлумачити як текст, зображення, звук або інструкції. -->
@@ -631,13 +656,13 @@ flowchart LR
 
 Кожен піксель має колір, який часто задають складовими **R**, **G** і **B**.
 
-![](../media/lecture01/img/pixel-rgb.svg){fig-alt="Піксель у сітці задається інтенсивностями червоного, зеленого та синього світла."}
+![Піксель у сітці з інтенсивностями червоного, зеленого та синього світла](../media/lecture01/img/pixel-rgb.svg){fig-alt="Піксель у сітці задається інтенсивностями червоного, зеленого та синього світла."}
 
 ## Відео — кадри, звук і час
 
 Відео = відеопотік (зображення з певною частотою) + аудіодоріжка
 
-![](../media/lecture01/img/video-container.svg){fig-alt="Послідовні кадри й дві аудіодоріжки синхронізовано на спільній шкалі часу."}
+![Відеокадри й аудіодоріжки на спільній часовій шкалі](../media/lecture01/img/video-container.svg){fig-alt="Послідовні кадри й дві аудіодоріжки синхронізовано на спільній шкалі часу."}
 
 ## Спробувати
 
@@ -675,7 +700,6 @@ flowchart LR
 відкритий текст $\xrightarrow{\text{ключ}}$ шифротекст.
 :::
 
-
 ::: {.callout-tip title="Шифр Цезаря" .fragment}
 ключ — це зсув літер в абетці.
 
@@ -692,7 +716,6 @@ flowchart LR
 ```
 
 Переберіть ключі у [зошиті шифру Цезаря](https://molab.marimo.io/github/SGo-Go/cs00/blob/main/assets/lecture01/notebooks/caesar_cipher.py/wasm).
-
 
 ## Що спробувати далі?
 

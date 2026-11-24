@@ -11,6 +11,11 @@ with app.setup(hide_code=True):
 
     import marimo as mo
 
+    ALPHABETS = {
+        "Українська": "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ",
+        "English": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    }
+
 
 @app.cell(hide_code=True)
 def _():
@@ -40,11 +45,6 @@ def caesar(text: str, shift: int, alphabet: str) -> str:
 
 @app.cell(hide_code=True)
 def _():
-    ALPHABETS = {
-        "Українська": "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ",
-        "English": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    }
-
     language = mo.ui.dropdown(options=ALPHABETS, value="Українська", label="Алфавіт")
     mode = mo.ui.radio(options={"Зашифрувати": 1, "Розшифрувати": -1}, value="Зашифрувати", label="Дія")
     mo.hstack([language, mode], justify="start", gap=2)

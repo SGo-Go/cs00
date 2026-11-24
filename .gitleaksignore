@@ -1,0 +1,6 @@
+create new gitleaksignore instead of pointing
+
+.secrets.baseline
+# User confirmed the signed image URL token for "Neobart" smage
+528ab562bb005b9ea365a625ecbf40f55f1e4324:docs/quarto/slides/01-data-encoding.qmd:jwt:48
+5733038819988182d905311edcad93c3b1a10783:docs/quarto/slides/01-data-encoding.qmd:jwt:48

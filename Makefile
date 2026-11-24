@@ -21,7 +21,7 @@ render-videos:
 preview:
 	cd docs/quarto && quarto preview
 
-serve: render
+serve: # render
 	python3 -m http.server --bind 127.0.0.1 --directory docs/quarto/_site "$(PORT)"
 
 sphinx-render:
