@@ -10,7 +10,6 @@ uv.lock
 .flake8
 .github/copilot-instructions.md
 .gitleaks.toml
-.gitleaksignore
 .hadolint.yaml
 .interrogate.yaml
 .isort.cfg
