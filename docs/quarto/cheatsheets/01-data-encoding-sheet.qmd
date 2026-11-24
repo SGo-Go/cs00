@@ -25,6 +25,9 @@ execute:
   eval: false
 ---
 
+<!-- Each `.sheet` is a separate printable page and intentionally starts with a top-level heading. -->
+<!-- markdownlint-disable-file MD025 -->
+
 ::: {.content-visible when-format="html"}
 <style>
 body {

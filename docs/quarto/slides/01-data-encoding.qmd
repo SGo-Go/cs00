@@ -19,6 +19,9 @@ execute:
   freeze: auto
 ---
 
+<!-- Reveal.js repeats top-level and section headings; Quarto's slide dividers also resemble Markdown tables. -->
+<!-- markdownlint-disable-file MD024 MD025 MD055 MD056 -->
+
 ```{=html}
 <style>
 .reveal {
@@ -42,10 +45,12 @@ execute:
 </style>
 ```
 
+<!-- Quarto background-image attributes require bare URLs, which MD034 flags as bare links. -->
 <!-- markdownlint-disable MD034 -->
 # {background-image="https://live.staticflickr.com/1392/1388783865_704b5cf42b_c.jpg" background-opacity="0.75"}
 <!-- markdownlint-enable MD034 -->
 
+<!-- Quarto background-image attributes require bare URLs, which MD034 flags as bare links. -->
 <!-- markdownlint-disable MD034 -->
 # Біт, байт, кілобайт, ... {background-image="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/049a564b-0c72-4af6-8e7c-7f1d77037a6b/d2zlkd-1dbf1dfa-bb76-40ad-9c3a-834780d4d9cc.jpg/v1/fill/w_1024,h_768,q_75,strp/neobart__by_raffskizze_d2zlkd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6Ii9mLzA0OWE1NjRiLTBjNzItNGFmNi04ZTdjLTdmMWQ3NzAzN2E2Yi9kMnpsa2QtMWRiZjFkZmEtYmI3Ni00MGFkLTljM2EtODM0NzgwZDRkOWNjLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.jGFXPf0OeTErIzLrMfZ6la2vlqzQ7NPHdpkzy6ETZpY" background-opacity="0.85"}
 <!-- markdownlint-enable MD034 -->
@@ -59,7 +64,7 @@ execute:
 
 ::: {.columns}
 ::: {.column width="55%"}
-![](https://upload.wikimedia.org/wikipedia/commons/0/01/Atanasoff-Berry_Computer_at_Durhum_Center.jpg "Комп'ютер Атанасова — Беррі (ABC)"){width=100%}
+![Комп'ютер Атанасова — Беррі (ABC)](https://upload.wikimedia.org/wikipedia/commons/0/01/Atanasoff-Berry_Computer_at_Durhum_Center.jpg "Комп'ютер Атанасова — Беррі (ABC)"){width=100%}
 :::
 ::: {.column width="45%"}
 **Комп'ютер ABC**
@@ -142,6 +147,7 @@ $$k_n = 2^n = \underbrace{2 \cdot 2 \cdots 2}_{n\text{ множників}}$$
 |              32 | $2^{32}$                         |             4294967296 |
 |              64 | $2^{64}$                         |   18446744073709551616 |
 
+<!-- Quarto background-image attributes require bare URLs, which MD034 flags as bare links. -->
 <!-- markdownlint-disable MD034 -->
 ## Самоперевірка {background-image="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202505/MIT-FreeAtoms-01-press.jpg" background-opacity="0.18"}
 <!-- markdownlint-enable MD034 -->
@@ -650,13 +656,13 @@ flowchart LR
 
 Кожен піксель має колір, який часто задають складовими **R**, **G** і **B**.
 
-![](../media/lecture01/img/pixel-rgb.svg){fig-alt="Піксель у сітці задається інтенсивностями червоного, зеленого та синього світла."}
+![Піксель у сітці з інтенсивностями червоного, зеленого та синього світла](../media/lecture01/img/pixel-rgb.svg){fig-alt="Піксель у сітці задається інтенсивностями червоного, зеленого та синього світла."}
 
 ## Відео — кадри, звук і час
 
 Відео = відеопотік (зображення з певною частотою) + аудіодоріжка
 
-![](../media/lecture01/img/video-container.svg){fig-alt="Послідовні кадри й дві аудіодоріжки синхронізовано на спільній шкалі часу."}
+![Відеокадри й аудіодоріжки на спільній часовій шкалі](../media/lecture01/img/video-container.svg){fig-alt="Послідовні кадри й дві аудіодоріжки синхронізовано на спільній шкалі часу."}
 
 ## Спробувати
 

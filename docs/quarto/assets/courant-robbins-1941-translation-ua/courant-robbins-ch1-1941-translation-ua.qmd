@@ -10,6 +10,9 @@ format:
 citeproc: true
 ---
 
+<!-- Quarto equation IDs are not Markdown heading anchors, so MD051 cannot resolve these fragments. -->
+<!-- markdownlint-disable-file MD051 -->
+
 ::: {.callout-note title="Примітка до оцифрування"}
 Текст оцифровано `SGo-Go` за допомогою [GitHub Copilot](https://github.com/features/copilot).
 
@@ -976,6 +979,7 @@ B. $A_1$, очевидно, правильне, оскільки якщо $\max(
 Було показано, що $A_n$ правильне для будь-якого $n$; отже, зокрема, правильне $A_r$.
 Тому $a = b$.
 
+<!-- This appended supplement intentionally adds a top-level heading after the translated chapter. -->
 <!-- markdownlint-disable-next-line MD025 -->
 # Доповнення до глави I. Теорія чисел
 
