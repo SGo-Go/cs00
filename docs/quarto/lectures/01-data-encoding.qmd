@@ -611,7 +611,7 @@ flowchart TD
 
 ::::
 
-Докладніше: [про токени](https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens) та [про мовні моделі](05-software-ai.qmd#що-таке-llm).
+Докладніше: [про токени](https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens) та [про мовні моделі](06-software-ai.qmd#що-таке-llm).
 
 ## Файли: текстові та бінарні
 

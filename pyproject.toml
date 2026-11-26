@@ -43,6 +43,9 @@ qc = [
 ]
 visuals = [ "cs00-visuals" ]
 
+[tool.marimo.lint]
+select = [ "ALL" ]
+
 [tool.ruff]
 cache-dir = "~/.cache/ruff"
 exclude = [ "third_party/" ]
