@@ -30,4 +30,3 @@ sphinx-render:
 sphinx-open: sphinx-render
 	@test -n "$$BROWSER" || { printf '%s\n' 'Set BROWSER to open the generated Sphinx index.'; exit 1; }
 	"$$BROWSER" "file://$(CURDIR)/docs/quarto/_site/api/index.html"
-

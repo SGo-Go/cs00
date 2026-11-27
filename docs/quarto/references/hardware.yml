@@ -101,7 +101,9 @@ references:
     publisher: Microsoft Press
     issued: 2022
     ISBN: "9780137909100"
-    abstract: "An accessible introduction to how hardware and software represent information and build on digital logic."
+    abstract: >-
+      An accessible introduction to how hardware and software represent
+      information and build on digital logic.
     URL: "https://openlibrary.org/isbn/9780137909100"
 
   # # https://cmls-global.com/wp-content/uploads/2021/08/The-elements-of-computing-systems-building-a-modern-computer.pdf
@@ -135,7 +137,9 @@ references:
     publisher: Pearson
     issued: 2015
     ISBN: "9780134092669"
-    abstract: "Connects machine-level code, processor architecture, memory hierarchy, linking, I/O, and concurrency for programmers."
+    abstract: >-
+      Connects machine-level code, processor architecture, memory hierarchy,
+      linking, I/O, and concurrency for programmers.
     URL: "https://csapp.cs.cmu.edu/3e/home.html"
     # https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/CSAPP_2016.pdf
 
@@ -152,7 +156,9 @@ references:
     publisher: Morgan Kaufmann
     issued: 2019
     ISBN: "9780128119051"
-    abstract: "An advanced reference on processor design, memory systems, parallel architectures, and quantitative performance analysis."
+    abstract: >-
+      An advanced reference on processor design, memory systems, parallel
+      architectures, and quantitative performance analysis.
     URL: "https://openlibrary.org/isbn/9780128119051"
     # https://acs.pub.ro/~cpop/SMPA/Computer%20Architecture,%20Sixth%20Edition_%20A%20Quantitative%20Approach%20(%20PDFDrive%20).pdf
 

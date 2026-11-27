@@ -31,7 +31,9 @@ references:
         given: Andrea C.
     publisher: Arpaci-Dusseau Books
     issued: 2023
-    annote: "A clear, in-depth introduction to virtualization, concurrency, and persistence, freely available online from the authors."
+    annote: >-
+      A clear, in-depth introduction to virtualization, concurrency, and persistence,
+      freely available online from the authors.
     keyword: "Systems & Architecture"
     URL: "https://pages.cs.wisc.edu/~remzi/OSTEP/"
 
@@ -48,7 +50,9 @@ references:
     publisher: Pearson
     issued: 2014
     ISBN: "9780133591620"
-    annote: "A comprehensive introduction to operating-system architecture, processes, memory management, file systems, and distributed systems."
+    annote: >-
+      A comprehensive introduction to operating-system architecture, processes,
+      memory management, file systems, and distributed systems.
     keyword: "Systems & Architecture"
 
   - id: kleppmann-2017-ddia
@@ -112,7 +116,8 @@ references:
     publisher: Cengage Learning
     issued: 2012
     ISBN: "9781133187790"
-    annote: "A rigorous foundation in automata, computability, and complexity theory, including the P versus NP question."
+    annote: >-
+      A rigorous foundation in automata, computability, and complexity theory, including the P versus NP question.
     keyword: "Algorithms & Theory"
     URL: "https://www.cengage.com/c/introduction-to-the-theory-of-computation-3e-sipser/9781133187790/"
 
@@ -134,7 +139,8 @@ references:
     publisher: Pearson
     issued: 2006
     ISBN: "9780321486813"
-    annote: "The classic compiler text on lexical analysis, parsing, syntax-directed translation, and code generation."
+    annote: >-
+      The classic compiler text on lexical analysis, parsing, syntax-directed translation, and code generation.
     keyword: "Compilers & Programming Languages"
     URL: "https://www.pearson.com/en-us/subject-catalog/p/compilers-principles-techniques-and-tools/P200000003472/9780133002140.html"
 
@@ -152,7 +158,8 @@ references:
   #   publisher-place: Cambridge, MA
   #   issued: 1996
   #   ISBN: "9780262510875"
-  #   annote: "Builds intuition for abstraction, recursion, interpreters, and models of computation from first principles."
+  #   annote: >-
+  #     Builds intuition for abstraction, recursion, interpreters, and models of computation from first principles.
   #   keyword: "Compilers & Programming Languages"
   #   URL: "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/"
   #   # https://web.mit.edu/6.001/6.037/sicp.pdf
@@ -171,7 +178,9 @@ references:
     publisher: Pearson
     issued: 2021
     ISBN: "9780136681557"
-    annote: "Introduces networking from the application layer down to physical hardware, balancing theory with practical protocol analysis."
+    annote: >-
+      Introduces networking from the application layer down to physical hardware,
+      balancing theory with practical protocol analysis.
     keyword: Networking
     URL: "https://gaia.cs.umass.edu/kurose_ross/index.php"
 
@@ -186,7 +195,8 @@ references:
     publisher: O'Reilly Media
     issued: 2019
     ISBN: "9781492040330"
-    annote: "Explores storage engines such as B-trees and LSM-trees, and the internals of distributed database clusters."
+    annote: >-
+      Explores storage engines such as B-trees and LSM-trees, and the internals of distributed database clusters.
     keyword: "Databases & Storage Internals"
     URL: "https://www.oreilly.com/library/view/database-internals/9781492040330/"
 
@@ -270,7 +280,8 @@ references:
     publisher-place: Cambridge, MA
     issued: 2018
     ISBN: "9780262039246"
-    annote: "A foundational introduction to Markov decision processes, reinforcement learning, and deep RL fundamentals."
+    annote: >-
+      A foundational introduction to Markov decision processes, reinforcement learning, and deep RL fundamentals.
     keyword: "Artificial Intelligence & Machine Learning"
     URL: "https://mitpress.mit.edu/9780262039246/reinforcement-learning/"
 
@@ -329,7 +340,9 @@ references:
     publisher-place: Cambridge, MA
     issued: 2023
     ISBN: "9780262048026"
-    annote: "Explains physically based rendering mathematics and architecture alongside a complete literate-programming renderer implementation."
+    annote: >-
+      Explains physically based rendering mathematics and architecture alongside a
+      complete literate-programming renderer implementation.
     keyword: "Computer Graphics & Vision"
     URL: "https://pbr-book.org/4ed/Preface"
 
@@ -393,7 +406,8 @@ references:
     publisher: Wiley
     issued: 2020
     ISBN: "9781119642787"
-    annote: "A practical guide to resilient system design, threat modeling, access control, and cryptographic protocols."
+    annote: >-
+      A practical guide to resilient system design, threat modeling, access control, and cryptographic protocols.
     keyword: "Security & Systems Engineering"
     URL: "https://www.cl.cam.ac.uk/archive/rja14/book.html"
 
@@ -416,6 +430,7 @@ references:
     publisher: Addison-Wesley Professional
     issued: 2017
     ISBN: "9780134277554"
-    annote: "A hands-on reference to production UNIX and Linux systems, networking, storage, permissions, and administration."
+    annote: >-
+      A hands-on reference to production UNIX and Linux systems, networking, storage, permissions, and administration.
     keyword: "Security & Systems Engineering"
     URL: "https://www.oreilly.com/library/view/unix-and-linux/9780134278308/"
