@@ -1,0 +1,170 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Books and a primary historical source on computer hardware, architecture, and machine-level programming.
+
+references:
+
+  # Ukrainian translations
+  - id: petzold-2001-code-uk
+    type: book
+    title: "Код. Таємна мова інформатики"
+    language: uk
+    author:
+      - family: Петцольд
+        given: Чарльз
+    issued: 2001
+    original-title: "Code: The Hidden Language of Computer Hardware and Software"
+    note: "Ukrainian translation of an earlier English edition; the retailer lists 512 pages."
+    URL: "https://rozetka.com.ua/ua/331185133/p331185133/"
+
+  # Russian translations
+  # - id: nisan-schocken-2023-elements-of-computing-systems-ru
+  #   type: book
+  #   title: "Архитектура компьютерных систем. Как собрать современный компьютер по всем правилам"
+  #   language: ru
+  #   author:
+  #     - family: Нисан
+  #       given: Ноам
+  #     - family: Шокен
+  #       given: Шимон
+  #   translator:
+  #     - family: Перфильев
+  #       given: О. И.
+  #   edition: "2"
+  #   publisher: Бомбора
+  #   issued: 2023
+  #   ISBN: "9785041810535"
+  #   original-title: "The Elements of Computing Systems: Building a Modern Computer from First Principles"
+  #   URL: "https://eksmo.ru/book/arhitektura-kompyuternykh-sistem-kak-sobrat-sovremennyy-kompyuter-po-vsem-pravilam-ITD1322188/"
+
+  - id: bryant-ohallaron-2022-computer-systems-ru
+    type: book
+    title: "Компьютерные системы: архитектура и программирование: взгляд программиста"
+    language: ru
+    author:
+      - family: Брайант
+        given: Рэндал Э.
+      - family: О'Халларон
+        given: Дэвид Р.
+    translator:
+      - family: Киселев
+        given: А. Н.
+    edition: "3"
+    publisher: ДМК-Пресс
+    issued: 2022
+    ISBN: "9785970604922"
+    original-title: "Computer Systems: A Programmer's Perspective"
+    URL: "https://www.labirint.ru/books/877092/"
+
+  - id: hennessy-patterson-2016-computer-architecture-ru
+    type: book
+    title: "Компьютерная архитектура. Количественный подход"
+    language: ru
+    author:
+      - family: Хеннесси
+        given: Джон Л.
+      - family: Паттерсон
+        given: Дэвид А.
+    translator:
+      - family: Таранчева
+        given: М. В.
+    edition: "5"
+    publisher: Техносфера
+    issued: 2016
+    ISBN: "9785948364131"
+    original-title: "Computer Architecture: A Quantitative Approach"
+    URL: "https://search.rsl.ru/ru/record/01008094668"
+
+  - id: raschka-2026-build-large-language-model-from-scratch-ru
+    type: book
+    title: "Строим LLM с нуля"
+    language: ru
+    author:
+      - family: Рашка
+        given: Себастьян
+    translator:
+      - family: Окунь
+        given: О.
+    publisher: Питер
+    issued: 2026
+    ISBN: "9785446143252"
+    original-title: "Build a Large Language Model (From Scratch)"
+    URL: "https://library.cbr.ru/catalog/lib/books/1100115/"
+
+  - id: petzold-2022-code
+    type: book
+    title: "Code: The Hidden Language of Computer Hardware and Software"
+    language: en
+    author:
+      - family: Petzold
+        given: Charles
+    edition: "2"
+    publisher: Microsoft Press
+    issued: 2022
+    ISBN: "9780137909100"
+    abstract: "An accessible introduction to how hardware and software represent information and build on digital logic."
+    URL: "https://openlibrary.org/isbn/9780137909100"
+
+  # # https://cmls-global.com/wp-content/uploads/2021/08/The-elements-of-computing-systems-building-a-modern-computer.pdf
+  # - id: nisan-schocken-2021-elements-of-computing-systems
+  #   type: book
+  #   title: "The Elements of Computing Systems: Building a Modern Computer from First Principles"
+  #   language: en
+  #   author:
+  #     - family: Nisan
+  #       given: Noam
+  #     - family: Schocken
+  #       given: Shimon
+  #   edition: "2"
+  #   publisher: MIT Press
+  #   publisher-place: Cambridge, MA
+  #   issued: 2021
+  #   ISBN: "9780262539807"
+  #   abstract: "A project-based path from logic gates and hardware through machine language, compilers, and software."
+  #   URL: "https://mitpress.mit.edu/9780262539807/the-elements-of-computing-systems/"
+
+  - id: bryant-ohallaron-2015-computer-systems-programmers-perspective
+    type: book
+    title: "Computer Systems: A Programmer's Perspective"
+    language: en
+    author:
+      - family: Bryant
+        given: Randal E.
+      - family: O'Hallaron
+        given: David R.
+    edition: "3"
+    publisher: Pearson
+    issued: 2015
+    ISBN: "9780134092669"
+    abstract: "Connects machine-level code, processor architecture, memory hierarchy, linking, I/O, and concurrency for programmers."
+    URL: "https://csapp.cs.cmu.edu/3e/home.html"
+    # https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/CSAPP_2016.pdf
+
+  - id: hennessy-patterson-2019-computer-architecture-quantitative-approach
+    type: book
+    title: "Computer Architecture: A Quantitative Approach"
+    language: en
+    author:
+      - family: Hennessy
+        given: John L.
+      - family: Patterson
+        given: David A.
+    edition: "6"
+    publisher: Morgan Kaufmann
+    issued: 2019
+    ISBN: "9780128119051"
+    abstract: "An advanced reference on processor design, memory systems, parallel architectures, and quantitative performance analysis."
+    URL: "https://openlibrary.org/isbn/9780128119051"
+    # https://acs.pub.ro/~cpop/SMPA/Computer%20Architecture,%20Sixth%20Edition_%20A%20Quantitative%20Approach%20(%20PDFDrive%20).pdf
+
+  - id: raschka-2024-build-large-language-model-from-scratch
+    type: book
+    title: "Build a Large Language Model (From Scratch)"
+    language: en
+    author:
+      - family: Raschka
+        given: Sebastian
+    publisher: Manning Publications
+    issued: 2024
+    ISBN: "9781633437166"
+    abstract: "A hands-on introduction to tokenization, Transformer language models, training, and fine-tuning."
+    URL: "https://www.manning.com/books/build-a-large-language-model-from-scratch"

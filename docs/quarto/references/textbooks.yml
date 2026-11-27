@@ -1,0 +1,421 @@
+# Copyright (C) 2026 SGo-Go. All rights reserved.
+# Recommended textbooks grouped by area of computer science.
+
+references:
+  # Systems & Architecture
+  - id: bryant-ohallaron-2015-csapp
+    type: book
+    title: "Computer Systems: A Programmer's Perspective"
+    language: en
+    author:
+      - family: Bryant
+        given: Randal E.
+      - family: O'Hallaron
+        given: David R.
+    edition: "3"
+    publisher: Pearson
+    issued: 2015
+    ISBN: "9780134092669"
+    annote: "Explains how processors, memory, linking, and virtual memory impact code performance."
+    keyword: "Systems & Architecture"
+    URL: "https://csapp.cs.cmu.edu/3e/home.html"
+
+  - id: arpaci-dusseau-2023-ostep
+    type: book
+    title: "Operating Systems: Three Easy Pieces"
+    language: en
+    author:
+      - family: Arpaci-Dusseau
+        given: Remzi H.
+      - family: Arpaci-Dusseau
+        given: Andrea C.
+    publisher: Arpaci-Dusseau Books
+    issued: 2023
+    annote: "A clear, in-depth introduction to virtualization, concurrency, and persistence, freely available online from the authors."
+    keyword: "Systems & Architecture"
+    URL: "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+
+  - id: tanenbaum-bos-2014-modern-operating-systems
+    type: book
+    title: "Modern Operating Systems"
+    language: en
+    author:
+      - family: Tanenbaum
+        given: Andrew S.
+      - family: Bos
+        given: Herbert
+    edition: "4"
+    publisher: Pearson
+    issued: 2014
+    ISBN: "9780133591620"
+    annote: "A comprehensive introduction to operating-system architecture, processes, memory management, file systems, and distributed systems."
+    keyword: "Systems & Architecture"
+
+  - id: kleppmann-2017-ddia
+    type: book
+    title: "Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems"
+    language: en
+    author:
+      - family: Kleppmann
+        given: Martin
+    publisher: O'Reilly Media
+    issued: 2017
+    ISBN: "9781449373320"
+    annote: "A practical guide to distributed systems, databases, replication, partitioning, and stream processing."
+    keyword: "Systems & Architecture"
+    URL: "https://dataintensive.net/"
+
+  # Algorithms & Theory
+  - id: cormen-et-al-2022-clrs
+    type: book
+    title: "Introduction to Algorithms"
+    language: en
+    author:
+      - family: Cormen
+        given: Thomas H.
+      - family: Leiserson
+        given: Charles E.
+      - family: Rivest
+        given: Ronald L.
+      - family: Stein
+        given: Clifford
+    edition: "4"
+    publisher: MIT Press
+    publisher-place: Cambridge, MA
+    issued: 2022
+    ISBN: "9780262046305"
+    annote: "The encyclopedic standard for algorithm design, complexity analysis, and data structures."
+    keyword: "Algorithms & Theory"
+    URL: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/"
+
+  # - id: knuth-1968-taocp
+  #   type: book
+  #   title: "The Art of Computer Programming"
+  #   language: en
+  #   author:
+  #     - family: Knuth
+  #       given: Donald E.
+  #   publisher: Addison-Wesley
+  #   issued: 1968
+  #   annote: "A multi-volume, deeply mathematical reference renowned for exhaustive low-level algorithmic analysis."
+  #   keyword: "Algorithms & Theory"
+  #   URL: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
+
+  - id: sipser-2012-theory-computation
+    type: book
+    title: "Introduction to the Theory of Computation"
+    language: en
+    author:
+      - family: Sipser
+        given: Michael
+    edition: "3"
+    publisher: Cengage Learning
+    issued: 2012
+    ISBN: "9781133187790"
+    annote: "A rigorous foundation in automata, computability, and complexity theory, including the P versus NP question."
+    keyword: "Algorithms & Theory"
+    URL: "https://www.cengage.com/c/introduction-to-the-theory-of-computation-3e-sipser/9781133187790/"
+
+  # Compilers & Programming Languages
+  - id: aho-et-al-2006-compilers
+    type: book
+    title: "Compilers: Principles, Techniques, and Tools"
+    language: en
+    author:
+      - family: Aho
+        given: Alfred V.
+      - family: Lam
+        given: Monica S.
+      - family: Sethi
+        given: Ravi
+      - family: Ullman
+        given: Jeffrey D.
+    edition: "2"
+    publisher: Pearson
+    issued: 2006
+    ISBN: "9780321486813"
+    annote: "The classic compiler text on lexical analysis, parsing, syntax-directed translation, and code generation."
+    keyword: "Compilers & Programming Languages"
+    URL: "https://www.pearson.com/en-us/subject-catalog/p/compilers-principles-techniques-and-tools/P200000003472/9780133002140.html"
+
+  # - id: abelson-sussman-1996-sicp
+  #   type: book
+  #   title: "Structure and Interpretation of Computer Programs"
+  #   language: en
+  #   author:
+  #     - family: Abelson
+  #       given: Harold
+  #     - family: Sussman
+  #       given: Gerald Jay
+  #   edition: "2"
+  #   publisher: MIT Press
+  #   publisher-place: Cambridge, MA
+  #   issued: 1996
+  #   ISBN: "9780262510875"
+  #   annote: "Builds intuition for abstraction, recursion, interpreters, and models of computation from first principles."
+  #   keyword: "Compilers & Programming Languages"
+  #   URL: "https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/"
+  #   # https://web.mit.edu/6.001/6.037/sicp.pdf
+
+  # Networking
+  - id: kurose-ross-2021-computer-networking
+    type: book
+    title: "Computer Networking: A Top-Down Approach"
+    language: en
+    author:
+      - family: Kurose
+        given: James F.
+      - family: Ross
+        given: Keith W.
+    edition: "8"
+    publisher: Pearson
+    issued: 2021
+    ISBN: "9780136681557"
+    annote: "Introduces networking from the application layer down to physical hardware, balancing theory with practical protocol analysis."
+    keyword: Networking
+    URL: "https://gaia.cs.umass.edu/kurose_ross/index.php"
+
+  # Databases & Storage Internals
+  - id: petrov-2019-database-internals
+    type: book
+    title: "Database Internals: A Deep Dive into How Distributed Data Systems Work"
+    language: en
+    author:
+      - family: Petrov
+        given: Alex
+    publisher: O'Reilly Media
+    issued: 2019
+    ISBN: "9781492040330"
+    annote: "Explores storage engines such as B-trees and LSM-trees, and the internals of distributed database clusters."
+    keyword: "Databases & Storage Internals"
+    URL: "https://www.oreilly.com/library/view/database-internals/9781492040330/"
+
+  - id: bailis-et-al-2015-red-book
+    type: book
+    title: "Readings in Database Systems"
+    language: en
+    editor:
+      - family: Bailis
+        given: Peter
+      - family: Hellerstein
+        given: Joseph M.
+      - family: Stonebraker
+        given: Michael
+    edition: "5"
+    issued: 2015
+    annote: "A curated collection of foundational database research papers with expert commentary."
+    keyword: "Databases & Storage Internals"
+    URL: "https://redbook.io/"
+
+  # Programming Languages & Formal Verification
+  - id: pierce-2002-tapl
+    type: book
+    title: "Types and Programming Languages"
+    language: en
+    author:
+      - family: Pierce
+        given: Benjamin C.
+    publisher: MIT Press
+    publisher-place: Cambridge, MA
+    issued: 2002
+    ISBN: "9780262162098"
+    annote: "A comprehensive guide to type systems, lambda calculus, and formal semantics."
+    keyword: "Programming Languages & Formal Verification"
+    URL: "https://mitpress.mit.edu/9780262162098/types-and-programming-languages/"
+
+  - id: cooper-torczon-2022-engineering-compiler
+    type: book
+    title: "Engineering a Compiler"
+    language: en
+    author:
+      - family: Cooper
+        given: Keith D.
+      - family: Torczon
+        given: Linda
+    edition: "3"
+    publisher: Morgan Kaufmann
+    issued: 2022
+    ISBN: "9780128154120"
+    annote: "A modern compiler text emphasizing backend optimization, static single assignment, and code generation."
+    keyword: "Programming Languages & Formal Verification"
+    URL: "https://shop.elsevier.com/books/engineering-a-compiler/cooper/978-0-12-815412-0"
+
+  # Artificial Intelligence & Machine Learning
+  - id: bishop-2006-prml
+    type: book
+    title: "Pattern Recognition and Machine Learning"
+    language: en
+    author:
+      - family: Bishop
+        given: Christopher M.
+    publisher: Springer
+    publisher-place: New York, NY
+    issued: 2006
+    ISBN: "9780387310732"
+    annote: "A mathematically rigorous foundation in Bayesian methods, graphical models, and statistical learning."
+    keyword: "Artificial Intelligence & Machine Learning"
+    URL: "https://link.springer.com/book/9780387310732"
+
+  - id: sutton-barto-2018-reinforcement-learning
+    type: book
+    title: "Reinforcement Learning: An Introduction"
+    language: en
+    author:
+      - family: Sutton
+        given: Richard S.
+      - family: Barto
+        given: Andrew G.
+    edition: "2"
+    publisher: MIT Press
+    publisher-place: Cambridge, MA
+    issued: 2018
+    ISBN: "9780262039246"
+    annote: "A foundational introduction to Markov decision processes, reinforcement learning, and deep RL fundamentals."
+    keyword: "Artificial Intelligence & Machine Learning"
+    URL: "https://mitpress.mit.edu/9780262039246/reinforcement-learning/"
+
+  # Math, Logic & Cryptography
+  - id: graham-knuth-patashnik-1994-concrete-mathematics
+    type: book
+    title: "Concrete Mathematics: A Foundation for Computer Science"
+    language: en
+    author:
+      - family: Graham
+        given: Ronald L.
+      - family: Knuth
+        given: Donald E.
+      - family: Patashnik
+        given: Oren
+    edition: "2"
+    publisher: Addison-Wesley
+    publisher-place: Reading, MA
+    issued: 1994
+    ISBN: "9780201558029"
+    annote: "Covers the discrete mathematics, sums, recurrences, and asymptotics used to analyze algorithms."
+    keyword: "Math, Logic & Cryptography"
+    URL: "https://www-cs-faculty.stanford.edu/~knuth/gkp.html"
+
+  - id: katz-lindell-2020-modern-cryptography
+    type: book
+    title: "Introduction to Modern Cryptography"
+    language: en
+    author:
+      - family: Katz
+        given: Jonathan
+      - family: Lindell
+        given: Yehuda
+    edition: "3"
+    publisher: CRC Press
+    issued: 2020
+    ISBN: "9780815354369"
+    annote: "Introduces formal security proofs, reductionist arguments, and cryptographic primitives."
+    keyword: "Math, Logic & Cryptography"
+    URL: "https://www.cs.umd.edu/~jkatz/imc.html"
+
+  # Computer Graphics & Vision
+  - id: pharr-jakob-humphreys-2023-pbrt
+    type: book
+    title: "Physically Based Rendering: From Theory to Implementation"
+    language: en
+    author:
+      - family: Pharr
+        given: Matt
+      - family: Jakob
+        given: Wenzel
+      - family: Humphreys
+        given: Greg
+    edition: "4"
+    publisher: MIT Press
+    publisher-place: Cambridge, MA
+    issued: 2023
+    ISBN: "9780262048026"
+    annote: "Explains physically based rendering mathematics and architecture alongside a complete literate-programming renderer implementation."
+    keyword: "Computer Graphics & Vision"
+    URL: "https://pbr-book.org/4ed/Preface"
+
+  - id: szeliski-2022-computer-vision
+    type: book
+    title: "Computer Vision: Algorithms and Applications"
+    language: en
+    author:
+      - family: Szeliski
+        given: Richard
+    edition: "2"
+    publisher: Springer
+    issued: 2022
+    ISBN: "9783030343712"
+    annote: "A comprehensive survey of image formation, feature detection, 3D reconstruction, and recognition."
+    keyword: "Computer Graphics & Vision"
+    URL: "https://szeliski.org/Book/"
+
+  # Information Theory & Signal Processing
+  - id: cover-thomas-2006-elements-information-theory
+    type: book
+    title: "Elements of Information Theory"
+    language: en
+    author:
+      - family: Cover
+        given: Thomas M.
+      - family: Thomas
+        given: Joy A.
+    edition: "2"
+    publisher: Wiley-Interscience
+    issued: 2006
+    ISBN: "9780471241959"
+    annote: "Covers entropy, data compression, channel capacity, and coding theory."
+    keyword: "Information Theory & Signal Processing"
+    URL: "https://www.wiley.com/en-us/Elements+of+Information+Theory%2C+2nd+Edition-p-9780471241959"
+
+  - id: mackay-2003-information-theory-inference-learning
+    type: book
+    title: "Information Theory, Inference, and Learning Algorithms"
+    language: en
+    author:
+      - family: MacKay
+        given: David J. C.
+    publisher: Cambridge University Press
+    publisher-place: Cambridge
+    issued: 2003
+    ISBN: "9780521642989"
+    annote: "Unifies error-correcting codes, Bayesian inference, and neural networks through information theory."
+    keyword: "Information Theory & Signal Processing"
+    URL: "https://www.inference.org.uk/itprnn/book.html"
+
+  # Security & Systems Engineering
+  - id: anderson-2020-security-engineering
+    type: book
+    title: "Security Engineering: A Guide to Building Dependable Distributed Systems"
+    language: en
+    author:
+      - family: Anderson
+        given: Ross
+    edition: "3"
+    publisher: Wiley
+    issued: 2020
+    ISBN: "9781119642787"
+    annote: "A practical guide to resilient system design, threat modeling, access control, and cryptographic protocols."
+    keyword: "Security & Systems Engineering"
+    URL: "https://www.cl.cam.ac.uk/archive/rja14/book.html"
+
+  - id: nemeth-et-al-2017-unix-linux-system-administration
+    type: book
+    title: "UNIX and Linux System Administration Handbook"
+    language: en
+    author:
+      - family: Nemeth
+        given: Evi
+      - family: Snyder
+        given: Garth
+      - family: Hein
+        given: Trent R.
+      - family: Whaley
+        given: Ben
+      - family: Mackin
+        given: Dan
+    edition: "5"
+    publisher: Addison-Wesley Professional
+    issued: 2017
+    ISBN: "9780134277554"
+    annote: "A hands-on reference to production UNIX and Linux systems, networking, storage, permissions, and administration."
+    keyword: "Security & Systems Engineering"
+    URL: "https://www.oreilly.com/library/view/unix-and-linux/9780134278308/"

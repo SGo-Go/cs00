@@ -120,6 +120,7 @@ references:
     issued: 2008
     ISBN: "978-0-07-352340-8"
     URL: "https://people.eecs.berkeley.edu/~vazirani/algorithms.html"
+    # https://prog.sch57.ru/books/Dasgupta,%20Papadimitrou,%20Vasirani%20-%20Algorithms%20(ru).pdf
 
   - id: cormen-et-al-2022
     type: book

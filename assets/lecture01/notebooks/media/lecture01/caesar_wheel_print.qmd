@@ -1,0 +1,58 @@
+---
+lang: uk
+bibliography: []
+format:
+  typst:
+    papersize: a4
+    mainfont: "Liberation Sans"
+    page-numbering: false
+execute:
+  eval: false
+---
+
+```{=typst}
+#set page(margin: 0mm)
+#set text(font: "Liberation Sans", fill: rgb("#17212b"))
+
+#let alphabet = ("А", "Б", "В", "Г", "Ґ", "Д", "Е", "Є", "Ж", "З", "И", "І", "Ї", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Ь", "Ю", "Я")
+
+#let center-label(x, y, content, width: 8mm, height: 8mm, size: 12pt, weight: "regular") = {
+  place(top + left, dx: x - width / 2, dy: y - height / 2)[
+    #box(width: width, height: height, align(center + horizon)[
+      #text(size: size, weight: weight)[#content]
+    ])
+  ]
+}
+
+#let draw-circle(cx, cy, radius) = {
+  place(top + left, dx: cx - radius, dy: cy - radius)[
+    #circle(radius: radius, stroke: 0.35pt + rgb("#17212b"))
+  ]
+  place(top + left, dx: cx - 1.5mm, dy: cy - 1.5mm)[
+    #circle(radius: 1.5mm, fill: white, stroke: 0.3pt + rgb("#17212b"))
+  ]
+}
+
+#let draw-letters(cx, cy, radius) = {
+  for (index, letter) in alphabet.enumerate() {
+    let angle = 2 * calc.pi * index / alphabet.len() - calc.pi / 2
+    let x = cx + radius * calc.cos(angle)
+    let y = cy + radius * calc.sin(angle)
+    center-label(x, y, letter)
+  }
+}
+
+#center-label(105mm, 7mm, [ШИФРУВАЛЬНЕ КОЛЕСО ЦЕЗАРЯ], width: 180mm, height: 7mm, size: 12pt, weight: "bold")
+#center-label(105mm, 11.5mm, [Українська абетка · 33 літери], width: 180mm, height: 5mm, size: 8pt)
+
+#draw-circle(105mm, 80mm, 65mm)
+#draw-letters(105mm, 80mm, 59.5mm)
+#center-label(105mm, 151mm, [1. НЕРУХОМА ОСНОВА · ВІДКРИТИЙ ТЕКСТ], width: 170mm, height: 5mm, size: 8pt, weight: "bold")
+
+#center-label(105mm, 164mm, [2. ОБЕРТАЙТЕ МЕНШЕ КОЛЕСО · ШИФР], width: 170mm, height: 5mm, size: 8pt, weight: "bold")
+#draw-circle(105mm, 223mm, 52mm)
+#draw-letters(105mm, 223mm, 44.5mm)
+
+#center-label(105mm, 284mm, [Виріжте по контуру. Проколіть центри й з'єднайте колеса брадсом.], width: 200mm, height: 4mm, size: 7pt)
+#center-label(105mm, 289mm, [Для зсуву +3 сумістіть А зовнішнього кільця з Г внутрішнього.], width: 200mm, height: 4mm, size: 7pt)
+```
