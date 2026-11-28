@@ -1,6 +1,6 @@
 ---
 lang: uk
-bibliography: []
+bibliography: ""
 format:
   typst:
     papersize: a4
