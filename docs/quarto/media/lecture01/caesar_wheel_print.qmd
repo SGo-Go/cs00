@@ -1,11 +1,12 @@
 ---
 lang: uk
-bibliography: ""
+bibliography: []
 format:
   typst:
     papersize: a4
     mainfont: "Liberation Sans"
     page-numbering: false
+    citeproc: true
 execute:
   eval: false
 ---
