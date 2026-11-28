@@ -5,7 +5,7 @@ LECTURE_01_VIDEO_SCENES := BinaryCounting FloatingPoint IntegerModuloCircle
 .PHONY: help install render render-videos preview serve sphinx-render sphinx-open
 
 help:
-	@printf '%s\n' 'Available targets:' '  make install       Install system and Python docs/visuals dependencies' '  make render        Render videos and the Quarto site' '  make render-videos Render the lecture 1 MP4s' '  make preview       Preview the Quarto site' '  make serve         Serve the rendered Quarto site on a random HTTP port' '  make sphinx-render Build the Sphinx API docs' '  make sphinx-open   Build and open the Sphinx API docs'
+	@printf '%s\n' 'Available targets:' '  make install          Install system and Python docs/visuals dependencies' '  make render           Render videos and the Quarto site' '  make render-videos    Render the lecture 1 MP4s' '  make preview          Preview the Quarto site' '  make serve            Serve the rendered Quarto site on a random HTTP port' '  make sphinx-render    Build the Sphinx API docs' '  make sphinx-open      Build and open the Sphinx API docs'
 
 install:
 	sudo apt-get update
